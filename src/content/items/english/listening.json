@@ -1,0 +1,114 @@
+[
+  {
+    "id": "els-1",
+    "domain": "english",
+    "topic": "listening",
+    "blockTier": "easy",
+    "difficulty": 2,
+    "audioText": "Attention passengers. The train to Haifa scheduled to depart from platform three at ten fifteen will now leave from platform seven. The departure time has not changed. Passengers already waiting on platform three should move to platform seven immediately.",
+    "stem": "What has changed about the train to Haifa?",
+    "options": [
+      "The platform, but not the departure time",
+      "The departure time, but not the platform",
+      "Both the platform and the departure time",
+      "The destination of the train"
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "Listen for the two facts announcements usually pair: place and time.",
+      "The platform changes from three to seven.",
+      "The announcement states explicitly that the departure time has not changed."
+    ],
+    "techniqueTags": ["listen-for-contrast", "announcement"],
+    "targetTimeSec": 70,
+    "trapExplanations": {
+      "1": "The reverse of what was said — the time is the part explicitly unchanged.",
+      "2": "Only one of the two changed; the announcement rules out the other.",
+      "3": "The destination, Haifa, is never said to change."
+    }
+  },
+  {
+    "id": "els-2",
+    "domain": "english",
+    "topic": "listening",
+    "blockTier": "medium",
+    "difficulty": 3,
+    "audioText": "In today's lecture I want to correct a common misunderstanding. People often say that we use only ten percent of our brains. This is not true. Brain imaging shows activity across virtually the entire brain over the course of a day. What is true is that we rarely use all regions at the same moment, which is a very different claim.",
+    "stem": "What is the speaker's main purpose?",
+    "options": [
+      "To correct a widespread false belief",
+      "To explain how brain imaging works",
+      "To argue that people should use more of their brains",
+      "To describe a new scientific discovery"
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "The opening states the purpose directly: 'I want to correct a common misunderstanding.'",
+      "The speaker then names the myth and denies it.",
+      "The rest clarifies what the accurate version is."
+    ],
+    "techniqueTags": ["speaker-purpose", "signposting"],
+    "targetTimeSec": 80,
+    "trapExplanations": {
+      "1": "Imaging is mentioned as evidence, not as the topic being explained.",
+      "2": "The speaker denies the premise behind such advice rather than giving it.",
+      "3": "Nothing is presented as new — the correction concerns an old myth."
+    }
+  },
+  {
+    "id": "els-3",
+    "domain": "english",
+    "topic": "listening",
+    "blockTier": "medium",
+    "difficulty": 3,
+    "audioText": "So the deadline for the group project is the fifteenth. However, I know several of you have exams that week. If your group needs an extension, send me an email before the tenth. I will not grant extensions requested after that date, even if the reason is a good one.",
+    "stem": "What must students do to receive an extension?",
+    "options": [
+      "Email the speaker before the tenth",
+      "Submit the project by the fifteenth",
+      "Explain a good reason at any time",
+      "Speak to the speaker after their exams"
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "Identify the condition attached to the request, not the deadline itself.",
+      "The speaker says extension requests must be emailed before the tenth.",
+      "The final sentence confirms the cut-off is strict."
+    ],
+    "techniqueTags": ["listen-for-condition", "instructions"],
+    "targetTimeSec": 80,
+    "trapExplanations": {
+      "1": "That is the project deadline, not the extension procedure.",
+      "2": "The speaker explicitly rules this out: a good reason after the tenth is not enough.",
+      "3": "No meeting after exams is offered anywhere in the announcement."
+    }
+  },
+  {
+    "id": "els-4",
+    "domain": "english",
+    "topic": "listening",
+    "blockTier": "hard",
+    "difficulty": 4,
+    "audioText": "The results were encouraging, though I would stop short of calling them conclusive. We saw improvement in the treatment group, and the effect held after we controlled for age. But the sample was small, and we have not yet replicated the study in a second population. I would describe the finding as promising rather than established.",
+    "stem": "How does the speaker characterise the findings?",
+    "options": [
+      "Positive but not yet proven",
+      "Conclusive and ready to publish",
+      "Disappointing and unlikely to hold",
+      "Invalid because of the small sample"
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "Track the hedging language: 'encouraging', 'stop short of conclusive', 'promising rather than established'.",
+      "The speaker affirms a real effect that survived a control.",
+      "But withholds certainty pending replication — positive, not proven."
+    ],
+    "techniqueTags": ["hedging-language", "speaker-attitude"],
+    "targetTimeSec": 95,
+    "trapExplanations": {
+      "1": "The speaker explicitly declines to call the results conclusive.",
+      "2": "The speaker calls the results encouraging, which is the opposite of disappointing.",
+      "3": "The small sample is a reason for caution, not a reason the speaker rejects the findings. Confusing a limitation with invalidity is the trap here."
+    }
+  }
+]

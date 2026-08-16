@@ -1,0 +1,245 @@
+[
+  {
+    "id": "ers-e1",
+    "domain": "english",
+    "topic": "restatement",
+    "blockTier": "easy",
+    "difficulty": 1,
+    "stem": "The meeting was cancelled because the manager was ill.",
+    "options": [
+      "The manager's illness led to the cancellation of the meeting.",
+      "The manager became ill during the meeting.",
+      "The meeting was held without the manager, who was ill.",
+      "The manager cancelled the meeting and then became ill."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "Identify the causal direction: illness caused the cancellation.",
+      "Check the order of events: he was ill first, then the meeting was cancelled.",
+      "Option 1 preserves both the cause and the order."
+    ],
+    "techniqueTags": ["cause-preservation", "event-order"],
+    "targetTimeSec": 60,
+    "trapExplanations": {
+      "1": "Places the illness during the meeting, but the original says the meeting never happened.",
+      "2": "Says the meeting took place, contradicting 'was cancelled'.",
+      "3": "Reverses the order — the original makes illness the cause, not the consequence."
+    }
+  },
+  {
+    "id": "ers-e2",
+    "domain": "english",
+    "topic": "restatement",
+    "blockTier": "easy",
+    "difficulty": 2,
+    "stem": "Few students passed the exam on their first attempt.",
+    "options": [
+      "Most students needed more than one attempt to pass the exam.",
+      "No student passed the exam on the first attempt.",
+      "Most students passed the exam on their first attempt.",
+      "The exam could only be taken once."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "'Few' means a small number, but not zero.",
+      "If few passed first time, the majority did not — they needed another attempt.",
+      "Option 1 states exactly that."
+    ],
+    "techniqueTags": ["quantifier-logic", "few-vs-none"],
+    "targetTimeSec": 65,
+    "trapExplanations": {
+      "1": "'Few' is not 'none' — some students did pass. This is the classic quantifier trap.",
+      "2": "Reverses the meaning entirely.",
+      "3": "Adds a rule about retakes that the original never mentions."
+    }
+  },
+  {
+    "id": "ers-e3",
+    "domain": "english",
+    "topic": "restatement",
+    "blockTier": "easy",
+    "difficulty": 2,
+    "stem": "Unless you register by Friday, you will not be able to attend the workshop.",
+    "options": [
+      "Registering by Friday is required in order to attend the workshop.",
+      "If you register by Friday, you will definitely attend the workshop.",
+      "Registration closes after the workshop begins.",
+      "Everyone who attends the workshop registered on Friday."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "'Unless X, not Y' means X is necessary for Y.",
+      "Necessary is not the same as sufficient — registering makes attendance possible, not certain.",
+      "Option 1 says 'required', which is exactly necessity."
+    ],
+    "techniqueTags": ["conditional-logic", "necessary-vs-sufficient"],
+    "targetTimeSec": 70,
+    "trapExplanations": {
+      "1": "Turns a necessary condition into a sufficient one — 'definitely' overstates the original.",
+      "2": "Invents a timing detail that is not in the sentence.",
+      "3": "Says everyone registered exactly on Friday, but the original allows registering earlier."
+    }
+  },
+  {
+    "id": "ers-m1",
+    "domain": "english",
+    "topic": "restatement",
+    "blockTier": "medium",
+    "difficulty": 3,
+    "stem": "The proposal, while economically sound, was politically unacceptable.",
+    "options": [
+      "The proposal made economic sense but could not be accepted politically.",
+      "The proposal was rejected because it was economically weak.",
+      "The proposal was acceptable both economically and politically.",
+      "Politicians agreed with the proposal despite its economic flaws."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "'While X, Y' sets up a concession: X is granted, Y is the problem.",
+      "X = economically sound (positive), Y = politically unacceptable (negative).",
+      "Option 1 keeps both halves with the same polarity."
+    ],
+    "techniqueTags": ["concession-structure", "polarity"],
+    "targetTimeSec": 70,
+    "trapExplanations": {
+      "1": "Reverses the economics — the original grants that it was sound.",
+      "2": "Drops the political objection entirely.",
+      "3": "Inverts both halves: politicians agreeing, economics flawed."
+    }
+  },
+  {
+    "id": "ers-m2",
+    "domain": "english",
+    "topic": "restatement",
+    "blockTier": "medium",
+    "difficulty": 3,
+    "stem": "Not all of the allegations were substantiated.",
+    "options": [
+      "Some of the allegations were not supported by evidence.",
+      "None of the allegations were supported by evidence.",
+      "All of the allegations were false.",
+      "The allegations were all proven true."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "'Not all' negates the universal claim, leaving a partial one.",
+      "It means at least one was unsubstantiated — but not necessarily all.",
+      "Option 1 says 'some ... not', which is exactly the negation of 'all'."
+    ],
+    "techniqueTags": ["quantifier-logic", "not-all-vs-none"],
+    "targetTimeSec": 70,
+    "trapExplanations": {
+      "1": "'Not all' is not 'none'. This is the single most common restatement trap on the test.",
+      "2": "Overstates in the same direction as option 1, and adds a falsity claim.",
+      "3": "Reverses the meaning completely."
+    }
+  },
+  {
+    "id": "ers-m3",
+    "domain": "english",
+    "topic": "restatement",
+    "blockTier": "medium",
+    "difficulty": 4,
+    "stem": "The company only began investing in safety after the accident occurred.",
+    "options": [
+      "Before the accident, the company had not invested in safety.",
+      "The accident happened because the company invested in safety.",
+      "The company invested in safety in order to prevent the accident.",
+      "The company stopped investing in safety once the accident occurred."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "'Only began ... after X' places the start of the action strictly after X.",
+      "That entails nothing of the kind happened before X.",
+      "Option 1 states that entailment directly."
+    ],
+    "techniqueTags": ["temporal-logic", "only-after"],
+    "targetTimeSec": 75,
+    "trapExplanations": {
+      "1": "Reverses cause and effect — the accident prompted the investment, not the other way round.",
+      "2": "Prevention would require investing before the accident, contradicting 'after'.",
+      "3": "Turns beginning into stopping — the opposite action."
+    }
+  },
+  {
+    "id": "ers-h1",
+    "domain": "english",
+    "topic": "restatement",
+    "blockTier": "hard",
+    "difficulty": 4,
+    "stem": "Her findings are significant not because they are surprising, but because they are so easily replicated.",
+    "options": [
+      "The importance of her findings lies in their reproducibility rather than their novelty.",
+      "Her findings are both surprising and easy to replicate.",
+      "Her findings are unimportant because they are unsurprising.",
+      "Her findings would be more significant if they were surprising."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "'Not because X, but because Y' rejects X as the reason and asserts Y.",
+      "X = surprising (novelty), Y = easily replicated (reproducibility).",
+      "Option 1 preserves the rejection of X and the assertion of Y."
+    ],
+    "techniqueTags": ["not-because-but-because", "reason-substitution"],
+    "targetTimeSec": 85,
+    "trapExplanations": {
+      "1": "The original denies that the findings are surprising as the source of significance; this asserts both.",
+      "2": "The original affirms significance — this denies it.",
+      "3": "Introduces a hypothetical comparison the original never makes."
+    }
+  },
+  {
+    "id": "ers-h2",
+    "domain": "english",
+    "topic": "restatement",
+    "blockTier": "hard",
+    "difficulty": 5,
+    "stem": "Had the warning been issued earlier, the damage might have been contained.",
+    "options": [
+      "The damage could possibly have been limited if the warning had come sooner.",
+      "The warning was issued early and the damage was contained.",
+      "The damage was certainly caused by the late warning.",
+      "An earlier warning would definitely have prevented all damage."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "'Had X ...' is an unreal past conditional: X did not happen.",
+      "'Might have been' expresses possibility, not certainty.",
+      "Option 1 keeps both the counterfactual and the hedged possibility."
+    ],
+    "techniqueTags": ["counterfactual", "modality"],
+    "targetTimeSec": 90,
+    "trapExplanations": {
+      "1": "States as fact what the original explicitly presents as contrary to fact.",
+      "2": "'Certainly' overstates 'might' and turns possibility into established causation.",
+      "3": "'Definitely ... all damage' doubly overstates: 'might' becomes certainty and 'contained' becomes total prevention."
+    }
+  },
+  {
+    "id": "ers-h3",
+    "domain": "english",
+    "topic": "restatement",
+    "blockTier": "hard",
+    "difficulty": 5,
+    "stem": "The regulation applies to all vehicles except those manufactured before 2010.",
+    "options": [
+      "Vehicles made in 2010 or later are subject to the regulation.",
+      "Only vehicles manufactured before 2010 must follow the regulation.",
+      "The regulation applies to no vehicle manufactured after 2010.",
+      "All vehicles, regardless of age, must comply with the regulation."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "The rule covers everything, minus one carved-out group.",
+      "The carve-out is 'manufactured before 2010', so what remains is 2010 and later.",
+      "Option 1 describes precisely the remaining set."
+    ],
+    "techniqueTags": ["exception-logic", "set-boundaries"],
+    "targetTimeSec": 85,
+    "trapExplanations": {
+      "1": "Inverts the exception — the pre-2010 vehicles are the ones excluded, not the only ones included.",
+      "2": "Also inverts the rule, exempting exactly the group that is covered.",
+      "3": "Ignores the exception clause altogether."
+    }
+  }
+]

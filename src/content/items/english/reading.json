@@ -1,0 +1,422 @@
+[
+  {
+    "id": "erd-e1",
+    "domain": "english",
+    "topic": "reading",
+    "blockTier": "easy",
+    "difficulty": 2,
+    "passage": "Honey has been used as a food and a medicine for thousands of years. Because it contains very little water and is naturally acidic, bacteria cannot easily grow in it. Sealed jars of honey found in ancient tombs were still edible when they were opened, which is why honey is often described as a food that never spoils.\n\nStill, this reputation has limits. Honey absorbs moisture from the air, and once its water content rises, fermentation becomes possible. A jar left open in a humid kitchen will not last thousands of years. The preservation depends less on the honey itself than on how it is stored.",
+    "stem": "According to the passage, why can bacteria not easily grow in honey?",
+    "options": [
+      "It has little water and is acidic",
+      "It is stored in sealed jars",
+      "It was used as a medicine",
+      "It absorbs moisture from the air"
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "Locate the word 'bacteria' in the passage.",
+      "The sentence begins with 'Because', which directly signals the reason.",
+      "The reason given is low water content and natural acidity."
+    ],
+    "techniqueTags": ["locate-explicit", "because-signal"],
+    "targetTimeSec": 60,
+    "trapExplanations": {
+      "1": "Sealing preserved the tomb honey, but the passage attributes bacterial resistance to composition, not packaging.",
+      "2": "Medicinal use is background information, not a cause.",
+      "3": "This is what *undermines* preservation, stated in the second paragraph — the opposite role."
+    }
+  },
+  {
+    "id": "erd-e2",
+    "domain": "english",
+    "topic": "reading",
+    "blockTier": "easy",
+    "difficulty": 2,
+    "passage": "Honey has been used as a food and a medicine for thousands of years. Because it contains very little water and is naturally acidic, bacteria cannot easily grow in it. Sealed jars of honey found in ancient tombs were still edible when they were opened, which is why honey is often described as a food that never spoils.\n\nStill, this reputation has limits. Honey absorbs moisture from the air, and once its water content rises, fermentation becomes possible. A jar left open in a humid kitchen will not last thousands of years. The preservation depends less on the honey itself than on how it is stored.",
+    "stem": "What is the main point of the second paragraph?",
+    "options": [
+      "Honey's resistance to spoiling depends on storage conditions",
+      "Honey spoils quickly in all conditions",
+      "Ancient honey was better than modern honey",
+      "Fermented honey is dangerous to eat"
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "The paragraph opens with 'Still', signalling a qualification of what came before.",
+      "It gives a condition under which honey does spoil: absorbed moisture.",
+      "The closing sentence states the point outright — preservation depends on storage."
+    ],
+    "techniqueTags": ["main-idea", "paragraph-function"],
+    "targetTimeSec": 65,
+    "trapExplanations": {
+      "1": "Too strong. The paragraph qualifies the claim rather than reversing it.",
+      "2": "No comparison between ancient and modern honey is made.",
+      "3": "Danger is never mentioned — only that fermentation becomes possible."
+    }
+  },
+  {
+    "id": "erd-e3",
+    "domain": "english",
+    "topic": "reading",
+    "blockTier": "easy",
+    "difficulty": 2,
+    "passage": "Honey has been used as a food and a medicine for thousands of years. Because it contains very little water and is naturally acidic, bacteria cannot easily grow in it. Sealed jars of honey found in ancient tombs were still edible when they were opened, which is why honey is often described as a food that never spoils.\n\nStill, this reputation has limits. Honey absorbs moisture from the air, and once its water content rises, fermentation becomes possible. A jar left open in a humid kitchen will not last thousands of years. The preservation depends less on the honey itself than on how it is stored.",
+    "stem": "The word 'reputation' in the second paragraph refers to the idea that honey:",
+    "options": [
+      "never spoils",
+      "is a form of medicine",
+      "comes from ancient tombs",
+      "absorbs moisture"
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "Reference words point backwards — read the sentence immediately before.",
+      "The first paragraph ends with 'a food that never spoils'.",
+      "That claim is the reputation being qualified."
+    ],
+    "techniqueTags": ["reference-word", "backward-link"],
+    "targetTimeSec": 60,
+    "trapExplanations": {
+      "1": "Mentioned in the opening line, but not the claim the second paragraph limits.",
+      "2": "The tombs are evidence for the reputation, not the reputation itself.",
+      "3": "This is the mechanism that limits the reputation, not the reputation."
+    }
+  },
+  {
+    "id": "erd-e4",
+    "domain": "english",
+    "topic": "reading",
+    "blockTier": "easy",
+    "difficulty": 3,
+    "passage": "Honey has been used as a food and a medicine for thousands of years. Because it contains very little water and is naturally acidic, bacteria cannot easily grow in it. Sealed jars of honey found in ancient tombs were still edible when they were opened, which is why honey is often described as a food that never spoils.\n\nStill, this reputation has limits. Honey absorbs moisture from the air, and once its water content rises, fermentation becomes possible. A jar left open in a humid kitchen will not last thousands of years. The preservation depends less on the honey itself than on how it is stored.",
+    "stem": "Why does the writer mention the jar left open in a humid kitchen?",
+    "options": [
+      "To give a concrete case where honey would not be preserved",
+      "To recommend a method of storing honey",
+      "To compare kitchens with ancient tombs",
+      "To prove that honey always ferments"
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "This is a function question: ask what the example does, not what it says.",
+      "It follows the claim that moisture enables fermentation.",
+      "It illustrates that claim with an everyday case."
+    ],
+    "techniqueTags": ["example-function", "author-purpose"],
+    "targetTimeSec": 70,
+    "trapExplanations": {
+      "1": "No storage advice is given; the sentence describes a failure case, not a recommendation.",
+      "2": "The tomb is in the previous paragraph and no explicit comparison is drawn.",
+      "3": "'Always' overstates — the passage says fermentation 'becomes possible'."
+    }
+  },
+  {
+    "id": "erd-e5",
+    "domain": "english",
+    "topic": "reading",
+    "blockTier": "easy",
+    "difficulty": 3,
+    "passage": "Honey has been used as a food and a medicine for thousands of years. Because it contains very little water and is naturally acidic, bacteria cannot easily grow in it. Sealed jars of honey found in ancient tombs were still edible when they were opened, which is why honey is often described as a food that never spoils.\n\nStill, this reputation has limits. Honey absorbs moisture from the air, and once its water content rises, fermentation becomes possible. A jar left open in a humid kitchen will not last thousands of years. The preservation depends less on the honey itself than on how it is stored.",
+    "stem": "Which statement would the writer most likely agree with?",
+    "options": [
+      "Honey keeps well, but only under the right conditions",
+      "Honey's reputation is entirely undeserved",
+      "Honey should not be stored for long periods",
+      "Modern honey differs chemically from ancient honey"
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "The writer grants the preservation claim in paragraph one and limits it in paragraph two.",
+      "The final sentence balances both: preservation depends on storage.",
+      "A statement that keeps both halves is the writer's actual position."
+    ],
+    "techniqueTags": ["author-view", "balanced-claim"],
+    "targetTimeSec": 70,
+    "trapExplanations": {
+      "1": "Too extreme — the writer accepts that sealed honey lasted millennia.",
+      "2": "The passage suggests the opposite: properly stored honey keeps very well.",
+      "3": "No chemical comparison between eras appears in the text."
+    }
+  },
+  {
+    "id": "erd-m1",
+    "domain": "english",
+    "topic": "reading",
+    "blockTier": "medium",
+    "difficulty": 3,
+    "passage": "For most of the twentieth century, city planners treated traffic congestion as a problem of insufficient road capacity. The remedy seemed obvious: build more lanes. Yet a pattern repeated itself across dozens of cities. A widened highway would relieve congestion for a year or two, after which traffic would return to its former levels, and sometimes exceed them.\n\nEconomists eventually named the mechanism induced demand. Road space is not consumed by a fixed number of drivers; it is consumed by however many drivers find the journey worth making. Adding capacity lowers the effective cost of driving in time, which draws in trips that were previously not worth taking — journeys deferred, routes switched, or moves to more distant housing. The new lanes fill because they were built.\n\nThis does not mean road building is never justified. It means capacity cannot be evaluated in isolation from price. Where driving is charged closer to its true cost through tolls or parking fees, added capacity behaves far more like planners originally expected.",
+    "stem": "According to the passage, why did widened highways fail to relieve congestion permanently?",
+    "options": [
+      "Lower travel time attracted trips that had not previously been made",
+      "The new lanes were poorly designed",
+      "Populations grew faster than roads could be built",
+      "Drivers preferred older routes"
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "Locate the explanation: the second paragraph names the mechanism.",
+      "'Adding capacity lowers the effective cost of driving in time, which draws in trips that were previously not worth taking.'",
+      "That is induced demand — new trips, not merely existing ones."
+    ],
+    "techniqueTags": ["locate-explicit", "mechanism"],
+    "targetTimeSec": 75,
+    "trapExplanations": {
+      "1": "Design quality is never raised; the passage says the pattern repeated across dozens of cities.",
+      "2": "Population growth is a plausible real-world factor but is not the passage's explanation.",
+      "3": "The passage mentions route switching as part of induced demand, not a preference for old routes."
+    }
+  },
+  {
+    "id": "erd-m2",
+    "domain": "english",
+    "topic": "reading",
+    "blockTier": "medium",
+    "difficulty": 4,
+    "passage": "For most of the twentieth century, city planners treated traffic congestion as a problem of insufficient road capacity. The remedy seemed obvious: build more lanes. Yet a pattern repeated itself across dozens of cities. A widened highway would relieve congestion for a year or two, after which traffic would return to its former levels, and sometimes exceed them.\n\nEconomists eventually named the mechanism induced demand. Road space is not consumed by a fixed number of drivers; it is consumed by however many drivers find the journey worth making. Adding capacity lowers the effective cost of driving in time, which draws in trips that were previously not worth taking — journeys deferred, routes switched, or moves to more distant housing. The new lanes fill because they were built.\n\nThis does not mean road building is never justified. It means capacity cannot be evaluated in isolation from price. Where driving is charged closer to its true cost through tolls or parking fees, added capacity behaves far more like planners originally expected.",
+    "stem": "What is the function of the final paragraph?",
+    "options": [
+      "To qualify the argument and specify when road building does work",
+      "To restate the problem described in the first paragraph",
+      "To reject the concept of induced demand",
+      "To argue that all roads should be tolled"
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "The paragraph opens 'This does not mean...' — a hallmark of qualification.",
+      "It then states a condition under which capacity works as expected: when driving is priced properly.",
+      "So it limits the argument without abandoning it."
+    ],
+    "techniqueTags": ["paragraph-function", "qualification"],
+    "targetTimeSec": 80,
+    "trapExplanations": {
+      "1": "It advances the argument rather than repeating the opening.",
+      "2": "It accepts induced demand and explains when its effect is muted. Confusing qualification with rejection is the common error here.",
+      "3": "Tolls are given as an example of pricing, not as a universal recommendation."
+    }
+  },
+  {
+    "id": "erd-m3",
+    "domain": "english",
+    "topic": "reading",
+    "blockTier": "medium",
+    "difficulty": 4,
+    "passage": "For most of the twentieth century, city planners treated traffic congestion as a problem of insufficient road capacity. The remedy seemed obvious: build more lanes. Yet a pattern repeated itself across dozens of cities. A widened highway would relieve congestion for a year or two, after which traffic would return to its former levels, and sometimes exceed them.\n\nEconomists eventually named the mechanism induced demand. Road space is not consumed by a fixed number of drivers; it is consumed by however many drivers find the journey worth making. Adding capacity lowers the effective cost of driving in time, which draws in trips that were previously not worth taking — journeys deferred, routes switched, or moves to more distant housing. The new lanes fill because they were built.\n\nThis does not mean road building is never justified. It means capacity cannot be evaluated in isolation from price. Where driving is charged closer to its true cost through tolls or parking fees, added capacity behaves far more like planners originally expected.",
+    "stem": "The phrase 'the effective cost of driving in time' suggests that the writer views time as:",
+    "options": [
+      "a price that drivers pay for a journey",
+      "an unreliable way to measure congestion",
+      "less important than money in travel decisions",
+      "a fixed quantity for every driver"
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "The phrase applies the vocabulary of price ('cost') to time.",
+      "The paragraph then treats trips as worth making or not — a cost-benefit framing.",
+      "So time functions as the price of the journey."
+    ],
+    "techniqueTags": ["inference-from-wording", "metaphor"],
+    "targetTimeSec": 80,
+    "trapExplanations": {
+      "1": "The passage uses time as a measure, not as an unreliable one.",
+      "2": "The final paragraph adds money alongside time; it never ranks them.",
+      "3": "The whole argument depends on time costs changing, so they are not fixed."
+    }
+  },
+  {
+    "id": "erd-m4",
+    "domain": "english",
+    "topic": "reading",
+    "blockTier": "medium",
+    "difficulty": 4,
+    "passage": "For most of the twentieth century, city planners treated traffic congestion as a problem of insufficient road capacity. The remedy seemed obvious: build more lanes. Yet a pattern repeated itself across dozens of cities. A widened highway would relieve congestion for a year or two, after which traffic would return to its former levels, and sometimes exceed them.\n\nEconomists eventually named the mechanism induced demand. Road space is not consumed by a fixed number of drivers; it is consumed by however many drivers find the journey worth making. Adding capacity lowers the effective cost of driving in time, which draws in trips that were previously not worth taking — journeys deferred, routes switched, or moves to more distant housing. The new lanes fill because they were built.\n\nThis does not mean road building is never justified. It means capacity cannot be evaluated in isolation from price. Where driving is charged closer to its true cost through tolls or parking fees, added capacity behaves far more like planners originally expected.",
+    "stem": "Which of the following, if true, would most weaken the concept of induced demand as described?",
+    "options": [
+      "In cities with widened highways, the total number of trips remained unchanged",
+      "Some widened highways cost more than planners expected",
+      "Congestion returned more slowly in smaller cities",
+      "Tolls are unpopular with drivers"
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "Induced demand claims new capacity generates additional trips.",
+      "To weaken it, show that trips did not increase when capacity did.",
+      "Unchanged trip totals would leave the mechanism with nothing to explain."
+    ],
+    "techniqueTags": ["weaken-argument", "mechanism-test"],
+    "targetTimeSec": 90,
+    "trapExplanations": {
+      "1": "Construction cost has no bearing on whether traffic volume responds to capacity.",
+      "2": "A difference in speed of return is consistent with induced demand, not against it.",
+      "3": "Public opinion about tolls does not test the mechanism itself."
+    }
+  },
+  {
+    "id": "erd-m5",
+    "domain": "english",
+    "topic": "reading",
+    "blockTier": "medium",
+    "difficulty": 3,
+    "passage": "For most of the twentieth century, city planners treated traffic congestion as a problem of insufficient road capacity. The remedy seemed obvious: build more lanes. Yet a pattern repeated itself across dozens of cities. A widened highway would relieve congestion for a year or two, after which traffic would return to its former levels, and sometimes exceed them.\n\nEconomists eventually named the mechanism induced demand. Road space is not consumed by a fixed number of drivers; it is consumed by however many drivers find the journey worth making. Adding capacity lowers the effective cost of driving in time, which draws in trips that were previously not worth taking — journeys deferred, routes switched, or moves to more distant housing. The new lanes fill because they were built.\n\nThis does not mean road building is never justified. It means capacity cannot be evaluated in isolation from price. Where driving is charged closer to its true cost through tolls or parking fees, added capacity behaves far more like planners originally expected.",
+    "stem": "The phrase 'The new lanes fill because they were built' is used to:",
+    "options": [
+      "summarise the induced demand mechanism in a single sentence",
+      "criticise the engineers who designed the lanes",
+      "predict how many lanes future cities will need",
+      "introduce the topic of road pricing"
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "The sentence closes the paragraph that explains induced demand.",
+      "It compresses the whole mechanism: building capacity is itself what generates the traffic that fills it.",
+      "So its role is summary, not criticism or prediction."
+    ],
+    "techniqueTags": ["sentence-function", "summary-statement"],
+    "targetTimeSec": 75,
+    "trapExplanations": {
+      "1": "No individuals are blamed anywhere in the passage; the argument is about a mechanism, not about competence.",
+      "2": "No forecast of future lane numbers is offered.",
+      "3": "Road pricing appears in the next paragraph, but this sentence closes the previous idea rather than opening that one."
+    }
+  },
+  {
+    "id": "erd-h1",
+    "domain": "english",
+    "topic": "reading",
+    "blockTier": "hard",
+    "difficulty": 5,
+    "passage": "The conventional account of the printing press credits it with spreading new ideas. The mechanism seems self-evident: cheaper books, wider circulation, faster diffusion. But historians of the period have increasingly argued that this account inverts the more important effect. What print changed first was not the spread of the new but the stabilisation of the old.\n\nIn a manuscript culture, every copy differed. Scribes corrected, abbreviated and silently emended, so that two copies of the same work might diverge substantially within a few generations. Print did not eliminate error, but it made error identical across thousands of copies, and therefore visible. A reader in one city could write to a reader in another and refer to the same passage on the same page. Discrepancy became detectable in a way it had never been.\n\nThe consequence was less dramatic than a revolution in ideas and more consequential: the emergence of a shared textual baseline against which claims could be checked. What looks in retrospect like the rapid spread of new theories may owe less to the volume of printed matter than to the fact that, for the first time, a disagreement could be located precisely.",
+    "stem": "The writer's main claim about the printing press is that:",
+    "options": [
+      "its most important effect was making texts uniform rather than spreading ideas",
+      "it did not significantly affect the circulation of books",
+      "it introduced more errors than manuscript copying did",
+      "it was less influential than historians once believed"
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "The first paragraph presents the conventional view, then reverses it: 'this account inverts the more important effect'.",
+      "The stated priority is 'the stabilisation of the old' over 'the spread of the new'.",
+      "The rest of the passage develops uniformity as the key consequence."
+    ],
+    "techniqueTags": ["main-claim", "conventional-view-reversal"],
+    "targetTimeSec": 95,
+    "trapExplanations": {
+      "1": "The writer does not deny wider circulation; the claim is about which effect mattered most.",
+      "2": "The passage says print made errors identical and visible, not more numerous.",
+      "3": "The writer argues the press was highly consequential — just for a different reason. This is the strongest distractor because it sounds appropriately revisionist."
+    }
+  },
+  {
+    "id": "erd-h2",
+    "domain": "english",
+    "topic": "reading",
+    "blockTier": "hard",
+    "difficulty": 5,
+    "passage": "The conventional account of the printing press credits it with spreading new ideas. The mechanism seems self-evident: cheaper books, wider circulation, faster diffusion. But historians of the period have increasingly argued that this account inverts the more important effect. What print changed first was not the spread of the new but the stabilisation of the old.\n\nIn a manuscript culture, every copy differed. Scribes corrected, abbreviated and silently emended, so that two copies of the same work might diverge substantially within a few generations. Print did not eliminate error, but it made error identical across thousands of copies, and therefore visible. A reader in one city could write to a reader in another and refer to the same passage on the same page. Discrepancy became detectable in a way it had never been.\n\nThe consequence was less dramatic than a revolution in ideas and more consequential: the emergence of a shared textual baseline against which claims could be checked. What looks in retrospect like the rapid spread of new theories may owe less to the volume of printed matter than to the fact that, for the first time, a disagreement could be located precisely.",
+    "stem": "Why does the writer emphasise that print made error 'identical across thousands of copies'?",
+    "options": [
+      "Because uniform error is detectable, whereas varied error is not",
+      "Because printers were less careful than scribes",
+      "Because printed books contained fewer mistakes overall",
+      "Because readers preferred printed texts to manuscripts"
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "Note the concession: 'Print did not eliminate error, but...' — the point is not accuracy.",
+      "The clause continues 'and therefore visible', followed by the example of two readers comparing the same page.",
+      "Uniformity is what makes discrepancy locatable — that is the writer's point."
+    ],
+    "techniqueTags": ["detail-purpose", "concession-structure"],
+    "targetTimeSec": 100,
+    "trapExplanations": {
+      "1": "Carelessness is never claimed; the passage is neutral about who erred more.",
+      "2": "The passage explicitly declines to claim print reduced error.",
+      "3": "Reader preference is not discussed anywhere in the text."
+    }
+  },
+  {
+    "id": "erd-h3",
+    "domain": "english",
+    "topic": "reading",
+    "blockTier": "hard",
+    "difficulty": 5,
+    "passage": "The conventional account of the printing press credits it with spreading new ideas. The mechanism seems self-evident: cheaper books, wider circulation, faster diffusion. But historians of the period have increasingly argued that this account inverts the more important effect. What print changed first was not the spread of the new but the stabilisation of the old.\n\nIn a manuscript culture, every copy differed. Scribes corrected, abbreviated and silently emended, so that two copies of the same work might diverge substantially within a few generations. Print did not eliminate error, but it made error identical across thousands of copies, and therefore visible. A reader in one city could write to a reader in another and refer to the same passage on the same page. Discrepancy became detectable in a way it had never been.\n\nThe consequence was less dramatic than a revolution in ideas and more consequential: the emergence of a shared textual baseline against which claims could be checked. What looks in retrospect like the rapid spread of new theories may owe less to the volume of printed matter than to the fact that, for the first time, a disagreement could be located precisely.",
+    "stem": "The phrase 'less dramatic ... and more consequential' suggests that the writer believes:",
+    "options": [
+      "the significance of a change is not measured by how visible it is",
+      "dramatic changes are usually unimportant",
+      "the printing press had no dramatic effects at all",
+      "historians prefer dramatic explanations to accurate ones"
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "The phrase separates two dimensions: how striking a change appears, and how much it matters.",
+      "The writer places the textual baseline low on drama and high on consequence.",
+      "The general principle implied is that visibility and significance come apart."
+    ],
+    "techniqueTags": ["inference", "implied-principle"],
+    "targetTimeSec": 100,
+    "trapExplanations": {
+      "1": "Overgeneralises: the writer separates drama from consequence in this case, not as a universal rule.",
+      "2": "The passage acknowledges genuine effects on circulation and diffusion.",
+      "3": "The passage credits historians with advancing this very revision — it does not criticise them."
+    }
+  },
+  {
+    "id": "erd-h4",
+    "domain": "english",
+    "topic": "reading",
+    "blockTier": "hard",
+    "difficulty": 5,
+    "passage": "The conventional account of the printing press credits it with spreading new ideas. The mechanism seems self-evident: cheaper books, wider circulation, faster diffusion. But historians of the period have increasingly argued that this account inverts the more important effect. What print changed first was not the spread of the new but the stabilisation of the old.\n\nIn a manuscript culture, every copy differed. Scribes corrected, abbreviated and silently emended, so that two copies of the same work might diverge substantially within a few generations. Print did not eliminate error, but it made error identical across thousands of copies, and therefore visible. A reader in one city could write to a reader in another and refer to the same passage on the same page. Discrepancy became detectable in a way it had never been.\n\nThe consequence was less dramatic than a revolution in ideas and more consequential: the emergence of a shared textual baseline against which claims could be checked. What looks in retrospect like the rapid spread of new theories may owe less to the volume of printed matter than to the fact that, for the first time, a disagreement could be located precisely.",
+    "stem": "Which finding would most strengthen the writer's argument?",
+    "options": [
+      "Scholarly disputes after printing increasingly cited exact page references",
+      "The number of books printed rose sharply in the sixteenth century",
+      "Printed books were cheaper than manuscripts",
+      "Many early printed books reproduced ancient texts"
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "The argument is that print's key effect was a shared baseline enabling precise disagreement.",
+      "Strengthening it means showing that precision in referencing actually increased.",
+      "Exact page citations in disputes is direct evidence of that mechanism."
+    ],
+    "techniqueTags": ["strengthen-argument", "evidence-match"],
+    "targetTimeSec": 105,
+    "trapExplanations": {
+      "1": "Volume supports the conventional account the writer is arguing against, not the revision.",
+      "2": "Price also supports the circulation story rather than the stabilisation story.",
+      "3": "Consistent with 'stabilisation of the old' but does not show the checking mechanism at work. A tempting near-miss."
+    }
+  },
+  {
+    "id": "erd-h5",
+    "domain": "english",
+    "topic": "reading",
+    "blockTier": "hard",
+    "difficulty": 5,
+    "passage": "The conventional account of the printing press credits it with spreading new ideas. The mechanism seems self-evident: cheaper books, wider circulation, faster diffusion. But historians of the period have increasingly argued that this account inverts the more important effect. What print changed first was not the spread of the new but the stabilisation of the old.\n\nIn a manuscript culture, every copy differed. Scribes corrected, abbreviated and silently emended, so that two copies of the same work might diverge substantially within a few generations. Print did not eliminate error, but it made error identical across thousands of copies, and therefore visible. A reader in one city could write to a reader in another and refer to the same passage on the same page. Discrepancy became detectable in a way it had never been.\n\nThe consequence was less dramatic than a revolution in ideas and more consequential: the emergence of a shared textual baseline against which claims could be checked. What looks in retrospect like the rapid spread of new theories may owe less to the volume of printed matter than to the fact that, for the first time, a disagreement could be located precisely.",
+    "stem": "In the context of the passage, 'silently emended' most nearly means:",
+    "options": [
+      "changed without noting the change",
+      "copied without speaking",
+      "removed entire passages",
+      "translated into another language"
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "Use the surrounding list: 'corrected, abbreviated and silently emended'.",
+      "All three are things scribes did to the text, and the result was divergence between copies.",
+      "'Silently' modifies how the change was made — unrecorded, so readers could not tell."
+    ],
+    "techniqueTags": ["vocabulary-in-context", "list-parallelism"],
+    "targetTimeSec": 90,
+    "trapExplanations": {
+      "1": "Takes 'silently' literally as an absence of sound, which the context does not support.",
+      "2": "Too specific — removal is one possible emendation, not the meaning of the phrase.",
+      "3": "Translation is a different activity and is not mentioned in the passage."
+    }
+  }
+]

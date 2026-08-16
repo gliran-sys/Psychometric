@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-ink-900 text-slate-100 font-sans antialiased;
+    /* Prevent the pull-to-refresh gesture from killing a timed section mid-drill. */
+    overscroll-behavior-y: contain;
+  }
+
+  /* Math expressions and English content stay LTR inside the RTL document. */
+  [dir='ltr'] {
+    text-align: left;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-ink-600/60 bg-ink-800/70 p-4 shadow-lg shadow-black/20;
+  }
+
+  .btn {
+    @apply rounded-xl px-4 py-2.5 font-medium transition active:scale-[0.98]
+           disabled:cursor-not-allowed disabled:opacity-40;
+  }
+
+  .btn-primary {
+    @apply btn bg-xp text-ink-900 hover:bg-xp/90;
+  }
+
+  .btn-ghost {
+    @apply btn border border-ink-600 bg-ink-700/50 text-slate-200 hover:bg-ink-700;
+  }
+
+  .input {
+    @apply w-full rounded-lg border border-ink-600 bg-ink-800 px-3 py-2 text-sm text-slate-100
+           outline-none focus:border-xp;
+  }
+
+  /* Answer options: large tap targets, since most drilling happens on a phone. */
+  .option {
+    @apply w-full rounded-xl border border-ink-600 bg-ink-700/40 p-3.5 text-start
+           transition hover:border-ink-600 hover:bg-ink-700 active:scale-[0.99];
+  }
+
+  .option-correct {
+    @apply border-quant bg-quant/15 text-quant;
+  }
+
+  .option-wrong {
+    @apply border-danger bg-danger/15 text-danger;
+  }
+}
+
+/* Numbers read left-to-right even in Hebrew prose — without this, scores and
+   timers can render with their digits reordered. */
+.num {
+  direction: ltr;
+  unicode-bidi: isolate;
+  display: inline-block;
+}

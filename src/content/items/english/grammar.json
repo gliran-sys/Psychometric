@@ -1,0 +1,117 @@
+[
+  {
+    "id": "egr-1",
+    "domain": "english",
+    "topic": "grammar",
+    "blockTier": "easy",
+    "difficulty": 2,
+    "stem": "Neither the manager nor the employees ______ aware of the new policy.",
+    "options": ["were", "was", "is", "has been"],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "With 'neither ... nor', the verb agrees with the nearer subject.",
+      "The nearer subject is 'the employees' — plural.",
+      "So the plural 'were' is correct."
+    ],
+    "techniqueTags": ["subject-verb-agreement", "correlative-conjunctions"],
+    "targetTimeSec": 45,
+    "trapExplanations": {
+      "1": "Agrees with 'the manager', the further subject — the rule uses the nearer one.",
+      "2": "Singular and also shifts the tense out of the sentence's past frame.",
+      "3": "Singular present perfect; both the number and the aspect are wrong here."
+    }
+  },
+  {
+    "id": "egr-2",
+    "domain": "english",
+    "topic": "grammar",
+    "blockTier": "medium",
+    "difficulty": 3,
+    "stem": "By the time the results ______ published, the team had already moved on to the next study.",
+    "options": ["were", "have been", "will be", "are"],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "The main clause uses 'had already moved' — past perfect.",
+      "Past perfect marks the earlier of two past events, so the other clause must be simple past.",
+      "'Were published' is the correct passive simple past."
+    ],
+    "techniqueTags": ["tense-sequence", "passive-voice"],
+    "targetTimeSec": 55,
+    "trapExplanations": {
+      "1": "Present perfect cannot pair with past perfect in this construction.",
+      "2": "Future tense contradicts 'had already moved on'.",
+      "3": "Simple present clashes with the past narrative frame."
+    }
+  },
+  {
+    "id": "egr-3",
+    "domain": "english",
+    "topic": "grammar",
+    "blockTier": "medium",
+    "difficulty": 3,
+    "stem": "The findings, ______ were published last year, have since been widely cited.",
+    "options": ["which", "that", "who", "what"],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "The clause is set off by commas, making it non-restrictive — extra information.",
+      "Non-restrictive clauses about things take 'which', never 'that'.",
+      "'Which' is correct."
+    ],
+    "techniqueTags": ["relative-clauses", "restrictive-vs-non-restrictive"],
+    "targetTimeSec": 55,
+    "trapExplanations": {
+      "1": "'That' introduces restrictive clauses and cannot follow a comma. The most common error in this pattern.",
+      "2": "'Who' refers to people, not findings.",
+      "3": "'What' cannot introduce a relative clause modifying a stated noun."
+    }
+  },
+  {
+    "id": "egr-4",
+    "domain": "english",
+    "topic": "grammar",
+    "blockTier": "hard",
+    "difficulty": 4,
+    "stem": "______ more carefully, the experiment might have produced usable data.",
+    "options": [
+      "Had it been designed",
+      "If it designed",
+      "Designing it",
+      "Unless it was designed"
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "'Might have produced' signals an unreal past conditional.",
+      "The inverted form 'Had it been ...' is the standard way to open such a clause without 'if'.",
+      "It is also passive, which the experiment (the thing designed) requires."
+    ],
+    "techniqueTags": ["conditionals", "inversion", "passive-voice"],
+    "targetTimeSec": 70,
+    "trapExplanations": {
+      "1": "Wrong voice and tense — the experiment did not design anything.",
+      "2": "A dangling participle: it would make the experiment the one doing the designing.",
+      "3": "'Unless' reverses the logic and does not fit the counterfactual."
+    }
+  },
+  {
+    "id": "egr-5",
+    "domain": "english",
+    "topic": "grammar",
+    "blockTier": "hard",
+    "difficulty": 4,
+    "stem": "The report recommends that each department ______ its budget by the end of the quarter.",
+    "options": ["submit", "submits", "submitted", "will submit"],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "'Recommend that' triggers the subjunctive mood in English.",
+      "The subjunctive uses the bare infinitive regardless of the subject.",
+      "So 'submit', not 'submits'."
+    ],
+    "techniqueTags": ["subjunctive", "verbs-of-recommendation"],
+    "targetTimeSec": 65,
+    "trapExplanations": {
+      "1": "The ordinary third-person singular form, which the subjunctive overrides. This is the trap the item is built on.",
+      "2": "Past tense does not fit a recommendation about future action.",
+      "3": "'Will' is not used in subjunctive that-clauses after 'recommend'."
+    }
+  }
+]

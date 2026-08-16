@@ -1,0 +1,271 @@
+[
+  {
+    "id": "esc-e1",
+    "domain": "english",
+    "topic": "sentence-completion",
+    "blockTier": "easy",
+    "difficulty": 1,
+    "stem": "The library is very quiet, so please do not ______ while others are studying.",
+    "options": ["talk loudly", "read books", "sit down", "take notes"],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "Find the logic word: 'so' means the second half is a result of the first.",
+      "The library is quiet — the rule must protect the quiet.",
+      "'Talk loudly' is the only option that would break the quiet."
+    ],
+    "techniqueTags": ["logic-words", "context-clue"],
+    "targetTimeSec": 40,
+    "trapExplanations": {
+      "1": "Reading books is exactly what a library is for — no reason to forbid it.",
+      "2": "Sitting down is silent and unrelated to the noise rule.",
+      "3": "Taking notes is a normal, quiet study activity."
+    }
+  },
+  {
+    "id": "esc-e2",
+    "domain": "english",
+    "topic": "sentence-completion",
+    "blockTier": "easy",
+    "difficulty": 1,
+    "stem": "Although the weather was cold, the children ______ playing outside all afternoon.",
+    "options": ["kept", "stopped", "avoided", "refused"],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "'Although' signals contrast between the two halves.",
+      "Cold weather would normally stop outdoor play, so the second half must go against that.",
+      "'Kept playing' is the contrast the sentence needs."
+    ],
+    "techniqueTags": ["logic-words", "contrast"],
+    "targetTimeSec": 40,
+    "trapExplanations": {
+      "1": "Stopping because of cold is the expected outcome, which cancels the contrast that 'Although' sets up.",
+      "2": "'Avoided playing' also matches expectation rather than contradicting it.",
+      "3": "'Refused' would need an infinitive ('refused to play') and, like the others, removes the contrast."
+    }
+  },
+  {
+    "id": "esc-e3",
+    "domain": "english",
+    "topic": "sentence-completion",
+    "blockTier": "easy",
+    "difficulty": 2,
+    "stem": "The instructions were so ______ that everyone understood them immediately.",
+    "options": ["clear", "confusing", "lengthy", "technical"],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "'so ... that' introduces a result: everyone understood immediately.",
+      "Work backwards from the result to the cause.",
+      "Only 'clear' produces immediate understanding."
+    ],
+    "techniqueTags": ["cause-and-result", "logic-words"],
+    "targetTimeSec": 45,
+    "trapExplanations": {
+      "1": "Confusing instructions would produce the opposite result.",
+      "2": "Length alone does not explain immediate understanding — long instructions usually slow it.",
+      "3": "Technical instructions typically make understanding harder, not instant."
+    }
+  },
+  {
+    "id": "esc-e4",
+    "domain": "english",
+    "topic": "sentence-completion",
+    "blockTier": "easy",
+    "difficulty": 2,
+    "stem": "She had to ______ her trip because of an unexpected illness.",
+    "options": ["postpone", "enjoy", "extend", "describe"],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "'because of an unexpected illness' gives the cause — something negative and disruptive.",
+      "The verb must be a reaction to a problem.",
+      "'Postpone' is the natural response to falling ill before a trip."
+    ],
+    "techniqueTags": ["cause-and-result", "vocabulary"],
+    "targetTimeSec": 45,
+    "trapExplanations": {
+      "1": "Illness is not a reason to enjoy a trip — the polarity is wrong.",
+      "2": "Extending a trip because of illness contradicts the disruption the sentence describes.",
+      "3": "Describing a trip is unrelated to being ill."
+    }
+  },
+  {
+    "id": "esc-m1",
+    "domain": "english",
+    "topic": "sentence-completion",
+    "blockTier": "medium",
+    "difficulty": 3,
+    "stem": "The researcher's conclusions were widely criticized as ______, since they rested on a single small sample.",
+    "options": ["premature", "innovative", "thorough", "conventional"],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "'since' gives the reason: the evidence was a single small sample.",
+      "Weak evidence makes a conclusion unjustified at this stage.",
+      "'Premature' means drawn too early — exactly the criticism the reason supports."
+    ],
+    "techniqueTags": ["cause-and-result", "academic-vocabulary"],
+    "targetTimeSec": 55,
+    "trapExplanations": {
+      "1": "'Innovative' is positive, but the sentence says the work was criticized.",
+      "2": "'Thorough' directly contradicts a single small sample.",
+      "3": "'Conventional' is not a criticism that follows from weak sampling."
+    }
+  },
+  {
+    "id": "esc-m2",
+    "domain": "english",
+    "topic": "sentence-completion",
+    "blockTier": "medium",
+    "difficulty": 3,
+    "stem": "Far from being ______, the new policy actually increased the very inequality it was designed to reduce.",
+    "options": ["effective", "harmful", "expensive", "temporary"],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "'Far from being X' means the opposite of X turned out to be true.",
+      "The outcome stated is that inequality increased — a failure.",
+      "So X must be the success word: 'effective'."
+    ],
+    "techniqueTags": ["logic-words", "negation-structure"],
+    "targetTimeSec": 60,
+    "trapExplanations": {
+      "1": "'Far from being harmful' would mean it was not harmful — but the sentence describes harm. Polarity reversed.",
+      "2": "Cost is never mentioned; the contrast is about effect, not price.",
+      "3": "Duration is irrelevant to the inequality outcome described."
+    }
+  },
+  {
+    "id": "esc-m3",
+    "domain": "english",
+    "topic": "sentence-completion",
+    "blockTier": "medium",
+    "difficulty": 3,
+    "stem": "The witness's account was ______; each retelling contradicted the previous one.",
+    "options": ["inconsistent", "detailed", "convincing", "brief"],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "The semicolon introduces an explanation of the blank.",
+      "'Each retelling contradicted the previous one' defines the problem.",
+      "'Inconsistent' names exactly that pattern."
+    ],
+    "techniqueTags": ["punctuation-clue", "definition-in-context"],
+    "targetTimeSec": 55,
+    "trapExplanations": {
+      "1": "An account can be detailed and still contradictory — 'detailed' does not explain the contradictions.",
+      "2": "Contradictions make an account less convincing, not more.",
+      "3": "Brevity has nothing to do with self-contradiction."
+    }
+  },
+  {
+    "id": "esc-m4",
+    "domain": "english",
+    "topic": "sentence-completion",
+    "blockTier": "medium",
+    "difficulty": 4,
+    "stem": "Rather than ______ the criticism, the author addressed each objection point by point.",
+    "options": ["dismissing", "answering", "considering", "inviting"],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "'Rather than X, Y' means Y happened instead of X, so X and Y are opposed.",
+      "Y is 'addressed each objection point by point' — engaging seriously.",
+      "X must be the opposite: 'dismissing'."
+    ],
+    "techniqueTags": ["logic-words", "contrast-structure"],
+    "targetTimeSec": 60,
+    "trapExplanations": {
+      "1": "'Answering' is a synonym for what the author did, so the contrast collapses. This is the strongest distractor.",
+      "2": "'Considering' also aligns with engaging rather than opposing it.",
+      "3": "'Inviting' criticism is not the opposite of addressing it."
+    }
+  },
+  {
+    "id": "esc-h1",
+    "domain": "english",
+    "topic": "sentence-completion",
+    "blockTier": "hard",
+    "difficulty": 4,
+    "stem": "The committee's decision was less a matter of principle than of ______: no other option could have been funded that year.",
+    "options": ["necessity", "conviction", "preference", "negligence"],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "'less a matter of X than of Y' establishes Y as the real driver, opposed to X.",
+      "X is 'principle', so Y must be something practical rather than ideological.",
+      "The colon explains: nothing else could be funded — that is necessity."
+    ],
+    "techniqueTags": ["comparative-structure", "punctuation-clue"],
+    "targetTimeSec": 70,
+    "trapExplanations": {
+      "1": "'Conviction' is a near-synonym of principle, so it cannot be the contrasting term.",
+      "2": "'Preference' implies a free choice, but the explanation says no other option existed.",
+      "3": "'Negligence' introduces blame that the explanation does not support."
+    }
+  },
+  {
+    "id": "esc-h2",
+    "domain": "english",
+    "topic": "sentence-completion",
+    "blockTier": "hard",
+    "difficulty": 5,
+    "stem": "What the theory gains in ______ it loses in precision: it accounts for every case but predicts none of them exactly.",
+    "options": ["scope", "elegance", "rigor", "obscurity"],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "'Gains in X, loses in Y' sets up a trade-off between two opposed virtues.",
+      "The colon explains: it accounts for every case (broad) but predicts none exactly (imprecise).",
+      "'Scope' is the breadth that is being traded away against precision."
+    ],
+    "techniqueTags": ["trade-off-structure", "academic-vocabulary"],
+    "targetTimeSec": 75,
+    "trapExplanations": {
+      "1": "'Elegance' is a plausible virtue but the explanation is about breadth of coverage, not beauty.",
+      "2": "'Rigor' is close to precision rather than opposed to it, so it breaks the trade-off.",
+      "3": "'Obscurity' is a defect, and the sentence requires something the theory gains."
+    }
+  },
+  {
+    "id": "esc-h3",
+    "domain": "english",
+    "topic": "sentence-completion",
+    "blockTier": "hard",
+    "difficulty": 5,
+    "stem": "Critics accused the memoir of being ______, noting that its author appeared in every scene as the sole voice of reason.",
+    "options": ["self-serving", "understated", "fragmented", "derivative"],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "The participle clause after the comma supplies the evidence for the accusation.",
+      "The evidence: the author is always present and always right.",
+      "'Self-serving' is the criticism that this evidence supports."
+    ],
+    "techniqueTags": ["evidence-clause", "tone"],
+    "targetTimeSec": 75,
+    "trapExplanations": {
+      "1": "'Understated' is the opposite of casting oneself as the sole voice of reason.",
+      "2": "'Fragmented' concerns structure, which the evidence says nothing about.",
+      "3": "'Derivative' means unoriginal — unrelated to the author's self-portrayal."
+    }
+  },
+  {
+    "id": "esc-h4",
+    "domain": "english",
+    "topic": "sentence-completion",
+    "blockTier": "hard",
+    "difficulty": 5,
+    "stem": "The reform was ______ in intent but ______ in execution, which is why its supporters and its critics can both cite it as evidence.",
+    "options": [
+      "ambitious ... halting",
+      "modest ... halting",
+      "ambitious ... swift",
+      "cautious ... deliberate"
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "'but' demands opposition between intent and execution.",
+      "The final clause explains why both sides claim it: the aim pleases supporters, the delivery pleases critics.",
+      "'Ambitious' intent with 'halting' execution creates exactly that split."
+    ],
+    "techniqueTags": ["dual-blank", "contrast-structure"],
+    "targetTimeSec": 85,
+    "trapExplanations": {
+      "1": "'Modest ... halting' are consistent with each other, so 'but' has nothing to oppose.",
+      "2": "'Ambitious ... swift' is a success on both counts, leaving critics nothing to cite.",
+      "3": "'Cautious ... deliberate' are near-synonyms, again removing the required contrast."
+    }
+  }
+]

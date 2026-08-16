@@ -1,0 +1,212 @@
+[
+  {
+    "id": "ls-analogies",
+    "track": "pet",
+    "topic": "analogies",
+    "title": "אנלוגיות — משפט היחס",
+    "minutes": 6,
+    "procedure": [
+      "נסח משפט יחס מלא בין שתי המילים, בעברית רגילה. לא 'קשור ל' — משפט אמיתי.",
+      "בדוק שהמשפט מבחין: אם הוא מתאים ליותר מתשובה אחת, הוא רחב מדי. חדד אותו.",
+      "הצב כל אחת מארבע התשובות באותו משפט בדיוק, באותו סדר.",
+      "אם שתי תשובות שורדות, הוסף למשפט ממד נוסף — מוחלטוּת, כיווניות, או גוון חיובי/שלילי."
+    ],
+    "body": "אנלוגיה אינה שאלת אוצר מילים אלא שאלת יחסים. אתה יכול להכיר את כל ארבע המילים ועדיין לטעות, ואתה יכול לא להכיר מילה אחת ובכל זאת לפתור.\n\nהכלי היחיד שעובד הוא **משפט היחס**. במקום לחשוב 'רופא וחולה קשורים לרפואה', נסח: 'רופא הוא בעל מקצוע שמעניק טיפול לחולה'. כעת יש לך תבנית שאפשר לבדוק מולה.\n\nהטעות השכיחה היא משפט רחב מדי. 'סכין קשור לחיתוך' מתאים גם ל'עיפרון קשור לנייר'. 'סכין הוא כלי שייעודו לבצע חיתוך' מתאים רק לתשובה אחת.\n\nכשנשארות שתי תשובות, ההכרעה כמעט תמיד באחד משלושה ממדים:\n\n- **מוחלטוּת** — 'אטום' הוא בלתי אפשרי, לא 'קשה'. אלה שתי דרגות שונות.\n- **כיווניות** — כלי:פעולה אינו זהה לפעולה:כלי. סדר האיברים קובע.\n- **גוון** — 'להגזים' נושא פסול; 'לצעוק' לא בהכרח.\n\nאנלוגיות הן סוג השאלות המהיר ביותר בפרק המילולי. בפרק של עשרים דקות אתה רוצה לסיים אותן בכ-35 שניות לשאלה, כדי לפנות זמן להבנת הנקרא."
+  },
+  {
+    "id": "ls-sentence-completion",
+    "track": "pet",
+    "topic": "sentence-completion",
+    "title": "השלמת משפטים — קרא את מילת הקישור קודם",
+    "minutes": 6,
+    "procedure": [
+      "אתר את מילת הקישור לפני שאתה מסתכל על התשובות: למרות, אך, משום, אלא, ככל ש.",
+      "קבע את הכיוון: ניגוד, סיבתיות, פירוט או יחס ישר.",
+      "קרא את סוף המשפט — הוא קבוע ואינו ניתן לשינוי, והוא מכתיב את התשובה.",
+      "בשאלות עם שני חסרים, פסול לפי החסר הקל יותר תחילה, ואז הכרע בין הנותרות."
+    ],
+    "body": "השלמת משפטים נראית כמו שאלת אוצר מילים, אבל היא בעיקר שאלת מבנה לוגי. מילת הקישור קובעת את התשובה הרבה יותר מאשר משמעות המילים.\n\n**מפת מילות הקישור:**\n\n- ניגוד: למרות, אף ש, אך, ואילו, לעומת זאת → שני החלקים מנוגדים בכיוונם.\n- סיבתיות: משום, שכן, ולכן, כתוצאה → שני החלקים באותו כיוון.\n- פירוט: נקודתיים, כלומר, דהיינו → החלק השני מסביר את הראשון, ללא ניגוד.\n- יחס ישר: ככל ש... כן → שני הגדלים נעים יחד.\n- החלפה: לא... אלא → החלק הראשון נפסל, השני נטען.\n\n**הכלל החשוב ביותר**: סוף המשפט קבוע. אם כתוב 'הצלחה מסחררת', שום תשובה עם 'נכשל' אינה אפשרית, גם אם החלק הראשון שלה נשמע נהדר. נבחנים רבים בוחרים לפי החצי הראשון בלבד — זו הטעות היקרה ביותר בסוג השאלה הזה.\n\n**שני חסרים**: אל תנסה להכריע בשניהם בבת אחת. מצא את החסר שבו ההכרעה ברורה, פסול לפיו שתיים או שלוש תשובות, ורק אז בדוק את השני."
+  },
+  {
+    "id": "ls-logic",
+    "track": "pet",
+    "topic": "logic",
+    "title": "היגיון והסקה — מה נובע בהכרח",
+    "minutes": 7,
+    "procedure": [
+      "תרגם את הנתונים לצורה סימבולית: כל A הם B, אם P אז Q, חלק מ-A הם B.",
+      "זהה את סוג השאלה: מה נובע, מה מחליש, על מה מסתמך.",
+      "בשאלות 'נובע בהכרח' — פסול כל תשובה שמוסיפה מידע שאינו בנתונים.",
+      "בשאלות סיבתיות — חפש כיוון הפוך או גורם שלישי."
+    ],
+    "body": "שאלות היגיון בודקות דבר אחד: האם אתה מבחין בין מה שנובע לבין מה שסביר. תשובה יכולה להיות נכונה במציאות ועדיין שגויה בשאלה, אם היא אינה נובעת מהנתונים.\n\n**שתי צורות היסק תקפות:**\n\n- מודוס פוננס: אם P אז Q. נתון P. מסקנה: Q.\n- מודוס טולנס: אם P אז Q. נתון לא Q. מסקנה: לא P.\n\n**שני כשלים שנראים תקפים ואינם:**\n\n- אישוש התוצאה: אם P אז Q. נתון Q. **לא נובע** P. זו המלכודת השכיחה ביותר.\n- שלילת התנאי: אם P אז Q. נתון לא P. **לא נובע** לא Q.\n\nההבחנה המעשית: 'כל בעלי הרישיון מעל 17' אינו אומר שכל מי שמעל 17 הוא בעל רישיון. גיל הוא תנאי **הכרחי**, לא **מספיק**.\n\n**שאלות החלשה וחיזוק**: כשמסקנה טוענת ש-X גורם ל-Y מתוך מתאם, הדרך החזקה להחליש היא להראות שהכיוון הפוך (Y גורם ל-X) או שגורם שלישי מסביר את שניהם. ההחלשה החזקה תמיד תוקפת את המנגנון, לא את הנתונים.\n\n**שאלות הנחה**: השתמש במבחן השלילה. שלול את התשובה המוצעת — אם הטיעון קורס, זו ההנחה. אם הוא שורד, לא."
+  },
+  {
+    "id": "ls-reading",
+    "track": "pet",
+    "topic": "reading",
+    "title": "הבנת הנקרא — שאלה קודם, טקסט אחר כך",
+    "minutes": 7,
+    "procedure": [
+      "קרא את הטקסט קריאה אחת מהירה למיפוי מבנה בלבד: מה כל פסקה עושה.",
+      "קרא את השאלה וסמן את מילת השאלה: סיבה, תפקיד, עמדה, יישום.",
+      "חזור לטקסט ואתר את הקטע הרלוונטי לפני שאתה מסתכל על התשובות.",
+      "פסול תשובות שמוסיפות מידע, מכלילות יתר על המידה, או הופכות סיוג לשלילה."
+    ],
+    "body": "הבנת הנקרא היא הצרכן הגדול ביותר של זמן בפרק המילולי, ולכן היא גם המקום שבו סדר העבודה משנה הכי הרבה.\n\n**אל תקרא לעומק בפעם הראשונה.** קריאה ראשונה נועדה למפות: פסקה ראשונה מציגה תפיסה מקובלת, פסקה שנייה מערערת עליה, פסקה שלישית מסייגת. אם אתה יודע מה כל פסקה **עושה**, תמצא כל פרט בשניות.\n\n**סוגי השאלות ומה כל אחת דורשת:**\n\n- **איתור מפורש** — התשובה כתובה בטקסט. חפש מילות סימון: 'משום', 'לכן', 'לא... אלא'.\n- **תפקיד** — מה המשפט או הפסקה עושים, לא מה הם אומרים. סיוג? הדגמה? התנגדות?\n- **עמדת הכותב** — כמעט תמיד במשפט המסכם. שים לב לסיוגים: כותב שכתב 'אך אינו מוחק את הפער' אינו מחזיק בעמדה קיצונית.\n- **יישום** — קח את הכלל מהטקסט והפעל אותו על מקרה חדש. אם הטקסט אומר שאין מידע על טווח מסוים, התשובה הזהירה היא הנכונה.\n\n**שלוש מלכודות קבועות:**\n\n1. תשובה נכונה במציאות אך לא בטקסט.\n2. תשובה שמשתמשת במילה מהטקסט אך הופכת את משמעותה.\n3. הכללה שהטקסט סייג במפורש.\n\nאם הטקסט אומר 'לא בהכרח', תשובה שאומרת 'תמיד' שגויה — גם אם כל השאר בה נכון."
+  },
+  {
+    "id": "ls-essay",
+    "track": "pet",
+    "topic": "essay",
+    "title": "מטלת הכתיבה — 12.5% מהציון ב-30 דקות",
+    "minutes": 7,
+    "procedure": [
+      "5 דקות: החלט עמדה וכתוב בצד שני נימוקים + נימוק נגדי אחד. אל תתחיל לכתוב לפני כן.",
+      "20 דקות: כתוב לפי מבנה קבוע — פתיחה, נימוק, נימוק, עמדה נגדית ותשובה, סיום.",
+      "5 דקות: הגהה. תחביר, מילות קישור, כתיב.",
+      "ספור שורות: היעד הוא 25-50. פחות מ-25 נענש, יותר מ-50 מבזבז זמן."
+    ],
+    "body": "אחרי הרפורמה החיבור שווה כרבע מציון החשיבה המילולית, והמילולי הוא מחצית מהציון הכללי — כלומר החיבור לבדו הוא כ-12.5% מהציון הסופי. זהו יחס התשואה הטוב ביותר במבחן כולו, ורוב הנבחנים העצמאיים כמעט לא מתאמנים עליו.\n\n**המבנה שעובד — חמש פסקאות:**\n\n1. **פתיחה** (2-3 שורות): הצג את הסוגיה במשפט אחד וקבע עמדה מפורשת. אל תפתח בשאלה רטורית.\n2. **נימוק ראשון** (6-8 שורות): טענה, הסבר, דוגמה.\n3. **נימוק שני** (6-8 שורות): טענה שונה מהותית מהראשונה, לא ניסוח אחר שלה.\n4. **עמדה נגדית ותשובה** (6-8 שורות): הצג את הטענה הנגדית בהגינות, ואז השב עליה. **זה הסעיף שמבדיל חיבור בינוני מטוב**, וזה הסעיף שהכי הרבה נבחנים מדלגים עליו.\n5. **סיום** (2-3 שורות): מסקנה שאינה חזרה מילולית על הפתיחה.\n\n**מה נבדק**: הציון ניתן בשני ממדים — תוכן ולשון — על ידי שני בודקים. תוכן הוא בהירות העמדה, איכות הנימוקים והמבנה. לשון היא תחביר, משלב ומילות קישור.\n\n**טעויות שעולות ביוקר**: עמדה שמשתנה באמצע החיבור; שני נימוקים שהם למעשה אותו נימוק; משלב דיבורי; היעדר פסקאות.\n\n**תרגול נכון**: כתוב בזמן אמת של 30 דקות, ואז דרג את עצמך לפי הרובריקה. שלושה חיבורים מתוזמנים שווים יותר מעשרה חיבורים ללא שעון."
+  },
+  {
+    "id": "ls-algebra",
+    "track": "pet",
+    "topic": "algebra",
+    "title": "אלגברה — הצבה מנצחת פתרון",
+    "minutes": 6,
+    "procedure": [
+      "לפני שאתה פותר, שאל: אפשר להציב מספרים? אפשר להציב תשובות?",
+      "בביטויים עם נעלמים ויחסים — הצב מספר נוח (10, 100) במקום לפתור סימבולית.",
+      "בשאלות 'מהו x' — נסה להציב את התשובות במשוואה, מהאמצע החוצה.",
+      "בדוק תמיד מה נשאל: x או 3x? הסכום או האיבר?"
+    ],
+    "body": "החשיבה הכמותית אינה בוחנת מהירות חישוב אלא בחירת דרך. כמעט בכל שאלה יש דרך ארוכה ודרך קצרה, והפרק בן עשרים הדקות מתוכנן כך שהדרך הארוכה לא תספיק.\n\n**הצבת מספרים** — כשיש יחסים או אחוזים בלי מספרים מוחלטים, בחר מספר נוח. 'מלבן שאורכו גדול ב-50% מרוחבו' — קח רוחב 10, אורך 15. פתרת בעל פה מה שלוקח שלוש שורות אלגברה.\n\n**הצבת תשובות** — כשהשאלה מבקשת ערך יחיד והתשובות מספריות, התחל מהאמצע. אם קיבלת יותר מדי, אתה יודע לאיזה כיוון להמשיך, וסיימת בשני ניסיונות.\n\n**זהויות ששוות זמן**:\n- (a+b)² = a² + 2ab + b², ולכן a² + b² = (a+b)² − 2ab.\n- a² − b² = (a−b)(a+b).\n- וייטה: במשוואה x² + px + q = 0, סכום השורשים הוא −p ומכפלתם q.\n\n**מערכות משוואות**: לפני שאתה פותר את המערכת כולה, בדוק מה נשאל. אם נשאל x − y, לעיתים חיסור המשוואות זו מזו נותן את התשובה בשורה אחת.\n\n**המלכודת הנפוצה ביותר** אינה טעות חישוב אלא עצירה שלב אחד לפני הסוף — מציאת 3x כשנשאל x, או מציאת צלע כשנשאל שטח. סמן במעגל את מה שנשאל לפני שאתה מתחיל."
+  },
+  {
+    "id": "ls-geometry",
+    "track": "pet",
+    "topic": "geometry",
+    "title": "גאומטריה — הנוסחאות שחייבים בעל פה",
+    "minutes": 6,
+    "procedure": [
+      "שרטט את הצורה, גם אם היא מתוארת במילים בלבד.",
+      "סמן על השרטוט כל נתון מספרי מיד עם קריאתו.",
+      "זהה את הנוסחה הרלוונטית לפני שאתה מחשב.",
+      "בדוק סבירות: שטח לא יכול להיות קטן מצלע, יתר תמיד ארוך מכל ניצב."
+    ],
+    "body": "בגאומטריה אין קיצורי דרך במקום ידע: הנוסחאות חייבות להיות בעל פה, כי אין דף נוסחאות ואין מחשבון.\n\n**המינימום שחייב להיות אוטומטי:**\n\n- משולש: שטח = (בסיס × גובה)/2. סכום זוויות = 180°.\n- פיתגורס: c² = a² + b². שלשות מוכרות: 3-4-5, 5-12-13, 8-15-17.\n- מלבן: היקף = 2(a+b), שטח = a·b.\n- ריבוע שצלעו a: אלכסון = a√2. **קיצור**: שטח לפי אלכסון d הוא d²/2.\n- מעגל: היקף = 2πr, שטח = πr². הבלבול בין השתיים הוא הטעות הנפוצה ביותר בנושא.\n- טרפז: שטח = ((בסיס+בסיס) × גובה)/2.\n\n**דמיון צורות** — הכלל שהכי הרבה נופלים בו: אם יחס הצלעות הוא k, יחס השטחים הוא k² ויחס הנפחים k³. יחס צלעות 2:3 נותן יחס שטחים 4:9, לא 2:3.\n\n**תמיד שרטט.** גם כשהשאלה מילולית לחלוטין. שרטוט גרוע עדיף על דמיון מדויק, כי הוא מונע את הטעות של ערבוב נתונים.\n\n**בדיקת סבירות** חוסכת שאלות שלמות: אם קיבלת יתר קצר מניצב, טעית. אם קיבלת שטח שלילי, טעית."
+  },
+  {
+    "id": "ls-word-problems",
+    "track": "pet",
+    "topic": "word-problems",
+    "title": "בעיות מילוליות — תרגם לפני שאתה פותר",
+    "minutes": 7,
+    "procedure": [
+      "הגדר במפורש מה הנעלם: 'x = גיל הבן היום'. כתוב את זה.",
+      "תרגם כל משפט בנפרד למשוואה, לפי סדר הופעתו.",
+      "פתור, ואז חזור להגדרה ובדוק שאתה מדווח על מה שנשאל.",
+      "הצב את התשובה חזרה בתנאי המקורי כבדיקה."
+    ],
+    "body": "בעיות מילוליות נכשלות כמעט תמיד בשלב התרגום, לא בשלב הפתרון. ההשקעה של עשר שניות בהגדרת הנעלם חוסכת את רוב הטעויות.\n\n**דרך, זמן ומהירות**: v = s/t. שתי נקודות שנופלים בהן:\n- **מהירות ממוצעת** היא סך הדרך חלקי סך הזמן — לעולם לא ממוצע המהירויות, אלא אם הזמנים שווים.\n- **תנועה זה לקראת זה**: המהירויות מתחברות. **תנועה באותו כיוון**: המהירויות נחסרות.\n\n**בעיות קצב ועבודה**: הזמנים אינם מתחברים — הקצבים מתחברים. פועל שמסיים ב-6 שעות עובד בקצב 1/6 לשעה. יחד עם פועל של 1/12: הקצב 1/4, והזמן 4 שעות. בדיקת סבירות מיידית: עבודה משותפת תמיד מהירה מכל אחד לבדו.\n\n**בעיות תמיסה**: זהה את הגודל שאינו משתנה. בהוספת מים, **כמות המלח קבועה** — רק הנפח גדל. בנה את המשוואה סביב הקבוע.\n\n**בעיות גיל**: הפרש הגילים קבוע לנצח. הטעות הכמעט בלתי נמנעת היא לדווח את הגיל בעוד x שנים כשנשאל הגיל היום. הגדרת הנעלם בכתב מונעת בדיוק את זה.\n\n**ממוצע משוקלל**: כשהקבוצות אינן שוות בגודלן, ממוצע הממוצעים שגוי. חשב סכומים, חבר, וחלק בסך הפריטים."
+  },
+  {
+    "id": "ls-ratios-percents",
+    "track": "pet",
+    "topic": "ratios-percents",
+    "title": "יחס ואחוזים — הבסיס קובע הכול",
+    "minutes": 6,
+    "procedure": [
+      "בכל שאלת אחוזים שאל: אחוז ממה? זהה את הבסיס במפורש.",
+      "לשינוי באחוזים השתמש במקדמים: עלייה של 20% היא ×1.2, ירידה של 20% היא ×0.8.",
+      "שינויים עוקבים מוכפלים, לעולם לא מתחברים.",
+      "ביחס a:b, חבר את החלקים וחלק את השלם — אל תתייחס ל-a/b כשבר מהשלם."
+    ],
+    "body": "אחוזים הם הנושא שבו הטעויות הכי צפויות, כי כמעט כולן נובעות משאלה אחת שלא נשאלה: **אחוז ממה**.\n\n**שיעור שינוי** מחושב תמיד ביחס לערך ההתחלתי. מ-250 ל-300: השינוי הוא 50/250 = 20%, לא 50/300. הבסיס הוא המצב הקודם.\n\n**שינויים עוקבים** — הכלל שמכריע יותר שאלות מכל אחר: המקדמים מוכפלים.\n- עלייה של 25% ואז ירידה של 20%: 1.25 × 0.8 = 1.0. **אין שינוי.**\n- שתי הנחות של 10%: 0.9 × 0.9 = 0.81, כלומר הנחה כוללת של 19%, לא 20%.\n\nההנחה השנייה קטנה יותר כי היא מחושבת על סכום שכבר הוקטן.\n\n**אחוז הפוך** — מחיר אחרי הנחה של 20% הוא 160; מהו המקורי? המחיר הנוכחי הוא 80% מהמקורי, ולכן 160/0.8 = 200. **לא** 160 × 1.2, שהוא 192. הוספה והורדה של אותו אחוז מחושבות על בסיסים שונים.\n\n**יחסים** — ביחס 3:5 מתוך 40: סך החלקים 8, כל חלק שווה 5, ולכן 15 ו-25. אל תתייחס ל-3/5 כחלק מהשלם.\n\n**שרשור יחסים** — נתון a:b = 2:3 ו-b:c = 4:5. השווה את b: הרחב את הראשון פי 4 (8:12) ואת השני פי 3 (12:15). כעת a:c = 8:15."
+  },
+  {
+    "id": "ls-data-interpretation",
+    "track": "pet",
+    "topic": "data-interpretation",
+    "title": "הסקה מתרשים — קרא את הכותרת לפני הנתונים",
+    "minutes": 5,
+    "procedure": [
+      "קרא כותרת, יחידות ומקרא לפני שאתה מסתכל על מספר אחד.",
+      "שים לב ליחידות: אלפים? אחוזים? מיליוני ש\"ח?",
+      "אמת שאתה קורא את השורה או הקטגוריה שנשאלה — לא את השכנה.",
+      "הבחן בין שינוי מוחלט לשיעור שינוי; השאלה כמעט תמיד מבקשת את השני."
+    ],
+    "body": "שאלות תרשים הן מהמהירות בפרק אם קוראים נכון, ומהמסוכנות אם לא. כמעט כל הטעויות הן טעויות קריאה, לא טעויות חישוב.\n\n**סדר עבודה קבוע:**\n\n1. כותרת — על מה התרשים בכלל.\n2. יחידות — 'באלפי ש\"ח' משנה כל תשובה.\n3. מקרא — איזה צבע או עמודה שייכים למה.\n4. רק אז — השאלה, ואיתה איזו קטגוריה בדיוק מבוקשת.\n\n**ההבחנה המכרעת: מוחלט מול יחסי.** אפליקציה שגדלה מ-100 ל-110 גדלה ב-10 יחידות אך רק ב-10%. אפליקציה שגדלה מ-40 ל-60 גדלה ב-20 יחידות אך ב-50%. השאלה 'היכן הגידול הגדול ביותר' כמעט תמיד מתכוונת לשיעור, והתשובה כמעט תמיד אינה המספר הגדול ביותר בטבלה.\n\n**אחוז מאחוז** — 35% מתלמידי בית הספר לומדים מדעים, ו-40% מהם בנות. מספר הבנות הוא 40% מתוך ה-35%, לא 40% מסך התלמידים. חשב בשני שלבים מפורשים.\n\n**חלק מהשלם** — כשמבקשים איזה חלק מהווה קטגוריה, חשב תחילה את הסך הכולל. הטעות הרווחת היא להשוות לקטגוריה הגדולה במקום לסכום."
+  },
+  {
+    "id": "ls-en-sentence-completion",
+    "track": "amirnet",
+    "topic": "sentence-completion",
+    "title": "Sentence Completion — find the logic word first",
+    "minutes": 5,
+    "procedure": [
+      "Cover the options. Read the sentence and find the logic word: although, because, so, rather than, far from.",
+      "Decide the direction: contrast, cause, explanation or trade-off.",
+      "Predict the missing word in your own words before looking at the choices.",
+      "Match your prediction to an option; eliminate any option that reverses the direction."
+    ],
+    "body": "This is the block type you will see most on AMIRNET — three separate blocks of it. It rewards structure reading far more than vocabulary size.\n\n**The direction words that decide the answer:**\n\n- Contrast: although, though, however, yet, while, despite, far from → the two halves oppose.\n- Cause/result: because, since, so, therefore, as a result → the two halves agree.\n- Explanation: colon, semicolon, that is → the second half defines the first.\n- Trade-off: gains in X, loses in Y; less a matter of X than of Y → X and Y are opposed virtues.\n\n**Predict before you look.** If you read the options first, a familiar word will pull you toward it regardless of logic. Covering the options and predicting is the single habit that raises accuracy fastest on this type.\n\n**Watch the double negative structures.** 'Far from being effective, the policy increased inequality' — 'far from X' asserts the *opposite* of X. Students who read quickly pick the word matching the outcome instead of the word being denied.\n\n**Vocabulary is still the floor.** You cannot reason your way to a word you have never met. This is why the vocabulary trainer runs daily alongside these drills — the two are one system, not two."
+  },
+  {
+    "id": "ls-en-restatement",
+    "track": "amirnet",
+    "topic": "restatement",
+    "title": "Restatement — meaning must survive exactly",
+    "minutes": 6,
+    "procedure": [
+      "Identify the logical skeleton: cause, condition, quantifier, time order, modality.",
+      "Check each option against the skeleton, not against the wording.",
+      "Reject any option that strengthens or weakens certainty.",
+      "Reject any option that reverses direction of cause or time."
+    ],
+    "body": "Restatement is not paraphrase — it is logical equivalence. An option can use every word of the original and still be wrong, and the correct answer often shares almost no vocabulary with the stem.\n\n**The five things that must survive unchanged:**\n\n1. **Quantifiers.** 'Few' is not 'none'. 'Not all' is not 'none'. This is the most frequently exploited trap on the test.\n2. **Modality.** 'Might have' is not 'did'. 'Could' is not 'will'. Watch for options that upgrade a hedge into a certainty — 'certainly', 'definitely', 'always'.\n3. **Direction of cause.** 'The meeting was cancelled because he was ill' is not 'he became ill because of the cancellation'.\n4. **Time order.** 'Only began after X' entails that nothing happened before X.\n5. **Conditionals.** 'Unless X, not Y' makes X *necessary*, not *sufficient*. An option saying X guarantees Y has overstated it.\n\n**Counterfactuals** deserve their own note. 'Had the warning been issued earlier...' means the warning was *not* issued earlier. Any option treating it as something that happened is wrong.\n\n**Practical method**: strip the sentence to a skeleton — 'some X not Y', 'if A then B', 'X caused Y' — and test the four options against the skeleton. Reading for feel rather than structure is what the distractors are built to punish."
+  },
+  {
+    "id": "ls-en-reading",
+    "track": "amirnet",
+    "topic": "reading",
+    "title": "Reading Comprehension — question first, then hunt",
+    "minutes": 6,
+    "procedure": [
+      "Skim the passage once for structure only: what does each paragraph do?",
+      "Read the question and identify its type before returning to the text.",
+      "Locate the relevant lines, then answer in your own words.",
+      "Only then read the options, and eliminate anything the passage does not say."
+    ],
+    "body": "The reading block is the longest single block on AMIRNET — around 15 minutes for five questions — so it is where poor method costs the most.\n\n**Skim for function, not content.** On the first pass you want a one-line label per paragraph: 'conventional view', 'the objection', 'the qualification'. That map lets you find any detail in seconds. Reading deeply first means reading twice.\n\n**Question types and what each needs:**\n\n- **Explicit detail** — the answer is written down. Look for signal words: 'because', 'therefore', 'not ... but'.\n- **Function** — what a sentence *does*: qualifies, illustrates, objects. Openers like 'Still', 'This does not mean' are giveaways.\n- **Vocabulary in context** — ignore the dictionary meaning you know; use the surrounding list or contrast.\n- **Inference** — one step beyond the text, never two. If you need an extra assumption, it is the wrong option.\n- **Strengthen/weaken** — attack or support the *mechanism* the author proposed, not the topic generally.\n\n**The three standing traps:**\n\n1. True in the world, but not stated in the passage.\n2. Uses a word from the passage while reversing its meaning.\n3. Turns the author's qualification into a flat claim — 'may' becomes 'always'.\n\nIf the passage hedges, the correct answer hedges."
+  },
+  {
+    "id": "ls-en-grammar",
+    "track": "amirnet",
+    "topic": "grammar",
+    "title": "Grammar — the handful of rules actually tested",
+    "minutes": 5,
+    "procedure": [
+      "Find the subject and the verb, ignoring everything between them.",
+      "Check agreement in number, then check tense against the rest of the sentence.",
+      "For relative clauses, check the comma: comma means 'which', no comma allows 'that'.",
+      "For recommendations and demands, expect the subjunctive bare infinitive."
+    ],
+    "body": "Grammar appears in AMIRNET's experimental sections, and the same small set of rules recurs.\n\n**Subject-verb agreement.** Strip out prepositional phrases and clauses first: 'The report, along with the appendices, *was* submitted' — the subject is 'report', not 'appendices'. With 'neither ... nor' and 'either ... or', the verb agrees with the **nearer** subject.\n\n**Tense sequence.** Past perfect ('had moved') marks the earlier of two past events; the other clause takes simple past. Mixing present perfect with past perfect is the usual error.\n\n**Relative clauses.** A comma makes the clause non-restrictive, and non-restrictive clauses about things take **which**, never **that**. No comma, and 'that' is fine. 'Who' is for people only.\n\n**Subjunctive.** Verbs of recommending, demanding, insisting and suggesting take the bare infinitive in the that-clause: 'recommends that each department **submit**' — not 'submits'. This looks wrong to the ear, which is exactly why it is tested.\n\n**Conditionals and inversion.** 'Had it been designed more carefully...' is the inverted form of 'If it had been designed...'. Unreal past conditionals pair with 'would/might have'.\n\n**Dangling modifiers.** An opening participle must attach to the subject that follows: 'Designing it carefully, the experiment...' wrongly makes the experiment the designer."
+  },
+  {
+    "id": "ls-en-listening",
+    "track": "amirnet",
+    "topic": "listening",
+    "title": "Listening — predict, then confirm",
+    "minutes": 5,
+    "procedure": [
+      "Read the question before the audio starts, if the format allows it.",
+      "Listen for the signposting phrase: 'I want to correct', 'However', 'What is true is'.",
+      "Note only the contrast pairs — what changed and what did not.",
+      "Answer from meaning, not from a word you recognised."
+    ],
+    "body": "Listening is a growing component: NITE's stated aim is to broaden assessment to listening, writing and speaking, and text-to-speech of texts and questions became available to all examinees in April 2026. Practising it now costs little and removes a surprise later.\n\n**Announcements** almost always pair a change with a non-change: the platform changed, the time did not. Distractors invert exactly that pair, so listen for both halves and hold them separately.\n\n**Lectures** signpost their purpose in the first sentence — 'I want to correct a common misunderstanding'. If you catch the opening, you have the main-idea question already.\n\n**Instructions** hide the answer in a condition, not in the headline. 'The deadline is the fifteenth' is the headline; 'email me before the tenth' is the answer to 'what must students do'.\n\n**Hedging language decides attitude questions.** 'Encouraging', 'I would stop short of conclusive', 'promising rather than established' all point to the same place: a real effect, not yet proven. Options offering certainty in either direction are wrong.\n\n**The core trap** is answering from a recognised word rather than from meaning. If an option repeats a word you clearly heard, that is a reason for suspicion, not confidence."
+  }
+]

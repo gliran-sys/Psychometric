@@ -1,0 +1,66 @@
+{
+  "prompts": [
+    {
+      "id": "ewp-001",
+      "context": "Some people believe that students learn better in small classes, while others argue that class size matters less than teaching quality.",
+      "prompt": "Which view do you agree with? Explain your position with reasons and examples. Write 120-180 words.",
+      "difficulty": 2
+    },
+    {
+      "id": "ewp-002",
+      "context": "Many cities are considering banning private cars from their centres.",
+      "prompt": "Do you support such a ban? Give reasons for your answer. Write 120-180 words.",
+      "difficulty": 3
+    },
+    {
+      "id": "ewp-003",
+      "context": "Some employers now ask candidates to complete tasks generated and assessed automatically, without a human interviewer.",
+      "prompt": "Discuss the advantages and disadvantages of this practice, and state your own view. Write 120-180 words.",
+      "difficulty": 4
+    },
+    {
+      "id": "ewp-004",
+      "context": "It is sometimes claimed that learning a foreign language is less useful now that translation tools are widely available.",
+      "prompt": "To what extent do you agree? Support your answer with reasons. Write 120-180 words.",
+      "difficulty": 4
+    }
+  ],
+  "rubric": [
+    {
+      "id": "ewr-task",
+      "label": "Task response",
+      "dimension": "content",
+      "description": "Answers the question actually asked, states a clear position, and stays within the word range."
+    },
+    {
+      "id": "ewr-development",
+      "label": "Development",
+      "dimension": "content",
+      "description": "Each reason is supported with an explanation or example, not just asserted."
+    },
+    {
+      "id": "ewr-organisation",
+      "label": "Organisation",
+      "dimension": "content",
+      "description": "Clear paragraphing: introduction with the position, body paragraphs, short conclusion."
+    },
+    {
+      "id": "ewr-grammar",
+      "label": "Grammatical range and accuracy",
+      "dimension": "language",
+      "description": "Correct tenses and agreement, with some variety in sentence structure rather than all simple sentences."
+    },
+    {
+      "id": "ewr-vocabulary",
+      "label": "Vocabulary",
+      "dimension": "language",
+      "description": "Precise word choice, including academic connectors. Repetition of the same basic words lowers the score."
+    },
+    {
+      "id": "ewr-cohesion",
+      "label": "Cohesion",
+      "dimension": "language",
+      "description": "Linking words used accurately — however, therefore, in contrast — so the logic between sentences is explicit."
+    }
+  ]
+}
