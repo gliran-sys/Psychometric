@@ -11,6 +11,7 @@ import { EssayWorkshop } from './screens/EssayWorkshop';
 import { ReviewCenter } from './screens/ReviewCenter';
 import { Stats } from './screens/Stats';
 import { Settings } from './screens/Settings';
+import { ExternalLog } from './screens/ExternalLog';
 import { EnglishDashboard } from './screens/english/EnglishDashboard';
 import { EnglishDrill } from './screens/english/EnglishDrill';
 import { VocabTrainer } from './screens/english/VocabTrainer';
@@ -33,6 +34,7 @@ export default function App() {
         <Route path="review" element={<ReviewCenter />} />
         <Route path="stats" element={<Stats />} />
         <Route path="settings" element={<Settings />} />
+        <Route path="official" element={<ExternalLog />} />
 
         {/* Track B — AMIRNET, a parallel section with its own dashboard */}
         <Route path="english" element={<EnglishDashboard />} />

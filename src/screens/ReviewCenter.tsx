@@ -4,6 +4,8 @@ import { QuestionView } from '../components/QuestionView';
 import { dueCards, gradeFrom, review } from '../engine/srs';
 import { ERROR_LABELS, primaryRecommendation, summarise, type ErrorType } from '../engine/errorTaxonomy';
 import { itemById, vocabById } from '../content';
+import { isExternalItemId } from '../content/officialSources';
+import { ExternalRefCard } from './ExternalLog';
 import { useStore } from '../state/store';
 import { today } from '../lib/date';
 import { isEnglishItem } from '../content/schema';
@@ -118,6 +120,35 @@ function ReviewQueue() {
     );
   }
 
+  // An external card points at a paper question whose text the app deliberately does
+  // not store. Show the pointer and let the user self-grade after solving it there.
+  if (isExternalItemId(card.id)) {
+    const grade = (correct: boolean) => {
+      upsertSrsCard(review(card, correct ? 5 : 1, today()));
+      addXp(correct ? 8 : 3);
+      registerActivity();
+      advanceQuest('review-due');
+      setDone((d) => d + 1);
+    };
+
+    return (
+      <div className="space-y-4">
+        <p className="num text-xs text-slate-500">
+          נותרו {due.length} · נפילות בכרטיס זה: {card.lapses}
+        </p>
+        <ExternalRefCard itemId={card.id} />
+        <div className="flex gap-2">
+          <button type="button" className="btn-ghost flex-1" onClick={() => grade(false)}>
+            טעיתי שוב
+          </button>
+          <button type="button" className="btn-primary flex-1" onClick={() => grade(true)}>
+            פתרתי נכון
+          </button>
+        </div>
+      </div>
+    );
+  }
+
   const item = itemById(card.id);
   if (!item) return null;
 
@@ -179,7 +210,9 @@ function ErrorLog() {
         </div>
       )}
 
-      <div className="card space-y-2">
+      {/* Hidden when nothing is classified yet — an empty breakdown would render as a
+          blank card, which reads as a rendering fault rather than as "no data". */}
+      <div className={`card space-y-2 ${breakdown.length === 0 ? 'hidden' : ''}`}>
         {breakdown.map((row) => (
           <button
             key={row.type}
@@ -204,6 +237,13 @@ function ErrorLog() {
 
       <div className="space-y-2">
         {shown.slice(-25).reverse().map((miss, i) => {
+          if (isExternalItemId(miss.itemId)) {
+            return (
+              <div key={`${miss.itemId}-${i}`}>
+                <ExternalRefCard itemId={miss.itemId} />
+              </div>
+            );
+          }
           const item = itemById(miss.itemId);
           if (!item) return null;
           return (

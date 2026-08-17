@@ -156,6 +156,10 @@ export function Dashboard() {
           <div className="text-2xl">🛡️</div>
           <p className="mt-1 text-sm font-medium">סימולציה מלאה</p>
         </Link>
+        <Link to="/official" className="card text-center">
+          <div className="text-2xl">📄</div>
+          <p className="mt-1 text-sm font-medium">מבחנים רשמיים</p>
+        </Link>
         <Link to="/english" className="card text-center">
           <div className="text-2xl">🇬🇧</div>
           <p className="mt-1 text-sm font-medium">

@@ -67,6 +67,22 @@ export interface AmirnetSimResult {
   at: string;
 }
 
+/**
+ * Display metadata for a question solved in an official exam paper.
+ *
+ * Deliberately holds NO question text, options or answer — only a pointer to where the
+ * question lives (which paper, which section, which number). NITE's papers are
+ * copyrighted; this records that you attempted question 14, not what question 14 says.
+ */
+export interface ExternalRef {
+  itemId: string;
+  source: string;
+  section: string;
+  questionNumber: number;
+  topic: string;
+  difficulty: number;
+}
+
 export interface Quest {
   id: string;
   label: string;
@@ -115,9 +131,12 @@ export interface AppState {
   /** Lessons the user has completed, by lesson id. Drives skill-tree unlocks. */
   completedLessons: string[];
   quests: { day: string; items: Quest[] };
+  /** Pointers to questions solved in official papers, keyed by synthetic item id. */
+  externalRefs: Record<string, ExternalRef>;
 
   // --- actions ---
   recordAttempt: (a: Omit<AttemptRecord, 'at'>, newRating: number) => void;
+  logExternalAttempt: (ref: ExternalRef, result: { correct: boolean; timeSec: number; errorType: ErrorType | null }, newRating: number) => void;
   addXp: (amount: number) => void;
   registerActivity: () => void;
   upsertSrsCard: (card: SrsCard) => void;
@@ -174,6 +193,7 @@ const initialState = () => ({
   amirnetSims: [],
   completedLessons: [],
   quests: { day: '', items: [] },
+  externalRefs: {},
 });
 
 export const useStore = create<AppState>()(
@@ -196,6 +216,40 @@ export const useStore = create<AppState>()(
               },
             },
           } as Partial<AppState>;
+        }),
+
+      /**
+       * Records a question solved in an official paper. It goes into the same attempt
+       * log as authored items, so the topic heatmap, error taxonomy, score projection
+       * and spaced-repetition queue all pick it up with no special handling — the whole
+       * point of routing external work through the existing pipeline.
+       */
+      logExternalAttempt: (ref, result, newRating) =>
+        set((s) => {
+          const prev = s.abilities[ref.topic] ?? { rating: STARTING_RATING, attempts: 0, correct: 0 };
+          return {
+            externalRefs: { ...s.externalRefs, [ref.itemId]: ref },
+            attempts: [
+              ...s.attempts,
+              {
+                itemId: ref.itemId,
+                topic: ref.topic,
+                track: 'pet' as const,
+                correct: result.correct,
+                timeSec: result.timeSec,
+                errorType: result.errorType,
+                at: new Date().toISOString(),
+              },
+            ],
+            abilities: {
+              ...s.abilities,
+              [ref.topic]: {
+                rating: newRating,
+                attempts: prev.attempts + 1,
+                correct: prev.correct + (result.correct ? 1 : 0),
+              },
+            },
+          };
         }),
 
       addXp: (amount) => set((s) => ({ xp: s.xp + amount })),
@@ -270,10 +324,10 @@ export const useStore = create<AppState>()(
 
       exportJson: () => {
         const { profile, xp, streak, abilities, englishAbilities, srs, attempts, badges,
-          essayDrafts, mockResults, amirnetSims, completedLessons } = get();
+          essayDrafts, mockResults, amirnetSims, completedLessons, externalRefs } = get();
         return JSON.stringify(
           { version: STORE_VERSION, profile, xp, streak, abilities, englishAbilities, srs,
-            attempts, badges, essayDrafts, mockResults, amirnetSims, completedLessons },
+            attempts, badges, essayDrafts, mockResults, amirnetSims, completedLessons, externalRefs },
           null,
           2,
         );
