@@ -2,12 +2,12 @@ import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { TimedSection, scoreSection, type SectionAnswers } from '../components/TimedSection';
 import { QuestionView } from '../components/QuestionView';
-import { SCORED_SECTIONS, TOPICS, DOMAIN_LABELS, type Domain } from '../config/blueprint';
-import { PET_ITEMS } from '../content';
+import { SCORED_SECTIONS, DOMAIN_LABELS, type Domain } from '../config/blueprint';
+import { buildSection } from '../engine/sectionBuilder';
 import { bossResult, BOSS_THRESHOLDS } from '../engine/gamification';
 import { updateRating } from '../engine/adaptive';
 import { suggestErrorType } from '../engine/errorTaxonomy';
-import { useStore } from '../state/store';
+import { recentlySeenItemIds, useStore } from '../state/store';
 import type { Item } from '../content/schema';
 
 /**
@@ -29,9 +29,16 @@ export function BossFight() {
   const advanceQuest = useStore((s) => s.advanceQuest);
 
   const blueprint = SCORED_SECTIONS.find((s) => s.domain === domain);
+  const recentIds = useStore(recentlySeenItemIds);
 
   const items = useMemo(
-    () => (domain && blueprint ? buildSection(domain, blueprint.questionCount) : []),
+    () =>
+      domain && blueprint
+        ? buildSection(domain, blueprint.questionCount, { exclude: recentIds })
+        : [],
+    // `recentIds` is deliberately omitted: it changes as answers are recorded, and
+    // rebuilding the section mid-fight would swap the questions under the user.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [domain, blueprint],
   );
 
@@ -148,36 +155,5 @@ export function BossFight() {
   );
 }
 
-/**
- * Assembles a section that mirrors the real topic mix rather than drawing at random:
- * a verbal section with no reading comprehension would train the wrong pacing entirely.
- */
-export function buildSection(domain: Domain, questionCount: number): Item[] {
-  const topics = TOPICS[domain];
-  const picked: Item[] = [];
-
-  topics.forEach((topic) => {
-    const pool = PET_ITEMS.filter((i) => i.topic === topic.id);
-    picked.push(...shuffle(pool).slice(0, topic.questionsPerSection));
-  });
-
-  // Top up from anything left if the blueprint mix came up short of the target count.
-  if (picked.length < questionCount) {
-    const used = new Set(picked.map((i) => i.id));
-    const rest = PET_ITEMS.filter(
-      (i) => !used.has(i.id) && topics.some((t) => t.id === i.topic),
-    );
-    picked.push(...shuffle(rest).slice(0, questionCount - picked.length));
-  }
-
-  return picked.slice(0, questionCount);
-}
-
-export function shuffle<T>(array: T[]): T[] {
-  const copy = [...array];
-  for (let i = copy.length - 1; i > 0; i -= 1) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [copy[i], copy[j]] = [copy[j], copy[i]];
-  }
-  return copy;
-}
+// Section assembly lives in `engine/sectionBuilder.ts` so the mock exam, the boss
+// fight and the diagnostic all share one implementation — including its no-repeat logic.

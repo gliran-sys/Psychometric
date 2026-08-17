@@ -311,6 +311,20 @@ export const useStore = create<AppState>()(
   ),
 );
 
+/**
+ * Items the user has answered recently, for exam modes to avoid re-serving.
+ *
+ * Capped rather than unbounded: with a finite bank, excluding everything ever seen
+ * would eventually leave nothing to build a section from. A sliding window keeps
+ * consecutive mocks distinct while letting old items return once they are genuinely
+ * cold — which is what spaced repetition wants anyway.
+ */
+export const RECENT_ITEM_WINDOW = 250;
+
+export function recentlySeenItemIds(s: AppState): Set<string> {
+  return new Set(s.attempts.slice(-RECENT_ITEM_WINDOW).map((a) => a.itemId));
+}
+
 /** True once the real AMIRNET has been sat and cleared — Track B retires. */
 export function isEnglishDone(s: AppState): boolean {
   return s.profile.amirnetRealScore !== null &&

@@ -5,7 +5,7 @@ import { WRITING_TASK, ESSAY_SHARE_OF_VERBAL, DOMAIN_WEIGHTS } from '../config/b
 import { useCountdown } from '../hooks/useTimer';
 import { formatClock } from '../engine/pacing';
 import { useStore } from '../state/store';
-import { shuffle } from './BossFight';
+import { shuffle } from '../engine/sectionBuilder';
 
 /**
  * The writing task — the best hours-to-points ratio on the exam and the part most

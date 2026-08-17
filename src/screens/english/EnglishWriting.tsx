@@ -4,7 +4,7 @@ import { ENGLISH_ESSAY_PROMPTS, ENGLISH_ESSAY_RUBRIC } from '../../content';
 import { useCountdown } from '../../hooks/useTimer';
 import { formatClock } from '../../engine/pacing';
 import { useStore } from '../../state/store';
-import { shuffle } from '../BossFight';
+import { shuffle } from '../../engine/sectionBuilder';
 
 /** AMIRNET's writing component is auto-scored, so word count and clarity matter more than length. */
 const MINUTES = 20;

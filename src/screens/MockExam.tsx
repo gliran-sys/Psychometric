@@ -12,8 +12,8 @@ import {
 } from '../config/blueprint';
 import { accuracyToDomainScore, generalScore, verbalDomainScore } from '../engine/scoring';
 import { updateRating } from '../engine/adaptive';
-import { useStore } from '../state/store';
-import { buildSection, shuffle } from './BossFight';
+import { buildSection, shuffle } from '../engine/sectionBuilder';
+import { recentlySeenItemIds, useStore } from '../state/store';
 import type { Item } from '../content/schema';
 
 /**
@@ -38,12 +38,24 @@ export function MockExam() {
   const awardBadge = useStore((s) => s.awardBadge);
   const registerActivity = useStore((s) => s.registerActivity);
   const latestEssay = useStore((s) => [...s.essayDrafts].reverse()[0] ?? null);
+  const recentIds = useStore(recentlySeenItemIds);
 
   const order = useMemo(() => shuffle(SECTIONS), []);
-  const sectionItems = useMemo(
-    () => order.map((section) => buildSection(section.domain, section.questionCount)),
-    [order],
-  );
+
+  /**
+   * Every section is drawn against a running exclusion set — items already used by an
+   * earlier section of THIS mock, plus items seen in recent sittings. Building each
+   * section independently would let the same question appear twice in one exam.
+   */
+  const sectionItems = useMemo(() => {
+    const exclude = new Set(recentIds);
+    return order.map((section) => {
+      const items = buildSection(section.domain, section.questionCount, { exclude });
+      items.forEach((item) => exclude.add(item.id));
+      return items;
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [order]);
 
   if (!started) {
     return (

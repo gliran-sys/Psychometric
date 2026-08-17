@@ -17,7 +17,7 @@ import { assembleBlock, routingSummary, tierForBlock, type BlockOutcome } from '
 import { evaluate } from '../../engine/amirnetScoring';
 import { updateRating } from '../../engine/adaptive';
 import { ENGLISH_ITEMS } from '../../content';
-import { useStore } from '../../state/store';
+import { recentlySeenItemIds, useStore } from '../../state/store';
 import type { EnglishItem } from '../../content/schema';
 
 const TIER_LABEL: Record<BlockTier, string> = { easy: 'קל', medium: 'בינוני', hard: 'קשה' };
@@ -37,7 +37,12 @@ export function AmirnetSimulation() {
   const [outcomes, setOutcomes] = useState<BlockOutcome[]>([]);
   const [answers, setAnswers] = useState<(number | null)[]>([]);
   const [questionIndex, setQuestionIndex] = useState(0);
-  const [usedIds, setUsedIds] = useState<Set<string>>(() => new Set());
+  /**
+   * Seeded with items from recent sittings, not just this one, so a second simulation
+   * serves fresh questions rather than replaying the first.
+   */
+  const recentIds = useStore(recentlySeenItemIds);
+  const [usedIds, setUsedIds] = useState<Set<string>>(() => new Set(recentIds));
 
   const englishAbilities = useStore((s) => s.englishAbilities);
   const recordAttempt = useStore((s) => s.recordAttempt);

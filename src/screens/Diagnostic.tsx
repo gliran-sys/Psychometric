@@ -5,8 +5,8 @@ import { Meter } from '../components/Meter';
 import { SCORE_SCALE, DOMAIN_LABELS, type Domain } from '../config/blueprint';
 import { accuracyToDomainScore, generalScore } from '../engine/scoring';
 import { updateRating } from '../engine/adaptive';
+import { buildSection } from '../engine/sectionBuilder';
 import { useStore } from '../state/store';
-import { buildSection } from './BossFight';
 import type { Item } from '../content/schema';
 
 /** A shortened mock: one section per domain, enough to seed every topic's rating. */

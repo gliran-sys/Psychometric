@@ -241,5 +241,131 @@
       "2": "Also inverts the rule, exempting exactly the group that is covered.",
       "3": "Ignores the exception clause altogether."
     }
+  },
+  {
+    "id": "ers-e4", "domain": "english", "topic": "restatement", "blockTier": "easy", "difficulty": 1,
+    "stem": "The shop opens at nine and closes at six.",
+    "options": [
+      "The shop is open for nine hours each day.",
+      "The shop is open for six hours each day.",
+      "The shop opens at six and closes at nine.",
+      "The shop is closed between nine and six."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": ["Convert to a 24-hour span: nine in the morning to six in the evening.", "From 9 to 18 is nine hours.", "Option 1 states that duration."],
+    "techniqueTags": ["time-arithmetic"], "targetTimeSec": 55,
+    "trapExplanations": {"1": "Takes the closing hour as the duration.", "2": "Reverses opening and closing times.", "3": "Inverts open and closed — that is the period it is open."}
+  },
+  {
+    "id": "ers-e5", "domain": "english", "topic": "restatement", "blockTier": "easy", "difficulty": 2,
+    "stem": "Everyone in the class except Maya finished the assignment.",
+    "options": [
+      "Maya was the only one who did not finish.",
+      "Only Maya finished the assignment.",
+      "Nobody finished the assignment.",
+      "Maya finished before the others."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": ["'Everyone except X' means all but X.", "So the rest finished and X did not.", "Option 1 states exactly that."],
+    "techniqueTags": ["exception-logic"], "targetTimeSec": 60,
+    "trapExplanations": {"1": "Inverts the exception, making Maya the only finisher.", "2": "Contradicts 'everyone ... finished'.", "3": "Says Maya finished, which the exception denies."}
+  },
+  {
+    "id": "ers-e6", "domain": "english", "topic": "restatement", "blockTier": "easy", "difficulty": 2,
+    "stem": "He rarely arrives on time.",
+    "options": [
+      "He is usually late.",
+      "He is never late.",
+      "He always arrives on time.",
+      "He never arrives at all."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": ["'Rarely' means seldom but not never.", "If punctuality is rare, lateness is the norm.", "'Usually late' preserves the frequency."],
+    "techniqueTags": ["frequency-adverbs"], "targetTimeSec": 55,
+    "trapExplanations": {"1": "Reverses the meaning entirely.", "2": "Also the reverse of what is stated.", "3": "'Rarely on time' still means he arrives — just late."}
+  },
+  {
+    "id": "ers-m4", "domain": "english", "topic": "restatement", "blockTier": "medium", "difficulty": 3,
+    "stem": "The policy was adopted despite strong opposition from the board.",
+    "options": [
+      "The board objected, but the policy was adopted anyway.",
+      "The board's opposition prevented the policy.",
+      "The board supported the policy strongly.",
+      "The policy was adopted because the board objected."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": ["'Despite X' concedes X and asserts the outcome anyway.", "X is board opposition; the outcome is adoption.", "Option 1 keeps both."],
+    "techniqueTags": ["concession-structure"], "targetTimeSec": 65,
+    "trapExplanations": {"1": "'Despite' means the opposition did not prevent it.", "2": "Reverses the board's stance.", "3": "Turns concession into causation — the opposition did not cause adoption."}
+  },
+  {
+    "id": "ers-m5", "domain": "english", "topic": "restatement", "blockTier": "medium", "difficulty": 3,
+    "stem": "Sales rose in every region apart from the north, where they held steady.",
+    "options": [
+      "Sales did not fall in any region.",
+      "Sales fell in the north.",
+      "Sales rose in every region including the north.",
+      "Sales rose only in the north."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": ["Everywhere but the north: rose. In the north: held steady.", "Holding steady is neither a rise nor a fall.", "So no region saw a decline."],
+    "techniqueTags": ["exception-logic", "precise-reading"], "targetTimeSec": 70,
+    "trapExplanations": {"1": "'Held steady' explicitly rules out a fall. The most tempting misreading.", "2": "Contradicts the exception for the north.", "3": "Inverts which regions rose."}
+  },
+  {
+    "id": "ers-m6", "domain": "english", "topic": "restatement", "blockTier": "medium", "difficulty": 4,
+    "stem": "No decision will be made before the report is published.",
+    "options": [
+      "A decision can only come after publication of the report.",
+      "A decision will be made as soon as the report is published.",
+      "The report will be published after the decision.",
+      "No decision will ever be made."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": ["'No X before Y' makes Y a prerequisite for X.", "Publication must precede any decision.", "It does not promise a decision will follow."],
+    "techniqueTags": ["temporal-logic", "necessary-vs-sufficient"], "targetTimeSec": 75,
+    "trapExplanations": {"1": "Turns a necessary condition into a guarantee with a timetable.", "2": "Reverses the order of the two events.", "3": "The statement delays a decision, it does not rule one out."}
+  },
+  {
+    "id": "ers-h4", "domain": "english", "topic": "restatement", "blockTier": "hard", "difficulty": 4,
+    "stem": "The treaty is binding on signatories only insofar as their domestic law permits.",
+    "options": [
+      "Domestic law sets the limit of each signatory's obligation.",
+      "The treaty overrides the domestic law of signatories.",
+      "Signatories have no obligations under the treaty.",
+      "Domestic law must be changed to match the treaty."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": ["'Only insofar as X permits' makes X the ceiling on the obligation.", "X is domestic law.", "So obligation extends exactly as far as domestic law allows, and no further."],
+    "techniqueTags": ["qualifier-logic", "scope"], "targetTimeSec": 85,
+    "trapExplanations": {"1": "Exactly reverses the hierarchy the clause establishes.", "2": "There are obligations — they are bounded, not absent.", "3": "The clause accommodates domestic law rather than demanding it change."}
+  },
+  {
+    "id": "ers-h5", "domain": "english", "topic": "restatement", "blockTier": "hard", "difficulty": 5,
+    "stem": "It is not that the method fails, but that its successes cannot be distinguished from chance.",
+    "options": [
+      "The method may work, but the evidence cannot show that it does.",
+      "The method has been shown to fail.",
+      "The method succeeds more often than chance would predict.",
+      "The method works only by chance."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": ["'Not that X, but that Y' denies X and asserts Y.", "X is failure — denied. Y is indistinguishability from chance.", "That is a claim about evidence, not about the method being wrong."],
+    "techniqueTags": ["not-that-but-that", "epistemic-claim"], "targetTimeSec": 95,
+    "trapExplanations": {"1": "Failure is precisely what the sentence denies.", "2": "If successes exceeded chance they would be distinguishable — the opposite is stated.", "3": "Asserts the method does not work, going beyond a claim about evidence. The strongest distractor."}
+  },
+  {
+    "id": "ers-h6", "domain": "english", "topic": "restatement", "blockTier": "hard", "difficulty": 5,
+    "stem": "Far from settling the question, the new findings have multiplied the possible explanations.",
+    "options": [
+      "The findings left the question more open than before.",
+      "The findings resolved the question conclusively.",
+      "The findings eliminated most competing explanations.",
+      "The findings confirmed the existing explanation."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": ["'Far from X' asserts the opposite of X.", "X is settling the question, so the question was not settled.", "'Multiplied the explanations' means more openness, not less."],
+    "techniqueTags": ["far-from-structure", "negation"], "targetTimeSec": 95,
+    "trapExplanations": {"1": "Asserts exactly what 'far from' denies.", "2": "Multiplying explanations is the opposite of eliminating them.", "3": "Confirmation would reduce the range of explanations, not expand it."}
   }
 ]

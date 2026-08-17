@@ -8,7 +8,7 @@
 import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';
 import { BLOCKS, TIER_ORDER } from '../src/config/amirnet';
-import { ALL_TOPICS } from '../src/config/blueprint';
+import { ALL_TOPICS, SECTIONS, TOPICS } from '../src/config/blueprint';
 import {
   englishItemSchema,
   essayPromptSchema,
@@ -129,6 +129,33 @@ for (const file of walk(CONTENT)) {
   }
 });
 
+/**
+ * Two options with identical text means the item has two correct answers (or two
+ * identical wrong ones) — a defect that is invisible in review but fatal in a drill.
+ */
+[...petItems, ...englishItems].forEach((raw) => {
+  const item = raw as { id: string; options: string[] };
+  const normalised = item.options.map((o) => o.trim());
+  const unique = new Set(normalised);
+  if (unique.size !== normalised.length) {
+    errors.push(`item ${item.id}: duplicate answer options`);
+  }
+});
+
+/**
+ * A repeated stem usually means an item was copy-pasted and only half-edited, which
+ * silently halves the variety of a section that draws from that topic.
+ */
+const stems = new Map<string, string>();
+[...petItems, ...englishItems].forEach((raw) => {
+  const item = raw as { id: string; stem: string; passage?: string };
+  // Reading sets legitimately share a passage, so key on the question itself.
+  const key = item.stem.trim();
+  const existing = stems.get(key);
+  if (existing) errors.push(`item ${item.id}: stem duplicates ${existing}`);
+  else stems.set(key, item.id);
+});
+
 /** Every PET topic in the blueprint needs items, or its skill-tree node dead-ends. */
 ALL_TOPICS.forEach((topic) => {
   const count = (petItems as { topic: string }[]).filter((i) => i.topic === topic.id).length;
@@ -137,17 +164,25 @@ ALL_TOPICS.forEach((topic) => {
 });
 
 /**
- * AMIRNET block assembly needs a full block's worth of items at EVERY tier for every
- * adaptive block type. A thin tier would force `assembleBlock` to widen and quietly
- * distort the routing that the whole simulation depends on.
+ * AMIRNET tier depth.
+ *
+ * The requirement is not one block's worth per tier — it is a whole SITTING's worth.
+ * Routing can hold the same tier for every block of a topic (three sentence-completion
+ * blocks all at medium, say), and `assembleBlock` excludes items already served earlier
+ * in the sitting. If the tier runs dry mid-sitting it widens to neighbouring tiers,
+ * which silently distorts the difficulty the score is derived from.
  */
+const blocksPerTopic = new Map<string, number>();
+BLOCKS.forEach((b) => blocksPerTopic.set(b.topic, (blocksPerTopic.get(b.topic) ?? 0) + 1));
+
 BLOCKS.forEach((block) => {
+  const needed = block.questionCount * (blocksPerTopic.get(block.topic) ?? 1);
   TIER_ORDER.forEach((tier) => {
     const count = englishItems.filter((i) => i.topic === block.topic && i.blockTier === tier).length;
-    if (count < block.questionCount) {
+    if (count < needed) {
       errors.push(
-        `AMIRNET: topic "${block.topic}" tier "${tier}" has ${count} items but block ` +
-          `"${block.id}" needs ${block.questionCount} — routing would be distorted`,
+        `AMIRNET: topic "${block.topic}" tier "${tier}" has ${count} items but a full ` +
+          `sitting can need ${needed} at one tier — routing would be distorted`,
       );
     }
   });
@@ -157,6 +192,41 @@ BLOCKS.forEach((block) => {
 englishItems
   .filter((i) => i.topic === 'listening' && !i.audioText)
   .forEach((i) => errors.push(`listening item ${i.id} has no audioText`));
+
+// --- non-repeating mock capacity ----------------------------------------------------
+
+/**
+ * How many full mocks can be sat before an item has to be served twice.
+ *
+ * This is the number that decides whether repeated practice feels like a new exam, and
+ * it is governed by the THINNEST topic rather than the total bank size — a large bank
+ * with shallow reading comprehension still repeats reading passages immediately.
+ */
+const perMockNeed = new Map<string, number>();
+SECTIONS.forEach((section) => {
+  TOPICS[section.domain].forEach((topic) => {
+    perMockNeed.set(topic.id, (perMockNeed.get(topic.id) ?? 0) + topic.questionsPerSection);
+  });
+});
+
+let mockCapacity = Infinity;
+let bottleneck = '';
+perMockNeed.forEach((need, topic) => {
+  const have = (petItems as { topic: string }[]).filter((i) => i.topic === topic).length;
+  const mocks = have / need;
+  if (mocks < mockCapacity) {
+    mockCapacity = mocks;
+    bottleneck = topic;
+  }
+});
+
+const fullMocks = Math.floor(mockCapacity);
+if (fullMocks < 2) {
+  warnings.push(
+    `bank supports only ${fullMocks} fully non-repeating mock(s); "${bottleneck}" is the ` +
+      `bottleneck at ${mockCapacity.toFixed(1)}. Add items to that topic first.`,
+  );
+}
 
 // --- report -------------------------------------------------------------------------
 
@@ -170,5 +240,6 @@ if (errors.length > 0) {
 
 console.log(
   `content OK — ${petItems.length} PET items, ${englishItems.length} AMIRNET items, ` +
-    `${allIds.size} unique ids`,
+    `${allIds.size} unique ids · ${fullMocks} non-repeating mock(s) ` +
+    `(bottleneck: ${bottleneck} at ${mockCapacity.toFixed(1)})`,
 );
