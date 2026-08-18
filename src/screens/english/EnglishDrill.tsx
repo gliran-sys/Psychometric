@@ -3,6 +3,7 @@ import { QuestionView } from '../../components/QuestionView';
 import { useDrill } from '../../hooks/useDrill';
 import { englishItemsByTopic, lessonForTopic } from '../../content';
 import { ENGLISH_TOPIC_LABELS, type EnglishTopic } from '../../config/amirnet';
+import { Icon } from '../../components/Icon';
 import { comboMultiplier } from '../../engine/gamification';
 import { EmptyState } from '../Drill';
 
@@ -50,7 +51,8 @@ export function EnglishDrill() {
         </div>
         {combo >= 2 && (
           <span className="num animate-pop rounded-full bg-english/15 px-3 py-1 text-sm font-bold text-english">
-            🔥 {combo} · ×{comboMultiplier(combo).toFixed(1)}
+            <Icon name="flame" size={12} filled className="me-1 inline-block align-[-1px]" />
+            {combo} · ×{comboMultiplier(combo).toFixed(1)}
           </span>
         )}
       </header>

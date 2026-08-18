@@ -3,6 +3,7 @@ import { QuestionView } from '../components/QuestionView';
 import { useDrill } from '../hooks/useDrill';
 import { petItemsByTopic, lessonForTopic } from '../content';
 import { topicLabel } from '../config/blueprint';
+import { Icon } from '../components/Icon';
 import { comboMultiplier } from '../engine/gamification';
 import { useStore } from '../state/store';
 import { useEffect } from 'react';
@@ -58,7 +59,8 @@ export function Drill() {
         </div>
         {combo >= 2 && (
           <span className="num animate-pop rounded-full bg-xp/15 px-3 py-1 text-sm font-bold text-xp">
-            🔥 {combo} · ×{comboMultiplier(combo).toFixed(1)}
+            <Icon name="flame" size={12} filled className="me-1 inline-block align-[-1px]" />
+            {combo} · ×{comboMultiplier(combo).toFixed(1)}
           </span>
         )}
       </header>

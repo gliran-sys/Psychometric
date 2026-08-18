@@ -141,7 +141,7 @@ export function Settings() {
           value={importText}
           onChange={(e) => setImportText(e.target.value)}
           placeholder="הדבק כאן גיבוי כדי לשחזר"
-          className="h-20 w-full rounded-lg border border-ink-600 bg-ink-800 p-2 text-xs text-slate-200 outline-none focus:border-xp"
+          className="h-20 w-full rounded-lg border border-rule-strong bg-surface p-2 text-xs text-slate-200 outline-none focus:border-xp"
         />
         <button
           type="button"

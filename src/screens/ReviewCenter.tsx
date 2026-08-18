@@ -24,19 +24,19 @@ export function ReviewCenter() {
   return (
     <div className="space-y-4">
       <header className="flex items-center justify-between">
-        <h1 className="text-xl font-bold">🔁 מרכז החזרה</h1>
-        <div className="flex gap-1 rounded-lg bg-ink-700 p-0.5 text-sm">
+        <h1 className="text-xl font-bold">מרכז החזרה</h1>
+        <div className="flex gap-1 rounded-lg bg-raised p-0.5 text-sm">
           <button
             type="button"
             onClick={() => setTab('queue')}
-            className={`rounded px-3 py-1 ${tab === 'queue' ? 'bg-ink-600 text-slate-100' : 'text-slate-400'}`}
+            className={`rounded px-3 py-1 ${tab === 'queue' ? 'bg-rule-strong text-slate-100' : 'text-slate-400'}`}
           >
             תור <span className="num">({due.length})</span>
           </button>
           <button
             type="button"
             onClick={() => setTab('log')}
-            className={`rounded px-3 py-1 ${tab === 'log' ? 'bg-ink-600 text-slate-100' : 'text-slate-400'}`}
+            className={`rounded px-3 py-1 ${tab === 'log' ? 'bg-rule-strong text-slate-100' : 'text-slate-400'}`}
           >
             יומן טעויות
           </button>
@@ -228,7 +228,7 @@ function ErrorLog() {
                 {row.count} · {Math.round(row.share * 100)}%
               </span>
             </div>
-            <div className="h-1.5 overflow-hidden rounded-full bg-ink-700">
+            <div className="h-1.5 overflow-hidden rounded-full bg-raised">
               <div className="h-full bg-danger/70" style={{ width: `${row.share * 100}%` }} />
             </div>
           </button>

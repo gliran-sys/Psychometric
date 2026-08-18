@@ -61,7 +61,7 @@ export function MockExam() {
     return (
       <div className="space-y-4">
         <header>
-          <h1 className="text-xl font-bold">🛡️ סימולציה מלאה</h1>
+          <h1 className="text-xl font-bold">סימולציה מלאה</h1>
           <p className="text-sm text-slate-400">
             המבנה החדש, החל ממועד דצמבר 2026: מטלת כתיבה ואחריה חמישה פרקים.
           </p>
@@ -212,7 +212,7 @@ function MockResults({
               <span className="text-slate-300">
                 {section.label}
                 {section.experimental && (
-                  <span className="ms-1.5 rounded bg-ink-600 px-1.5 py-0.5 text-[10px] text-slate-400">
+                  <span className="ms-1.5 rounded bg-rule-strong px-1.5 py-0.5 text-[10px] text-slate-400">
                     ניסיוני — לא נספר
                   </span>
                 )}

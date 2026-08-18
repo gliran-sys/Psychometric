@@ -45,10 +45,10 @@ export function SkillTree() {
                       <span
                         className={`grid h-8 w-8 place-items-center rounded-full text-sm ${
                           mastery > 0.66
-                            ? 'bg-xp/20 text-xp animate-glow'
+                            ? 'bg-xp/20 text-xp'
                             : mastery > 0.33
-                              ? 'bg-ink-600 text-slate-200'
-                              : 'bg-ink-700 text-slate-500'
+                              ? 'bg-rule-strong text-slate-200'
+                              : 'bg-raised text-slate-500'
                         }`}
                       >
                         {mastery > 0.66 ? '★' : mastery > 0.33 ? '◆' : '○'}
@@ -65,7 +65,7 @@ export function SkillTree() {
                     <span className="num text-xs text-slate-500">{Math.round(mastery * 100)}%</span>
                   </div>
 
-                  <div className="mb-3 h-1.5 overflow-hidden rounded-full bg-ink-700">
+                  <div className="mb-3 h-1.5 overflow-hidden rounded-full bg-raised">
                     <div
                       className={`h-full transition-[width] duration-500 ${
                         domain === 'verbal' ? 'bg-verbal' : 'bg-quant'

@@ -156,7 +156,7 @@ function Explanation({ item, selected }: { item: Item; selected: number | null }
       {(item as PetItem).techniqueTags.length > 0 && (
         <div className="flex flex-wrap gap-1.5">
           {item.techniqueTags.map((tag) => (
-            <span key={tag} className="rounded-full bg-ink-700 px-2.5 py-1 text-xs text-slate-400">
+            <span key={tag} className="rounded-full bg-raised px-2.5 py-1 text-xs text-slate-400">
               {tag}
             </span>
           ))}
@@ -189,7 +189,7 @@ function ErrorClassifier({
             className={`rounded-lg border px-3 py-1.5 text-sm transition ${
               value === type
                 ? 'border-xp bg-xp/15 text-xp'
-                : 'border-ink-600 bg-ink-700/40 text-slate-300 hover:bg-ink-700'
+                : 'border-rule-strong bg-raised/40 text-slate-300 hover:bg-raised'
             }`}
           >
             {ERROR_LABELS[type].he}

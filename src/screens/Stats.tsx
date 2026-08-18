@@ -35,7 +35,7 @@ export function Stats() {
   return (
     <div className="space-y-5">
       <header>
-        <h1 className="text-xl font-bold">📊 נתונים</h1>
+        <h1 className="text-xl font-bold">נתונים</h1>
         <p className="num text-sm text-slate-400">
           רמה {level} · {into}/{needed} XP · {state.attempts.length} שאלות · רצף שיא {state.streak.longest}
         </p>
@@ -56,7 +56,7 @@ export function Stats() {
                     {ability.attempts > 0 ? `${ability.correct}/${ability.attempts}` : '—'}
                   </span>
                 </div>
-                <div className="h-2 overflow-hidden rounded-full bg-ink-700">
+                <div className="h-2 overflow-hidden rounded-full bg-raised">
                   <div
                     className={`h-full transition-[width] ${domain === 'verbal' ? 'bg-verbal' : 'bg-quant'}`}
                     style={{ width: `${mastery * 100}%` }}
@@ -126,7 +126,7 @@ export function Stats() {
                 key={badge.id}
                 title={`${badgeById(badge.id)?.he} — ${badge.description}`}
                 className={`grid aspect-square place-items-center rounded-xl text-2xl ${
-                  earned ? 'bg-xp/15' : 'bg-ink-700 opacity-30 grayscale'
+                  earned ? 'bg-xp/15' : 'bg-raised opacity-30 grayscale'
                 }`}
               >
                 {badge.icon}
@@ -153,7 +153,7 @@ function Quadrant({
   hint: string;
 }) {
   return (
-    <div className="rounded-xl bg-ink-700/50 p-3">
+    <div className="rounded-xl bg-raised/50 p-3">
       <p className={`num text-2xl font-bold ${tone}`}>{Math.round((value / total) * 100)}%</p>
       <p className="text-xs text-slate-300">{label}</p>
       <p className="mt-0.5 text-[11px] text-slate-500">{hint}</p>

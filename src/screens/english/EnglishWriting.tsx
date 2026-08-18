@@ -38,7 +38,7 @@ export function EnglishWriting() {
     return (
       <div className="space-y-4">
         <header>
-          <h1 className="text-xl font-bold">📝 Writing task</h1>
+          <h1 className="text-xl font-bold">Writing task</h1>
           <p className="num text-sm text-slate-400">
             {MINUTES} דקות · {MIN_WORDS}-{MAX_WORDS} מילים
           </p>
@@ -83,7 +83,7 @@ export function EnglishWriting() {
 
     return (
       <div className="space-y-3">
-        <div className="sticky top-14 z-10 -mx-4 flex items-center justify-between border-b border-ink-700 bg-ink-900/95 px-4 py-2 backdrop-blur">
+        <div className="sticky top-14 z-10 -mx-4 flex items-center justify-between border-b border-raised bg-paper/95 px-4 py-2 backdrop-blur">
           <div>
             <p className={`num text-2xl font-bold ${remainingSec < 120 ? 'text-danger' : 'text-slate-100'}`}>
               {formatClock(remainingSec)}
@@ -104,7 +104,7 @@ export function EnglishWriting() {
           onChange={(e) => setText(e.target.value)}
           autoFocus
           dir="ltr"
-          className="h-[55vh] w-full resize-none rounded-xl border border-ink-600 bg-ink-800 p-3 text-sm leading-relaxed text-slate-100 outline-none focus:border-english"
+          className="h-[55vh] w-full resize-none rounded-xl border border-rule-strong bg-surface p-3 text-sm leading-relaxed text-slate-100 outline-none focus:border-english"
           placeholder="Write here..."
         />
       </div>
@@ -157,7 +157,7 @@ export function EnglishWriting() {
                   type="checkbox"
                   checked={!!checked[c.id]}
                   onChange={(e) => setChecked((s) => ({ ...s, [c.id]: e.target.checked }))}
-                  className="mt-1 h-4 w-4 shrink-0 accent-[#e879a8]"
+                  className="mt-1 h-4 w-4 shrink-0 accent-[#8a2470]"
                 />
                 <span>
                   <span className="font-medium text-slate-200">{c.label}</span>

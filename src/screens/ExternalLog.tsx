@@ -80,7 +80,7 @@ export function ExternalLog() {
   return (
     <div className="space-y-5">
       <header>
-        <h1 className="text-xl font-bold">📄 מבחנים רשמיים</h1>
+        <h1 className="text-xl font-bold">מבחנים רשמיים</h1>
         <p className="text-sm text-slate-400">
           פתור מבחן אמיתי מאתר המרכז הארצי, ורשום כאן כל שאלה. המעקב, החזרה המרווחת
           וההערכה יעבדו בדיוק כמו על שאלות האפליקציה.
@@ -95,7 +95,7 @@ export function ExternalLog() {
             href={src.url}
             target="_blank"
             rel="noreferrer"
-            className="block rounded-lg border border-ink-600 bg-ink-700/40 p-2.5 transition hover:bg-ink-700"
+            className="block rounded-lg border border-rule-strong bg-raised/40 p-2.5 transition hover:bg-raised"
           >
             <p className="text-sm font-medium text-slate-100">{src.label} ↗</p>
             <p className="text-xs text-slate-400">{src.description}</p>
@@ -187,7 +187,7 @@ export function ExternalLog() {
                 className={`rounded-lg border px-2.5 py-1 text-xs transition ${
                   errorType === type
                     ? 'border-xp bg-xp/15 text-xp'
-                    : 'border-ink-600 bg-ink-700/40 text-slate-300'
+                    : 'border-rule-strong bg-raised/40 text-slate-300'
                 }`}
               >
                 {ERROR_LABELS[type].he}

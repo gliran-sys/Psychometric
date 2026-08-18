@@ -4,11 +4,11 @@
 
 @layer base {
   html {
-    color-scheme: dark;
+    color-scheme: light;
   }
 
   body {
-    @apply bg-ink-900 text-slate-100 font-sans antialiased;
+    @apply bg-paper text-slate-100 font-sans antialiased;
     /* Prevent the pull-to-refresh gesture from killing a timed section mid-drill. */
     overscroll-behavior-y: contain;
   }
@@ -20,46 +20,74 @@
 }
 
 @layer components {
+  /**
+   * "מחברת" replaces floating cards with paper panels: a hairline rule, a small
+   * radius and no shadow. Depth in this direction comes from rules and whitespace,
+   * not from elevation.
+   */
   .card {
-    @apply rounded-2xl border border-ink-600/60 bg-ink-800/70 p-4 shadow-lg shadow-black/20;
+    @apply rounded-md border border-rule bg-surface p-4;
+  }
+
+  /**
+   * A section separated by a rule rather than boxed. This is the direction's core
+   * structural move — reach for it over `.card` when blocks simply follow one another.
+   */
+  .rule-block {
+    @apply border-b border-rule pb-5;
+  }
+
+  /** Small caps-ish section label above a rule-block. */
+  .eyebrow {
+    @apply text-xs uppercase tracking-[0.08em] text-slate-500;
   }
 
   .btn {
-    @apply rounded-xl px-4 py-2.5 font-medium transition active:scale-[0.98]
+    @apply rounded-md px-4 py-2.5 font-medium transition active:scale-[0.98]
            disabled:cursor-not-allowed disabled:opacity-40;
   }
 
   .btn-primary {
-    @apply btn bg-xp text-ink-900 hover:bg-xp/90;
+    @apply btn bg-accent text-paper hover:bg-accent/90;
   }
 
   .btn-ghost {
-    @apply btn border border-ink-600 bg-ink-700/50 text-slate-200 hover:bg-ink-700;
+    @apply btn border border-rule-strong bg-surface text-slate-200 hover:bg-raised;
   }
 
   .input {
-    @apply w-full rounded-lg border border-ink-600 bg-ink-800 px-3 py-2 text-sm text-slate-100
-           outline-none focus:border-xp;
+    @apply w-full rounded-md border border-rule-strong bg-surface px-3 py-2 text-sm text-slate-100
+           outline-none focus:border-accent;
   }
 
   /* Answer options: large tap targets, since most drilling happens on a phone. */
   .option {
-    @apply w-full rounded-xl border border-ink-600 bg-ink-700/40 p-3.5 text-start
-           transition hover:border-ink-600 hover:bg-ink-700 active:scale-[0.99];
+    @apply w-full rounded-md border border-rule-strong bg-surface p-3.5 text-start
+           transition hover:border-slate-500 hover:bg-raised active:scale-[0.99];
   }
 
   .option-correct {
-    @apply border-quant bg-quant/15 text-quant;
+    @apply border-quant bg-quant/5 text-quant;
   }
 
   .option-wrong {
-    @apply border-danger bg-danger/15 text-danger;
+    @apply border-danger bg-danger/5 text-danger;
   }
 }
 
 /* Numbers read left-to-right even in Hebrew prose — without this, scores and
    timers can render with their digits reordered. */
 .num {
+  direction: ltr;
+  unicode-bidi: isolate;
+  display: inline-block;
+}
+
+/* Scores, countdowns and timers carry the display serif and sit on the lining
+   figures, so columns of numbers line up. */
+.figure {
+  font-family: theme('fontFamily.display');
+  font-feature-settings: 'lnum' 1, 'tnum' 1;
   direction: ltr;
   unicode-bidi: isolate;
   display: inline-block;

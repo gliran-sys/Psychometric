@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Meter } from '../components/Meter';
+import { Icon, type IconName } from '../components/Icon';
 import { SCORE_SCALE, TOPICS, topicLabel } from '../config/blueprint';
 import { AMIRNET_SCALE, RETAKE_INTERVAL_DAYS, placementFor } from '../config/amirnet';
 import { approximatePercentile, projectScore } from '../engine/scoring';
@@ -10,6 +11,16 @@ import { masteryOf } from '../engine/adaptive';
 import { daysUntilRetake, daysUntilTest, isEnglishDone, useStore } from '../state/store';
 import { today } from '../lib/date';
 import { useEffect } from 'react';
+
+const SHORTCUTS: { to: string; label: string; icon: IconName }[] = [
+  { to: '/map', label: 'מפת הכוחות', icon: 'map' },
+  { to: '/review', label: 'חזרה', icon: 'review' },
+  { to: '/boss', label: 'פרק מתוזמן', icon: 'clock' },
+  { to: '/essay', label: 'מטלת כתיבה', icon: 'pen' },
+  { to: '/mock', label: 'סימולציה מלאה', icon: 'exam' },
+  { to: '/official', label: 'מבחנים רשמיים', icon: 'paper' },
+  { to: '/english', label: 'אמירנט', icon: 'english' },
+];
 
 export function Dashboard() {
   const state = useStore();
@@ -51,7 +62,7 @@ export function Dashboard() {
   }, [state.quests.day, weakest, due.length, englishDone, phase, setQuests]);
 
   return (
-    <div className="space-y-5">
+    <div className="space-y-6">
       {!state.profile.testDate && (
         <Link to="/settings" className="card block border-xp/40 bg-xp/5">
           <p className="font-medium text-xp">קבע תאריך מבחן כדי לקבל תוכנית לימודים</p>
@@ -62,28 +73,29 @@ export function Dashboard() {
       )}
 
       {countdown !== null && (
-        <div className="card flex items-center justify-between">
-          <div>
-            <p className="text-sm text-slate-400">נותרו עד הפסיכומטרי</p>
-            <p className="num text-3xl font-bold text-slate-50">{Math.max(0, countdown)}</p>
-            <p className="text-xs text-slate-500">ימים</p>
+        <div className="rule-block">
+          <p className="eyebrow">נותרו עד המבחן</p>
+          <div className="mt-1 flex items-baseline gap-2.5">
+            <span className="figure text-6xl font-black leading-none tracking-tight text-slate-100">
+              {Math.max(0, countdown)}
+            </span>
+            <span className="text-[15px] text-slate-400">ימים</span>
           </div>
-          <div className="text-end">
-            <p className="text-sm font-medium text-verbal">{PHASE_INFO[phase].he}</p>
-            <p className="mt-0.5 max-w-[190px] text-xs text-slate-400">
-              {PHASE_INFO[phase].description}
-            </p>
-          </div>
+          <p className="mt-2 text-[13px] leading-relaxed text-slate-300">
+            <span className="font-medium text-slate-100">{PHASE_INFO[phase].he}</span>
+            {' — '}
+            {PHASE_INFO[phase].description}
+          </p>
         </div>
       )}
 
-      <div className="card space-y-4">
+      <div className="rule-block space-y-5">
         <Meter
           label="ציון פסיכומטרי משוער"
           value={projection.general}
           min={SCORE_SCALE.min}
           max={SCORE_SCALE.max}
-          tone="xp"
+          tone="accent"
           caption={
             projection.provisional
               ? 'ההערכה עדיין רועשת — נדרשות כ-30 שאלות בכל תחום כדי שתתייצב.'
@@ -106,69 +118,52 @@ export function Dashboard() {
         />
       </div>
 
-      <section>
-        <h2 className="mb-2 text-sm font-semibold text-slate-400">משימות היום</h2>
-        <div className="space-y-2">
+      <section className="rule-block">
+        <h2 className="eyebrow mb-3">היום</h2>
+        <div className="flex flex-col gap-3.5">
           {state.quests.items.length === 0 && (
-            <p className="text-sm text-slate-500">אין משימות פתוחות — התחל תרגול כדי לייצר אותן.</p>
+            <p className="text-sm text-slate-400">אין משימות פתוחות — התחל תרגול כדי לייצר אותן.</p>
           )}
           {state.quests.items.map((quest) => (
-            <Link
-              key={quest.id}
-              to={quest.href.replace(/^#/, '')}
-              className={`card flex items-center justify-between ${quest.done ? 'opacity-50' : ''}`}
-            >
-              <div>
-                <p className="font-medium text-slate-100">
-                  {quest.done && '✓ '}
+            <Link key={quest.id} to={quest.href.replace(/^#/, '')} className="flex items-baseline gap-3">
+              <span
+                className={`mt-1 h-[7px] w-[7px] shrink-0 rounded-full border-[1.5px] ${
+                  quest.done ? 'border-accent bg-accent' : 'border-rule-strong'
+                }`}
+              />
+              <span className="flex-grow">
+                <span className={`block text-[15px] ${quest.done ? 'text-slate-400 line-through' : 'text-slate-100'}`}>
                   {quest.label}
-                </p>
-                <p className="num text-xs text-slate-500">
-                  {quest.progress}/{quest.target}
-                </p>
-              </div>
-              <span className="num text-sm font-bold text-xp">+{quest.xp}</span>
+                </span>
+                <span className="num block text-xs text-slate-500">
+                  {quest.progress} מתוך {quest.target}
+                </span>
+              </span>
             </Link>
           ))}
         </div>
       </section>
 
-      <section className="grid grid-cols-2 gap-2">
-        <Link to="/map" className="card text-center">
-          <div className="text-2xl">🗺️</div>
-          <p className="mt-1 text-sm font-medium">מפת הכוחות</p>
-        </Link>
-        <Link to="/review" className="card text-center">
-          <div className="text-2xl">🔁</div>
-          <p className="mt-1 text-sm font-medium">
-            חזרה {due.length > 0 && <span className="num text-xp">({due.length})</span>}
-          </p>
-        </Link>
-        <Link to="/boss" className="card text-center">
-          <div className="text-2xl">⚔️</div>
-          <p className="mt-1 text-sm font-medium">קרב בוס</p>
-        </Link>
-        <Link to="/essay" className="card text-center">
-          <div className="text-2xl">✍️</div>
-          <p className="mt-1 text-sm font-medium">מטלת כתיבה</p>
-        </Link>
-        <Link to="/mock" className="card text-center">
-          <div className="text-2xl">🛡️</div>
-          <p className="mt-1 text-sm font-medium">סימולציה מלאה</p>
-        </Link>
-        <Link to="/official" className="card text-center">
-          <div className="text-2xl">📄</div>
-          <p className="mt-1 text-sm font-medium">מבחנים רשמיים</p>
-        </Link>
-        <Link to="/english" className="card text-center">
-          <div className="text-2xl">🇬🇧</div>
-          <p className="mt-1 text-sm font-medium">
-            אמירנט
-            {retakeIn !== null && retakeIn > 0 && (
-              <span className="num block text-xs text-slate-500">מועד חוזר בעוד {retakeIn} ימים</span>
-            )}
-          </p>
-        </Link>
+      <section>
+        <h2 className="eyebrow mb-3">תרגול</h2>
+        <div className="grid grid-cols-2 gap-x-5 gap-y-0">
+          {SHORTCUTS.map((item) => (
+            <Link
+              key={item.to}
+              to={item.to}
+              className="flex items-center gap-2.5 border-b border-rule py-2.5 text-sm text-slate-100"
+            >
+              <Icon name={item.icon} size={17} className="shrink-0 text-accent" />
+              <span className="flex-grow">{item.label}</span>
+              {item.to === '/review' && due.length > 0 && (
+                <span className="num text-xs text-slate-500">{due.length}</span>
+              )}
+              {item.to === '/english' && retakeIn !== null && retakeIn > 0 && (
+                <span className="num text-xs text-slate-500">{retakeIn}י׳</span>
+              )}
+            </Link>
+          ))}
+        </div>
       </section>
 
       <p className="pb-2 text-center text-xs text-slate-600">

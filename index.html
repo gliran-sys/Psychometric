@@ -3,22 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="theme-color" content="#0b1020" />
+    <meta name="theme-color" content="#faf6ef" />
     <meta
       name="description"
       content="קורס אינטראקטיבי ומגומיין להכנה למבחן הפסיכומטרי הדו-תחומי (דצמבר 2026) ולמבחן אמירנט"
     />
     <title>פסיכומטרי RPG — הכנה לפסיכומטרי ולאמירנט</title>
     <!--
-      Deliberately no webfont CDN. A remote stylesheet blocks first paint on a weak
-      connection and fails outright offline, and this app is meant to be usable on a
-      phone anywhere. The system stack in index.css renders Hebrew well on every
-      platform. To use Rubik instead, drop the woff2 files into public/fonts and add
-      an @font-face rule — self-hosted, so the offline guarantee survives.
+      Body text runs on the system stack, so first paint never waits on the network and
+      the app stays fully usable offline. Only the DISPLAY face — headings, the
+      countdown and the scores — is fetched, with font-display:swap and a Hebrew serif
+      fallback chain, because Hebrew system serifs are unreliable across platforms.
+      To drop the network dependency entirely, put the Frank Ruhl Libre woff2 files in
+      public/fonts and swap this link for a local @font-face rule.
     -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="icon"
-      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>🎯</text></svg>"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>📓</text></svg>"
     />
   </head>
   <body>

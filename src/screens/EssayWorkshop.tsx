@@ -47,7 +47,7 @@ export function EssayWorkshop() {
     return (
       <div className="space-y-4">
         <header>
-          <h1 className="text-xl font-bold">✍️ מטלת כתיבה</h1>
+          <h1 className="text-xl font-bold">מטלת כתיבה</h1>
           <p className="text-sm text-slate-400">
             {WRITING_TASK.minutes} דקות · {WRITING_TASK.minLines}-{WRITING_TASK.maxLines} שורות
           </p>
@@ -109,7 +109,7 @@ export function EssayWorkshop() {
 
     return (
       <div className="space-y-3">
-        <div className="sticky top-14 z-10 -mx-4 flex items-center justify-between border-b border-ink-700 bg-ink-900/95 px-4 py-2 backdrop-blur">
+        <div className="sticky top-14 z-10 -mx-4 flex items-center justify-between border-b border-raised bg-paper/95 px-4 py-2 backdrop-blur">
           <div>
             <p className={`num text-2xl font-bold ${remainingSec < 120 ? 'text-danger' : 'text-slate-100'}`}>
               {formatClock(remainingSec)}
@@ -130,7 +130,7 @@ export function EssayWorkshop() {
           onChange={(e) => setText(e.target.value)}
           autoFocus
           dir="rtl"
-          className="h-[55vh] w-full resize-none rounded-xl border border-ink-600 bg-ink-800 p-3 text-sm leading-relaxed text-slate-100 outline-none focus:border-xp"
+          className="h-[55vh] w-full resize-none rounded-xl border border-rule-strong bg-surface p-3 text-sm leading-relaxed text-slate-100 outline-none focus:border-xp"
           placeholder="כתוב כאן..."
         />
       </div>
@@ -192,7 +192,7 @@ export function EssayWorkshop() {
                   type="checkbox"
                   checked={!!scores[c.id]}
                   onChange={(e) => setScores((s) => ({ ...s, [c.id]: e.target.checked }))}
-                  className="mt-1 h-4 w-4 shrink-0 accent-[#f5b83d]"
+                  className="mt-1 h-4 w-4 shrink-0 accent-[#8a2433]"
                 />
                 <span>
                   <span className="font-medium text-slate-200">{c.label}</span>

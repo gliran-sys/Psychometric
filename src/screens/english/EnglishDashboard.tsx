@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Meter } from '../../components/Meter';
+import { Icon } from '../../components/Icon';
 import {
   AMIRNET_SCALE,
   BLOCKS,
@@ -37,7 +38,7 @@ export function EnglishDashboard() {
   return (
     <div className="space-y-5">
       <header>
-        <h1 className="text-xl font-bold">🇬🇧 אמירנט</h1>
+        <h1 className="text-xl font-bold">אמירנט</h1>
         <p className="text-sm text-slate-400">
           מדצמבר 2026 זהו המבחן היחיד שבודק אנגלית לצורך קבלה וסיווג רמה.
         </p>
@@ -80,18 +81,18 @@ export function EnglishDashboard() {
 
       <section className="grid grid-cols-2 gap-2">
         <Link to="/english/sim" className="card col-span-2 text-center">
-          <div className="text-2xl">🎯</div>
+          <Icon name="target" size={22} className="mx-auto text-accent" />
           <p className="mt-1 font-medium">סימולציה אדפטיבית מלאה</p>
           <p className="num text-xs text-slate-500">
             {BLOCKS.length} בלוקים · כ-{TOTAL_MINUTES} דקות
           </p>
         </Link>
         <Link to="/english/vocab" className="card text-center">
-          <div className="text-2xl">📚</div>
+          <Icon name="vocab" size={22} className="mx-auto text-accent" />
           <p className="mt-1 text-sm font-medium">אוצר מילים</p>
         </Link>
         <Link to="/english/writing" className="card text-center">
-          <div className="text-2xl">📝</div>
+          <Icon name="pen" size={22} className="mx-auto text-accent" />
           <p className="mt-1 text-sm font-medium">מטלת כתיבה</p>
         </Link>
       </section>
@@ -113,7 +114,7 @@ export function EnglishDashboard() {
                     <p className="font-medium text-slate-100">
                       {ENGLISH_TOPIC_LABELS[topic as EnglishTopic].en}
                       {experimental && (
-                        <span className="ms-1.5 rounded bg-ink-600 px-1.5 py-0.5 text-[10px] text-slate-400">
+                        <span className="ms-1.5 rounded bg-rule-strong px-1.5 py-0.5 text-[10px] text-slate-400">
                           נסיוני / מתרחב
                         </span>
                       )}
@@ -125,7 +126,7 @@ export function EnglishDashboard() {
                   <span className="num text-xs text-slate-500">{Math.round(mastery * 100)}%</span>
                 </div>
 
-                <div className="mb-3 h-1.5 overflow-hidden rounded-full bg-ink-700">
+                <div className="mb-3 h-1.5 overflow-hidden rounded-full bg-raised">
                   <div className="h-full bg-english transition-[width]" style={{ width: `${mastery * 100}%` }} />
                 </div>
 

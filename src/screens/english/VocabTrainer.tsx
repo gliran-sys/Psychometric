@@ -62,12 +62,12 @@ export function VocabTrainer() {
     <div className="space-y-4">
       <header className="flex items-center justify-between">
         <div>
-          <h1 className="text-xl font-bold">📚 אוצר מילים</h1>
+          <h1 className="text-xl font-bold">אוצר מילים</h1>
           <p className="num text-xs text-slate-500">
             {masteredCount}/{list.length} בשליטה · {queue.due.length} לחזרה היום
           </p>
         </div>
-        <div className="flex gap-1 rounded-lg bg-ink-700 p-0.5 text-sm">
+        <div className="flex gap-1 rounded-lg bg-raised p-0.5 text-sm">
           {(['english', 'hebrew'] as const).map((lang) => (
             <button
               key={lang}
@@ -77,7 +77,7 @@ export function VocabTrainer() {
                 setRevealed(false);
               }}
               className={`rounded px-3 py-1 ${
-                language === lang ? 'bg-ink-600 text-slate-100' : 'text-slate-400'
+                language === lang ? 'bg-rule-strong text-slate-100' : 'text-slate-400'
               }`}
             >
               {lang === 'english' ? 'EN' : 'עב'}

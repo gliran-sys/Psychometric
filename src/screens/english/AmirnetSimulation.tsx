@@ -69,7 +69,7 @@ export function AmirnetSimulation() {
     return (
       <div className="space-y-4">
         <header>
-          <h1 className="text-xl font-bold">🎯 סימולציית אמירנט</h1>
+          <h1 className="text-xl font-bold">סימולציית אמירנט</h1>
           <p className="text-sm text-slate-400">
             {BLOCKS.length} בלוקים · כ-{TOTAL_MINUTES} דקות
           </p>
@@ -166,7 +166,7 @@ export function AmirnetSimulation() {
 
   return (
     <div className="space-y-4">
-      <header className="sticky top-14 z-10 -mx-4 border-b border-ink-700 bg-ink-900/95 px-4 py-2 backdrop-blur">
+      <header className="sticky top-14 z-10 -mx-4 border-b border-raised bg-paper/95 px-4 py-2 backdrop-blur">
         <div className="flex items-center justify-between">
           <div>
             <p className="text-sm font-bold text-slate-100">{blueprint.label}</p>
@@ -184,7 +184,7 @@ export function AmirnetSimulation() {
             <div
               key={b.id}
               className={`h-1 flex-1 rounded-full ${
-                i < blockIndex ? 'bg-english' : i === blockIndex ? 'bg-english/50' : 'bg-ink-700'
+                i < blockIndex ? 'bg-english' : i === blockIndex ? 'bg-english/50' : 'bg-raised'
               }`}
             />
           ))}
@@ -287,7 +287,7 @@ function SimulationResults({
                     <div
                       key={t}
                       className={`h-5 flex-1 rounded ${
-                        t === outcome.tier ? 'bg-english' : 'bg-ink-700'
+                        t === outcome.tier ? 'bg-english' : 'bg-raised'
                       }`}
                       title={TIER_LABEL[t]}
                     />
@@ -307,7 +307,7 @@ function SimulationResults({
           })}
         </div>
 
-        <div className="mt-3 space-y-1 border-t border-ink-700 pt-3 text-xs text-slate-400">
+        <div className="mt-3 space-y-1 border-t border-raised pt-3 text-xs text-slate-400">
           <p>
             רמה גבוהה שהגעת אליה: <span className="text-slate-200">{TIER_LABEL[summary.peakTier]}</span> ·
             רמה סופית: <span className="text-slate-200">{TIER_LABEL[summary.finalTier]}</span>

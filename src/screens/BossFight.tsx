@@ -46,7 +46,7 @@ export function BossFight() {
     return (
       <div className="space-y-4">
         <header>
-          <h1 className="text-xl font-bold">⚔️ קרב בוס</h1>
+          <h1 className="text-xl font-bold">קרב בוס</h1>
           <p className="text-sm text-slate-400">
             פרק שלם בזמן אמת. כדי לנצח צריך גם דיוק של{' '}
             <span className="num">{Math.round(BOSS_THRESHOLDS.accuracy * 100)}%</span> וגם לסיים בזמן.

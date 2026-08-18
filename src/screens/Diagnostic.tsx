@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { TimedSection, scoreSection } from '../components/TimedSection';
 import { Meter } from '../components/Meter';
+import { Icon } from '../components/Icon';
 import { SCORE_SCALE, DOMAIN_LABELS, type Domain } from '../config/blueprint';
 import { accuracyToDomainScore, generalScore } from '../engine/scoring';
 import { updateRating } from '../engine/adaptive';
@@ -44,7 +45,7 @@ export function Diagnostic() {
     return (
       <div className="space-y-4">
         <header>
-          <h1 className="text-xl font-bold">🧭 אבחון פתיחה</h1>
+          <h1 className="text-xl font-bold">אבחון פתיחה</h1>
           <p className="text-sm text-slate-400">
             שני פרקים מקוצרים, כ-23 דקות בסך הכול.
           </p>
@@ -117,7 +118,7 @@ export function Diagnostic() {
   return (
     <div className="space-y-4">
       <div className="card text-center">
-        <div className="text-4xl">🧭</div>
+        <Icon name="compass" size={38} className="mx-auto text-accent" />
         <h1 className="mt-1 text-lg font-bold">האבחון הושלם</h1>
         <p className="mt-1 text-sm text-slate-400">
           מנוע ההתאמה מכויל. מכאן כל תרגול מוגש ברמה שמתאימה לך.

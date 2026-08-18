@@ -50,7 +50,7 @@ export function TimedSection({ title, items, minutes, onFinish }: TimedSectionPr
 
   return (
     <div className="space-y-4">
-      <header className="sticky top-14 z-10 -mx-4 border-b border-ink-700 bg-ink-900/95 px-4 py-2 backdrop-blur">
+      <header className="sticky top-14 z-10 -mx-4 border-b border-raised bg-paper/95 px-4 py-2 backdrop-blur">
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-sm font-bold text-slate-100">{title}</h1>
@@ -80,10 +80,10 @@ export function TimedSection({ title, items, minutes, onFinish }: TimedSectionPr
               onClick={() => setIndex(i)}
               className={`num h-6 w-6 rounded text-[11px] transition ${
                 i === index
-                  ? 'bg-xp text-ink-900'
+                  ? 'bg-xp text-paper'
                   : answers[i] !== null
-                    ? 'bg-ink-600 text-slate-200'
-                    : 'bg-ink-700 text-slate-500'
+                    ? 'bg-rule-strong text-slate-200'
+                    : 'bg-raised text-slate-500'
               }`}
             >
               {i + 1}
