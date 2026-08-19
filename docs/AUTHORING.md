@@ -31,8 +31,8 @@ the single best simulation material available — link to them and solve them th
   "difficulty": 3,                   // 1-5
   "passage": "…",                    // optional; repeat it on each item of a set
   "stem": "רוֹפֵא : חוֹלֶה",
-  "options": ["…", "…", "…", "…"],   // exactly 4
-  "correctIndex": 0,
+  "options": ["…", "…", "…", "…"],   // exactly 4; write the CORRECT one first
+  "correctIndex": 0,                 // always 0 — the app shuffles (see below)
   "solutionSteps": ["…", "…"],       // the procedure, not just the answer
   "techniqueTags": ["משפט-יחס"],
   "targetTimeSec": 35,               // drives pacing feedback and SRS grading
@@ -42,6 +42,31 @@ the single best simulation material available — link to them and solve them th
     "3": "…"
   }
 }
+```
+
+### Write the correct answer first — the app shuffles it
+
+Author every item with the correct answer at index `0`. That is the only workable order
+to write in: distractors are designed *against* the answer, and `trapExplanations` are
+keyed to their option index, so writing the answer anywhere else just invites a
+mis-keyed explanation.
+
+Nothing ships in that order. `src/engine/optionOrder.ts` permutes the options at the
+content boundary in `src/content/index.ts`, remapping `correctIndex` and re-keying
+`trapExplanations` to follow their options. Every screen in the app reads the shuffled
+form; nothing imports the raw JSON.
+
+The permutation is derived from the item id, so it is stable — a question shows the same
+option order in a drill, in the review queue, and after a reload. Which means: **do not
+hand-shuffle options to "add variety".** It buys nothing, and choosing positions by hand
+is exactly how the bank ended up with every answer at א in the first place.
+
+`npm run validate:content` fails the build if the served positions come out skewed — as
+a whole bank, or inside any single topic with 15+ items, since drills serve one topic at
+a time. It prints the split on success:
+
+```
+content OK — … · answer positions 24%/23%/27%/25%
 ```
 
 ### `trapExplanations` is mandatory

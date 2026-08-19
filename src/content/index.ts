@@ -17,6 +17,7 @@ import hebrewVocab from './vocab/hebrew-academic.json';
 import englishVocab from './vocab/english-amirnet.json';
 import writingJson from './writing/prompts.json';
 import englishWritingJson from './english/writing-prompts.json';
+import { presentAll } from '../engine/optionOrder';
 import type {
   EnglishItem,
   EssayPrompt,
@@ -32,9 +33,15 @@ import type {
  * Types are asserted rather than parsed here: `npm run validate:content` runs the Zod
  * schemas over these same files in CI, so paying the parse cost again at every app
  * start would buy nothing. If validation passes, these assertions hold.
+ *
+ * Everything passes through `presentAll` on the way out. Items are authored with the
+ * correct answer first — distractors are written against the answer, so that is the
+ * only workable authoring order — and this is the one boundary where that order is
+ * turned into the order the user actually sees. Nothing downstream imports the raw
+ * JSON, so no screen can accidentally serve the authored arrangement.
  */
 
-export const PET_ITEMS: PetItem[] = [
+export const PET_ITEMS: PetItem[] = presentAll([
   ...analogies,
   ...verbalSentenceCompletion,
   ...logic,
@@ -44,15 +51,15 @@ export const PET_ITEMS: PetItem[] = [
   ...wordProblems,
   ...ratiosPercents,
   ...dataInterpretation,
-] as PetItem[];
+] as PetItem[]);
 
-export const ENGLISH_ITEMS: EnglishItem[] = [
+export const ENGLISH_ITEMS: EnglishItem[] = presentAll([
   ...enSentenceCompletion,
   ...enRestatement,
   ...enReading,
   ...enGrammar,
   ...enListening,
-] as EnglishItem[];
+] as EnglishItem[]);
 
 export const LESSONS: Lesson[] = lessonsJson as Lesson[];
 

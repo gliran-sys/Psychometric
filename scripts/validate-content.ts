@@ -9,6 +9,7 @@ import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';
 import { BLOCKS, TIER_ORDER } from '../src/config/amirnet';
 import { ALL_TOPICS, SECTIONS, TOPICS } from '../src/config/blueprint';
+import { permutationFor } from '../src/engine/optionOrder';
 import {
   englishItemSchema,
   essayPromptSchema,
@@ -228,6 +229,68 @@ if (fullMocks < 2) {
   );
 }
 
+/**
+ * Where the correct answer actually lands once the bank is served.
+ *
+ * Items are authored answer-first and shuffled by `src/engine/optionOrder.ts` on the
+ * way out of the content boundary, so the authored `correctIndex` says nothing about
+ * what the user sees. What matters is the served distribution, and it is checked here
+ * rather than only in tests because the failure mode is silent: an item bank that
+ * happens to lean on one position turns every drill into a guessing game the user can
+ * win without reading. This is the check whose absence let an all-answers-first bank
+ * ship.
+ */
+const servedPosition = (item: { id: string; correctIndex: number }) =>
+  permutationFor(item.id).indexOf(item.correctIndex);
+
+const positionCounts = [0, 0, 0, 0];
+const byTopicPositions = new Map<string, number[]>();
+
+[...petItems, ...englishItems].forEach((raw) => {
+  const item = raw as { id: string; topic: string; correctIndex: number };
+  const position = servedPosition(item);
+  positionCounts[position] += 1;
+  const counts = byTopicPositions.get(item.topic) ?? [0, 0, 0, 0];
+  counts[position] += 1;
+  byTopicPositions.set(item.topic, counts);
+});
+
+const totalItems = positionCounts.reduce((a, b) => a + b, 0);
+if (totalItems > 0) {
+  const expected = totalItems / 4;
+  const chiSquare = positionCounts.reduce((s, c) => s + (c - expected) ** 2 / expected, 0);
+
+  positionCounts.forEach((count, position) => {
+    if (count === 0) {
+      errors.push(`served answers never land in position ${position + 1} of 4`);
+    }
+  });
+
+  // df = 3, p = 0.001. Loose enough that ordinary sampling noise in a few hundred
+  // items passes; tight enough that a real skew — a broken hash, or a bank grown
+  // lopsided — fails the build instead of reaching a drill.
+  if (chiSquare > 16.27) {
+    errors.push(
+      `served answer positions are skewed (${positionCounts.join('/')}, chi-square ` +
+        `${chiSquare.toFixed(1)} over ${totalItems} items)`,
+    );
+  }
+
+  byTopicPositions.forEach((counts, topic) => {
+    const n = counts.reduce((a, b) => a + b, 0);
+    if (n < 15) return; // too few items for the share to mean anything
+    const worst = Math.max(...counts) / n;
+    if (worst > 0.5) {
+      // Drills serve one topic at a time, so a per-topic lean is exploitable even
+      // when the bank as a whole looks flat.
+      errors.push(
+        `topic "${topic}" puts ${Math.round(worst * 100)}% of its answers in one ` +
+          `position (${counts.join('/')})`,
+      );
+    }
+  });
+}
+
 // --- report -------------------------------------------------------------------------
 
 warnings.forEach((w) => console.warn(`warning: ${w}`));
@@ -241,5 +304,6 @@ if (errors.length > 0) {
 console.log(
   `content OK — ${petItems.length} PET items, ${englishItems.length} AMIRNET items, ` +
     `${allIds.size} unique ids · ${fullMocks} non-repeating mock(s) ` +
-    `(bottleneck: ${bottleneck} at ${mockCapacity.toFixed(1)})`,
+    `(bottleneck: ${bottleneck} at ${mockCapacity.toFixed(1)}) · ` +
+    `answer positions ${positionCounts.map((c) => `${Math.round((c / totalItems) * 100)}%`).join('/')}`,
 );
