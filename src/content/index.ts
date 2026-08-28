@@ -81,12 +81,30 @@ export function itemById(id: string): PetItem | EnglishItem | undefined {
   return petById.get(id) ?? englishById.get(id);
 }
 
+/**
+ * Topic pools are cached because their identity matters, not just their contents.
+ * Screens call these during render, and a fresh array each time makes every `useMemo`
+ * and `useEffect` keyed on the pool re-run on every render — which is exactly how a
+ * drill ended up re-selecting its question mid-answer. Callers must treat the result
+ * as read-only.
+ */
+const petByTopic = new Map<string, PetItem[]>();
+const englishByTopic = new Map<string, EnglishItem[]>();
+
 export function petItemsByTopic(topic: string): PetItem[] {
-  return PET_ITEMS.filter((i) => i.topic === topic);
+  const cached = petByTopic.get(topic);
+  if (cached) return cached;
+  const pool = PET_ITEMS.filter((i) => i.topic === topic);
+  petByTopic.set(topic, pool);
+  return pool;
 }
 
 export function englishItemsByTopic(topic: string): EnglishItem[] {
-  return ENGLISH_ITEMS.filter((i) => i.topic === topic);
+  const cached = englishByTopic.get(topic);
+  if (cached) return cached;
+  const pool = ENGLISH_ITEMS.filter((i) => i.topic === topic);
+  englishByTopic.set(topic, pool);
+  return pool;
 }
 
 export function lessonsForTrack(track: 'pet' | 'amirnet'): Lesson[] {

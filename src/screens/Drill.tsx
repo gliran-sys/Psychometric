@@ -14,6 +14,13 @@ import { useEffect } from 'react';
  */
 export function Drill() {
   const { topic = '' } = useParams();
+  // Keyed so switching topics starts a genuinely new session. React Router reuses this
+  // element across `:topic` changes, and without the remount the drill would carry the
+  // previous topic's served question and seen-set into the new one.
+  return <DrillSession key={topic} topic={topic} />;
+}
+
+function DrillSession({ topic }: { topic: string }) {
   const pool = petItemsByTopic(topic);
   const lesson = lessonForTopic('pet', topic);
   const advanceQuest = useStore((s) => s.advanceQuest);

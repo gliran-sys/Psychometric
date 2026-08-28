@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useRef, useState } from 'react';
+import { useCallback, useRef, useState } from 'react';
 import type { Item } from '../content/schema';
 import { selectNextItem, updateRating, STARTING_RATING } from '../engine/adaptive';
 import { gradeFrom, newCard, review } from '../engine/srs';
@@ -13,6 +13,15 @@ import { today } from '../lib/date';
  * One place owns the sequence that must never drift between tracks: serve an item at
  * the right difficulty, time the response, grade it, update the ability rating, file
  * the miss into spaced repetition, and award XP.
+ *
+ * The served item is held in state and changes only in `next()`. It used to be derived
+ * with `useMemo` from the pool and the seen set, which looked equivalent but was not:
+ * grading an answer updates the ability rating, the rating moves the target difficulty,
+ * and when that crossed a difficulty boundary the memo re-selected a *different* item
+ * while `selected` and `revealed` still described the old one. The user saw the next
+ * question appear on its own with an answer already filled in, and because `next()` then
+ * filed the substituted item's id as seen, the question they actually answered stayed
+ * unseen and came back around again.
  */
 export function useDrill(pool: Item[], track: 'pet' | 'amirnet', topic: string) {
   const abilities = useStore((s) => (track === 'amirnet' ? s.englishAbilities : s.abilities));
@@ -25,6 +34,11 @@ export function useDrill(pool: Item[], track: 'pet' | 'amirnet', topic: string) 
   const rating = abilities[topic]?.rating ?? STARTING_RATING;
 
   const [seenIds, setSeenIds] = useState<Set<string>>(() => new Set());
+  // Chosen once at mount and then only ever by `next()`, so nothing that re-renders
+  // mid-question — a rating update, an XP award, a parent re-render — can swap it.
+  const [current, setCurrent] = useState<Item | null>(() =>
+    selectNextItem(pool, rating, new Set()),
+  );
   const [selected, setSelected] = useState<number | null>(null);
   const [revealed, setRevealed] = useState(false);
   const [errorType, setErrorType] = useState<ErrorType | null>(null);
@@ -32,14 +46,6 @@ export function useDrill(pool: Item[], track: 'pet' | 'amirnet', topic: string) 
   const [stats, setStats] = useState({ correct: 0, answered: 0, xpEarned: 0 });
 
   const questionStartRef = useRef<number>(Date.now());
-
-  const current = useMemo(
-    () => selectNextItem(pool, rating, seenIds),
-    // `rating` is intentionally excluded: re-selecting mid-question when the rating
-    // updates would swap the item out from under the user.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [pool, seenIds],
-  );
 
   const answer = useCallback(
     (index: number) => {
@@ -88,12 +94,26 @@ export function useDrill(pool: Item[], track: 'pet' | 'amirnet', topic: string) 
   );
 
   const next = useCallback(() => {
-    if (current) setSeenIds((prev) => new Set(prev).add(current.id));
     setSelected(null);
     setRevealed(false);
     setErrorType(null);
     questionStartRef.current = Date.now();
-  }, [current]);
+    if (!current) return;
+
+    const seen = new Set(seenIds).add(current.id);
+    setSeenIds(seen);
+
+    // Every item in the topic has been answered — end the session rather than looping
+    // the pool, which is what the "you finished this topic" screen is for.
+    if (pool.every((item) => seen.has(item.id))) {
+      setCurrent(null);
+      return;
+    }
+
+    // `avoidId` matters only for the exhausted-pool fallback inside selectNextItem;
+    // it guarantees the same question is never served twice in a row.
+    setCurrent(selectNextItem(pool, rating, seen, { avoidId: current.id }));
+  }, [current, seenIds, pool, rating]);
 
   return { current, selected, revealed, errorType, setErrorType, combo, stats, answer, next };
 }

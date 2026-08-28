@@ -79,6 +79,43 @@ describe('item selection', () => {
   it('returns null only when there is nothing to serve', () => {
     expect(selectNextItem([], STARTING_RATING, new Set())).toBeNull();
   });
+
+  it('never serves the item it was told to avoid', () => {
+    const exhausted = new Set(pool.map((i) => i.id));
+    for (const item of pool) {
+      const served = selectNextItem(pool, STARTING_RATING, exhausted, { avoidId: item.id });
+      expect(served!.id).not.toBe(item.id);
+    }
+  });
+
+  it('varies the order between sessions instead of replaying the same one', () => {
+    // Difficulty has only five levels, so a topic usually offers many equally suitable
+    // items. Picking the first every time made each drill session an exact rerun of the
+    // last, which is not what a question bank this size is for.
+    const sameLevel = Array.from({ length: 8 }, (_, i) => ({ id: `x${i}`, difficulty: 3 }));
+    const picks = new Set<string>();
+    for (let i = 0; i < 200; i += 1) {
+      picks.add(selectNextItem(sameLevel, STARTING_RATING, new Set())!.id);
+    }
+    expect(picks.size).toBe(sameLevel.length);
+  });
+
+  it('randomises only among equally suitable items, never across difficulty', () => {
+    const wide = [1, 2, 3, 4, 5].map((difficulty) => ({ id: `d${difficulty}`, difficulty }));
+    const served = new Set<string>();
+    for (let i = 0; i < 200; i += 1) {
+      served.add(selectNextItem(wide, STARTING_RATING, new Set())!.id);
+    }
+    // One item is strictly closest to the target here, so the choice must not wander.
+    expect(served.size).toBe(1);
+  });
+
+  it('is deterministic when given a seeded generator', () => {
+    const sameLevel = Array.from({ length: 5 }, (_, i) => ({ id: `x${i}`, difficulty: 3 }));
+    const first = selectNextItem(sameLevel, STARTING_RATING, new Set(), { rng: () => 0.6 });
+    const again = selectNextItem(sameLevel, STARTING_RATING, new Set(), { rng: () => 0.6 });
+    expect(first!.id).toBe(again!.id);
+  });
 });
 
 describe('mastery', () => {

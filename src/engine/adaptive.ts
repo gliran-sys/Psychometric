@@ -49,27 +49,42 @@ export interface Selectable {
   difficulty: number;
 }
 
+export interface SelectOptions {
+  /** Never serve this item — used to avoid repeating a question back to back. */
+  avoidId?: string;
+  /** Injectable for deterministic tests. */
+  rng?: () => number;
+}
+
 /**
  * Picks the next item: closest to the target rating, excluding anything already seen
  * in this session. Falls back to reusing seen items only when the pool is exhausted,
  * so a thin topic still drills rather than dead-ends.
+ *
+ * Among items that are *equally* close to the target, the choice is random. Difficulty
+ * is quantised to five levels, so a topic usually offers several equally suitable
+ * items and picking the first every time made each drill session replay the previous
+ * one in the same order. Randomising the tie does not touch adaptivity — every
+ * candidate here sits at the same distance from the target rating.
  */
 export function selectNextItem<T extends Selectable>(
   pool: T[],
   userRating: number,
   seenIds: Set<string>,
+  { avoidId, rng = Math.random }: SelectOptions = {},
 ): T | null {
-  if (pool.length === 0) return null;
+  const allowed = avoidId === undefined ? pool : pool.filter((i) => i.id !== avoidId);
+  if (allowed.length === 0) return null;
 
-  const unseen = pool.filter((i) => !seenIds.has(i.id));
-  const candidates = unseen.length > 0 ? unseen : pool;
+  const unseen = allowed.filter((i) => !seenIds.has(i.id));
+  const candidates = unseen.length > 0 ? unseen : allowed;
   const target = targetItemRating(userRating);
 
-  return candidates.reduce((best, item) =>
-    Math.abs(itemRating(item.difficulty) - target) < Math.abs(itemRating(best.difficulty) - target)
-      ? item
-      : best,
-  );
+  const distance = (item: T) => Math.abs(itemRating(item.difficulty) - target);
+  const closest = Math.min(...candidates.map(distance));
+  const tied = candidates.filter((item) => distance(item) === closest);
+
+  return tied[Math.floor(rng() * tied.length)] ?? tied[0];
 }
 
 /** Rough mastery readout (0-1) for the skill tree, blending rating and sample size. */

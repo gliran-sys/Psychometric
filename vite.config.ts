@@ -7,7 +7,9 @@ export default defineConfig({
   plugins: [react()],
   base: process.env.BASE_PATH ?? '/Psychometric/',
   test: {
+    // jsdom only where it is needed: hook tests carry a DOM, engine tests stay on node.
     environment: 'node',
-    include: ['src/**/*.test.ts'],
+    include: ['src/**/*.test.ts', 'src/**/*.test.tsx'],
+    environmentMatchGlobs: [['src/hooks/**', 'jsdom']],
   },
 });

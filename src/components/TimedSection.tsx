@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import type { Item } from '../content/schema';
 import { QuestionView } from './QuestionView';
 import { useCountdown } from '../hooks/useTimer';
@@ -37,10 +37,15 @@ export function TimedSection({ title, items, minutes, onFinish }: TimedSectionPr
   const pace = paceStatus(answered, items.length, elapsedSec, totalSec);
   const secPerRemaining = requiredPace(answered, items.length, elapsedSec, totalSec);
 
-  if (expired) {
-    // Auto-submit rather than letting the user keep working past the buzzer.
+  // Auto-submit rather than letting the user keep working past the buzzer. This has to
+  // be an effect: called during render it updates the parent mid-render, and it re-fires
+  // on every subsequent render, submitting the section repeatedly.
+  const submitted = useRef(false);
+  useEffect(() => {
+    if (!expired || submitted.current) return;
+    submitted.current = true;
     onFinish({ answers, elapsedSec: totalSec, ranOutOfTime: true });
-  }
+  }, [expired, answers, totalSec, onFinish]);
 
   const select = (choice: number) =>
     setAnswers((prev) => prev.map((a, i) => (i === index ? choice : a)));

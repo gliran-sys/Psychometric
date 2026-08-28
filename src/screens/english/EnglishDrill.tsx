@@ -13,6 +13,12 @@ import { EmptyState } from '../Drill';
  */
 export function EnglishDrill() {
   const { topic = '' } = useParams();
+  // See the note in Drill.tsx: the route element is reused across topic changes, so the
+  // session needs an explicit remount to reset.
+  return <EnglishDrillSession key={topic} topic={topic} />;
+}
+
+function EnglishDrillSession({ topic }: { topic: string }) {
   const pool = englishItemsByTopic(topic);
   const lesson = lessonForTopic('amirnet', topic);
   const labels = ENGLISH_TOPIC_LABELS[topic as EnglishTopic];
