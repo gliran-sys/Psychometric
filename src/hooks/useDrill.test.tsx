@@ -145,6 +145,67 @@ describe('question repetition', () => {
   });
 });
 
+describe('across sessions', () => {
+  // Answers alternate so the ability rating stays roughly put. A run of all-correct
+  // answers climbs into the thin top of a topic, where repetition is a content gap
+  // rather than a selection failure.
+  function sessions(count: number, perSession: number) {
+    let n = 0;
+    const runs: string[][] = [];
+    for (let s = 0; s < count; s += 1) {
+      const { result, unmount } = drill();
+      const ids: string[] = [];
+      for (let i = 0; i < perSession; i += 1) {
+        const item = result.current.current;
+        if (!item) break;
+        ids.push(item.id);
+        const choice = n++ % 2 === 0 ? item.correctIndex : (item.correctIndex + 1) % 4;
+        act(() => result.current.answer(choice));
+        act(() => result.current.next());
+      }
+      unmount();
+      runs.push(ids);
+    }
+    return runs;
+  }
+
+  it('never repeats while the topic still has unseen items at that difficulty', () => {
+    // Rating 1382 puts the practice band over the two deepest difficulty levels in
+    // analogies, so there is enough material for three full sessions.
+    seedRating('analogies', 1382);
+    const runs = sessions(3, 5);
+    const all = runs.flat();
+
+    expect(all).toHaveLength(15);
+    expect(new Set(all).size).toBe(15);
+  });
+
+  it('starts each session on a question the previous one did not serve', () => {
+    // The drill resets its seen-set on mount, so cross-session variety has to come from
+    // attempt history. Without it, short daily sessions circle the same few items while
+    // most of the topic goes untouched.
+    seedRating('analogies', 1382);
+    const [first, second, third] = sessions(3, 5);
+
+    expect(first).not.toContain(second[0]);
+    expect([...first, ...second]).not.toContain(third[0]);
+  });
+
+  it('comes back to the stalest question once the band is exhausted', () => {
+    // A thin band is worked through and then recycled oldest-first — never at random,
+    // which is what made a small topic feel smaller than it is.
+    seedRating('analogies', 947);
+    const runs = sessions(4, 4);
+    const all = runs.flat();
+
+    const firstServed = all[0];
+    const repeatAt = all.indexOf(firstServed, 1);
+    expect(repeatAt).toBeGreaterThan(-1);
+    // Everything served before that repeat was distinct: the pool really was used up.
+    expect(new Set(all.slice(0, repeatAt)).size).toBe(repeatAt);
+  });
+});
+
 describe('grading', () => {
   it('counts the answer against the question that was on screen', () => {
     seedRating('analogies', 1070);

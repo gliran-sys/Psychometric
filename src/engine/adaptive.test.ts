@@ -3,6 +3,7 @@ import {
   expectedScore,
   itemRating,
   masteryOf,
+  PRACTICE_BAND,
   selectNextItem,
   STARTING_RATING,
   targetItemRating,
@@ -100,14 +101,71 @@ describe('item selection', () => {
     expect(picks.size).toBe(sameLevel.length);
   });
 
-  it('randomises only among equally suitable items, never across difficulty', () => {
+  it('draws on more than one difficulty so the effective pool is not one tier', () => {
+    // The point of the band. Serving only the nearest tier left a drill cycling roughly
+    // nine items in a typical topic, which is what made questions feel repetitive.
     const wide = [1, 2, 3, 4, 5].map((difficulty) => ({ id: `d${difficulty}`, difficulty }));
     const served = new Set<string>();
-    for (let i = 0; i < 200; i += 1) {
+    for (let i = 0; i < 300; i += 1) {
       served.add(selectNextItem(wide, STARTING_RATING, new Set())!.id);
     }
-    // One item is strictly closest to the target here, so the choice must not wander.
-    expect(served.size).toBe(1);
+    expect(served.size).toBeGreaterThan(1);
+  });
+
+  it('never serves an item outside the productive success band', () => {
+    const wide = [1, 2, 3, 4, 5].map((difficulty) => ({ id: `d${difficulty}`, difficulty }));
+    for (const rating of [700, 850, 1000, 1150, 1300]) {
+      for (let i = 0; i < 60; i += 1) {
+        const item = selectNextItem(wide, rating, new Set())!;
+        const p = expectedScore(rating, itemRating(item.difficulty));
+        expect(p).toBeGreaterThanOrEqual(PRACTICE_BAND.min);
+        expect(p).toBeLessThanOrEqual(PRACTICE_BAND.max);
+      }
+    }
+  });
+
+  it('falls back to the closest item when nothing sits in the band', () => {
+    // A user far above the whole topic still has to be served something.
+    const easyOnly = [{ id: 'e1', difficulty: 1 }];
+    expect(selectNextItem(easyOnly, 2000, new Set())!.id).toBe('e1');
+  });
+
+  it('works through unseen items before repeating any', () => {
+    const pool = Array.from({ length: 6 }, (_, i) => ({ id: `x${i}`, difficulty: 2 }));
+    const lastSeen = new Map([['x0', 10], ['x1', 3]]);
+    for (let i = 0; i < 100; i += 1) {
+      const served = selectNextItem(pool, STARTING_RATING, new Set(), { lastSeen })!;
+      expect(['x0', 'x1']).not.toContain(served.id);
+    }
+  });
+
+  it('repeats the least recently seen item once everything has been seen', () => {
+    const pool = Array.from({ length: 4 }, (_, i) => ({ id: `x${i}`, difficulty: 2 }));
+    // x2 is the stalest; x0 was answered most recently.
+    const lastSeen = new Map([['x0', 40], ['x1', 22], ['x2', 5], ['x3', 31]]);
+    for (let i = 0; i < 50; i += 1) {
+      expect(selectNextItem(pool, STARTING_RATING, new Set(), { lastSeen })!.id).toBe('x2');
+    }
+  });
+
+  it('rotates the whole pool across sessions instead of resampling a few', () => {
+    // Eight short sessions of three questions each, carrying attempt history between
+    // them, must cover the topic rather than circling the same items.
+    const pool = Array.from({ length: 12 }, (_, i) => ({ id: `x${i}`, difficulty: 2 }));
+    const lastSeen = new Map<string, number>();
+    let clock = 0;
+    const covered = new Set<string>();
+
+    for (let session = 0; session < 8; session += 1) {
+      const seen = new Set<string>();
+      for (let q = 0; q < 3; q += 1) {
+        const item = selectNextItem(pool, STARTING_RATING, seen, { lastSeen })!;
+        seen.add(item.id);
+        lastSeen.set(item.id, (clock += 1));
+        covered.add(item.id);
+      }
+    }
+    expect(covered.size).toBe(pool.length);
   });
 
   it('is deterministic when given a seeded generator', () => {

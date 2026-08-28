@@ -49,42 +49,73 @@ export interface Selectable {
   difficulty: number;
 }
 
+/**
+ * The success band an item must fall in to be worth serving.
+ *
+ * `targetItemRating` names the single ideal difficulty, but serving only the tier
+ * closest to it collapses the effective pool to one difficulty band of one topic —
+ * around nine items in a typical topic here — and no amount of shuffling hides that.
+ * Admitting anything the user would get right between 55% and 90% of the time widens
+ * that to two or three bands while staying inside productive struggle. On a
+ * hand-authored bank, mild difficulty imprecision costs far less than repetition does.
+ */
+export const PRACTICE_BAND = { min: 0.55, max: 0.9 };
+
 export interface SelectOptions {
   /** Never serve this item — used to avoid repeating a question back to back. */
   avoidId?: string;
   /** Injectable for deterministic tests. */
   rng?: () => number;
+  /**
+   * Attempt recency by item id, higher meaning more recently answered. Supplying it
+   * turns selection into a rotation: unseen items first, then least recently seen.
+   */
+  lastSeen?: Map<string, number>;
 }
 
 /**
- * Picks the next item: closest to the target rating, excluding anything already seen
- * in this session. Falls back to reusing seen items only when the pool is exhausted,
- * so a thin topic still drills rather than dead-ends.
+ * Picks the next item to serve.
  *
- * Among items that are *equally* close to the target, the choice is random. Difficulty
- * is quantised to five levels, so a topic usually offers several equally suitable
- * items and picking the first every time made each drill session replay the previous
- * one in the same order. Randomising the tie does not touch adaptivity — every
- * candidate here sits at the same distance from the target rating.
+ * Three filters in order: drop anything already seen in this session, keep what sits in
+ * the productive success band, then rotate by recency so the bank is worked through
+ * rather than sampled. Each stage falls back to the previous one rather than returning
+ * nothing, so a thin topic still drills instead of dead-ending.
  */
 export function selectNextItem<T extends Selectable>(
   pool: T[],
   userRating: number,
   seenIds: Set<string>,
-  { avoidId, rng = Math.random }: SelectOptions = {},
+  { avoidId, rng = Math.random, lastSeen }: SelectOptions = {},
 ): T | null {
   const allowed = avoidId === undefined ? pool : pool.filter((i) => i.id !== avoidId);
   if (allowed.length === 0) return null;
 
   const unseen = allowed.filter((i) => !seenIds.has(i.id));
   const candidates = unseen.length > 0 ? unseen : allowed;
-  const target = targetItemRating(userRating);
 
+  const suitable = candidates.filter((item) => {
+    const p = expectedScore(userRating, itemRating(item.difficulty));
+    return p >= PRACTICE_BAND.min && p <= PRACTICE_BAND.max;
+  });
+
+  // Nothing in band means the user has outgrown the topic or is far below it; fall back
+  // to whatever sits closest so the drill still runs.
+  const target = targetItemRating(userRating);
   const distance = (item: T) => Math.abs(itemRating(item.difficulty) - target);
   const closest = Math.min(...candidates.map(distance));
-  const tied = candidates.filter((item) => distance(item) === closest);
+  const band = suitable.length > 0 ? suitable : candidates.filter((i) => distance(i) === closest);
 
-  return tied[Math.floor(rng() * tied.length)] ?? tied[0];
+  const pick = (from: T[]) => from[Math.floor(rng() * from.length)] ?? from[0];
+  if (!lastSeen) return pick(band);
+
+  // Work through everything unseen before repeating anything, then repeat oldest-first.
+  // Without this a drill re-samples the same handful across sessions while items the
+  // user has never met sit untouched.
+  const never = band.filter((i) => !lastSeen.has(i.id));
+  if (never.length > 0) return pick(never);
+
+  const oldest = Math.min(...band.map((i) => lastSeen.get(i.id)!));
+  return pick(band.filter((i) => lastSeen.get(i.id) === oldest));
 }
 
 /** Rough mastery readout (0-1) for the skill tree, blending rating and sample size. */

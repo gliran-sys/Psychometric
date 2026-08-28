@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState } from 'react';
+import { useCallback, useMemo, useRef, useState } from 'react';
 import type { Item } from '../content/schema';
 import { selectNextItem, updateRating, STARTING_RATING } from '../engine/adaptive';
 import { gradeFrom, newCard, review } from '../engine/srs';
@@ -33,11 +33,23 @@ export function useDrill(pool: Item[], track: 'pet' | 'amirnet', topic: string) 
 
   const rating = abilities[topic]?.rating ?? STARTING_RATING;
 
+  // Recency of past attempts on this topic, so a session picks up where the last one
+  // left off instead of re-sampling the same handful. Position in the attempt log is
+  // the clock — no timestamp parsing, and it survives a reload with the store.
+  const attempts = useStore((s) => s.attempts);
+  const lastSeen = useMemo(() => {
+    const seen = new Map<string, number>();
+    attempts.forEach((a, i) => {
+      if (a.topic === topic && a.track === track) seen.set(a.itemId, i);
+    });
+    return seen;
+  }, [attempts, topic, track]);
+
   const [seenIds, setSeenIds] = useState<Set<string>>(() => new Set());
   // Chosen once at mount and then only ever by `next()`, so nothing that re-renders
   // mid-question — a rating update, an XP award, a parent re-render — can swap it.
   const [current, setCurrent] = useState<Item | null>(() =>
-    selectNextItem(pool, rating, new Set()),
+    selectNextItem(pool, rating, new Set(), { lastSeen }),
   );
   const [selected, setSelected] = useState<number | null>(null);
   const [revealed, setRevealed] = useState(false);
@@ -112,8 +124,8 @@ export function useDrill(pool: Item[], track: 'pet' | 'amirnet', topic: string) 
 
     // `avoidId` matters only for the exhausted-pool fallback inside selectNextItem;
     // it guarantees the same question is never served twice in a row.
-    setCurrent(selectNextItem(pool, rating, seen, { avoidId: current.id }));
-  }, [current, seenIds, pool, rating]);
+    setCurrent(selectNextItem(pool, rating, seen, { avoidId: current.id, lastSeen }));
+  }, [current, seenIds, pool, rating, lastSeen]);
 
   return { current, selected, revealed, errorType, setErrorType, combo, stats, answer, next };
 }
