@@ -1,5 +1,5 @@
 import { act, renderHook } from '@testing-library/react';
-import { afterEach, describe, expect, it } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { useDrill } from './useDrill';
 import { petItemsByTopic } from '../content';
 import { useStore } from '../state/store';
@@ -23,10 +23,20 @@ import type { Item } from '../content/schema';
 
 const RESET = useStore.getState();
 
-afterEach(() => {
+// Reset before each test rather than after. Selection now reads attempt history, so a
+// test that inherits another test's attempts serves different questions — which made
+// this file pass as a whole and fail when a single test was run on its own.
+beforeEach(() => {
   act(() => {
     useStore.setState({ ...RESET, abilities: {}, attempts: [], srs: {}, xp: 0 }, true);
   });
+  // Selection breaks ties between equally suitable items at random, so without pinning
+  // the generator these tests would serve a different sequence on every run.
+  vi.spyOn(Math, 'random').mockReturnValue(0.42);
+});
+
+afterEach(() => {
+  vi.restoreAllMocks();
 });
 
 /** Seeds the rating for a topic so a single answer crosses a difficulty boundary. */
@@ -191,19 +201,20 @@ describe('across sessions', () => {
     expect([...first, ...second]).not.toContain(third[0]);
   });
 
-  it('comes back to the stalest question once the band is exhausted', () => {
-    // A thin band is worked through and then recycled oldest-first — never at random,
-    // which is what made a small topic feel smaller than it is.
+  it('keeps serving fresh questions across many short sessions', () => {
+    // The user-visible payoff of the rotation: six short sittings in a row, all new
+    // material. Before the bank was doubled the practice band held about eight
+    // analogies at this rating and this test could not have passed.
     seedRating('analogies', 947);
-    const runs = sessions(4, 4);
-    const all = runs.flat();
+    const all = sessions(6, 3).flat();
 
-    const firstServed = all[0];
-    const repeatAt = all.indexOf(firstServed, 1);
-    expect(repeatAt).toBeGreaterThan(-1);
-    // Everything served before that repeat was distinct: the pool really was used up.
-    expect(new Set(all.slice(0, repeatAt)).size).toBe(repeatAt);
+    expect(all).toHaveLength(18);
+    expect(new Set(all).size).toBe(18);
   });
+
+  // The recycle-oldest-first behaviour that takes over once a band really is exhausted
+  // is covered in adaptive.test.ts, where a synthetic pool can be made thin on purpose
+  // instead of depending on how deep the real bank happens to be.
 });
 
 describe('grading', () => {
