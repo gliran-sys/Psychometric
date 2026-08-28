@@ -176,6 +176,15 @@ ALL_TOPICS.forEach((topic) => {
 const blocksPerTopic = new Map<string, number>();
 BLOCKS.forEach((b) => blocksPerTopic.set(b.topic, (blocksPerTopic.get(b.topic) ?? 0) + 1));
 
+/**
+ * How many sittings the bank supports without repeating, measured on the worst
+ * topic/tier pair — the same idea as the mock capacity below. Reported rather than
+ * merely checked, because a user who sits the simulation twice notices a thin tier
+ * long before any test does.
+ */
+let sittingCapacity = Infinity;
+let sittingBottleneck = '';
+
 BLOCKS.forEach((block) => {
   const needed = block.questionCount * (blocksPerTopic.get(block.topic) ?? 1);
   TIER_ORDER.forEach((tier) => {
@@ -186,8 +195,20 @@ BLOCKS.forEach((block) => {
           `sitting can need ${needed} at one tier — routing would be distorted`,
       );
     }
+    if (count / needed < sittingCapacity) {
+      sittingCapacity = count / needed;
+      sittingBottleneck = `${block.topic}/${tier}`;
+    }
   });
 });
+
+const fullSittings = Math.floor(sittingCapacity);
+if (fullSittings < 2) {
+  warnings.push(
+    `bank supports only ${fullSittings} fully non-repeating AMIRNET sitting(s); ` +
+      `"${sittingBottleneck}" is the bottleneck at ${sittingCapacity.toFixed(1)}.`,
+  );
+}
 
 /** Listening items are spoken by the Web Speech API and need text to speak. */
 englishItems
@@ -305,5 +326,7 @@ console.log(
   `content OK — ${petItems.length} PET items, ${englishItems.length} AMIRNET items, ` +
     `${allIds.size} unique ids · ${fullMocks} non-repeating mock(s) ` +
     `(bottleneck: ${bottleneck} at ${mockCapacity.toFixed(1)}) · ` +
+    `${fullSittings} non-repeating AMIRNET sitting(s) ` +
+    `(bottleneck: ${sittingBottleneck} at ${sittingCapacity.toFixed(1)}) · ` +
     `answer positions ${positionCounts.map((c) => `${Math.round((c / totalItems) * 100)}%`).join('/')}`,
 );

@@ -6,14 +6,22 @@
     "blockTier": "easy",
     "difficulty": 2,
     "stem": "Neither the manager nor the employees ______ aware of the new policy.",
-    "options": ["were", "was", "is", "has been"],
+    "options": [
+      "were",
+      "was",
+      "is",
+      "has been"
+    ],
     "correctIndex": 0,
     "solutionSteps": [
       "With 'neither ... nor', the verb agrees with the nearer subject.",
       "The nearer subject is 'the employees' — plural.",
       "So the plural 'were' is correct."
     ],
-    "techniqueTags": ["subject-verb-agreement", "correlative-conjunctions"],
+    "techniqueTags": [
+      "subject-verb-agreement",
+      "correlative-conjunctions"
+    ],
     "targetTimeSec": 45,
     "trapExplanations": {
       "1": "Agrees with 'the manager', the further subject — the rule uses the nearer one.",
@@ -28,14 +36,22 @@
     "blockTier": "medium",
     "difficulty": 3,
     "stem": "By the time the results ______ published, the team had already moved on to the next study.",
-    "options": ["were", "have been", "will be", "are"],
+    "options": [
+      "were",
+      "have been",
+      "will be",
+      "are"
+    ],
     "correctIndex": 0,
     "solutionSteps": [
       "The main clause uses 'had already moved' — past perfect.",
       "Past perfect marks the earlier of two past events, so the other clause must be simple past.",
       "'Were published' is the correct passive simple past."
     ],
-    "techniqueTags": ["tense-sequence", "passive-voice"],
+    "techniqueTags": [
+      "tense-sequence",
+      "passive-voice"
+    ],
     "targetTimeSec": 55,
     "trapExplanations": {
       "1": "Present perfect cannot pair with past perfect in this construction.",
@@ -50,14 +66,22 @@
     "blockTier": "medium",
     "difficulty": 3,
     "stem": "The findings, ______ were published last year, have since been widely cited.",
-    "options": ["which", "that", "who", "what"],
+    "options": [
+      "which",
+      "that",
+      "who",
+      "what"
+    ],
     "correctIndex": 0,
     "solutionSteps": [
       "The clause is set off by commas, making it non-restrictive — extra information.",
       "Non-restrictive clauses about things take 'which', never 'that'.",
       "'Which' is correct."
     ],
-    "techniqueTags": ["relative-clauses", "restrictive-vs-non-restrictive"],
+    "techniqueTags": [
+      "relative-clauses",
+      "restrictive-vs-non-restrictive"
+    ],
     "targetTimeSec": 55,
     "trapExplanations": {
       "1": "'That' introduces restrictive clauses and cannot follow a comma. The most common error in this pattern.",
@@ -84,7 +108,11 @@
       "The inverted form 'Had it been ...' is the standard way to open such a clause without 'if'.",
       "It is also passive, which the experiment (the thing designed) requires."
     ],
-    "techniqueTags": ["conditionals", "inversion", "passive-voice"],
+    "techniqueTags": [
+      "conditionals",
+      "inversion",
+      "passive-voice"
+    ],
     "targetTimeSec": 70,
     "trapExplanations": {
       "1": "Wrong voice and tense — the experiment did not design anything.",
@@ -99,19 +127,177 @@
     "blockTier": "hard",
     "difficulty": 4,
     "stem": "The report recommends that each department ______ its budget by the end of the quarter.",
-    "options": ["submit", "submits", "submitted", "will submit"],
+    "options": [
+      "submit",
+      "submits",
+      "submitted",
+      "will submit"
+    ],
     "correctIndex": 0,
     "solutionSteps": [
       "'Recommend that' triggers the subjunctive mood in English.",
       "The subjunctive uses the bare infinitive regardless of the subject.",
       "So 'submit', not 'submits'."
     ],
-    "techniqueTags": ["subjunctive", "verbs-of-recommendation"],
+    "techniqueTags": [
+      "subjunctive",
+      "verbs-of-recommendation"
+    ],
     "targetTimeSec": 65,
     "trapExplanations": {
       "1": "The ordinary third-person singular form, which the subjunctive overrides. This is the trap the item is built on.",
       "2": "Past tense does not fit a recommendation about future action.",
       "3": "'Will' is not used in subjunctive that-clauses after 'recommend'."
+    }
+  },
+  {
+    "id": "egr-6",
+    "domain": "english",
+    "topic": "grammar",
+    "blockTier": "easy",
+    "difficulty": 2,
+    "stem": "The report, along with its appendices, ______ been sent to every member of the committee.",
+    "options": [
+      "has",
+      "have",
+      "were",
+      "are"
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "Strip out the phrase between the commas: 'along with its appendices' is not part of the subject.",
+      "The subject left behind is 'the report' — singular.",
+      "A singular subject takes 'has'."
+    ],
+    "techniqueTags": [
+      "subject-verb-agreement",
+      "intervening-phrases"
+    ],
+    "targetTimeSec": 45,
+    "trapExplanations": {
+      "1": "Agrees with 'appendices', which sits inside a phrase and cannot be the subject.",
+      "2": "Plural and past simple; neither fits a singular subject before 'been'.",
+      "3": "Plural, and 'are been' is not a possible form."
+    }
+  },
+  {
+    "id": "egr-7",
+    "domain": "english",
+    "topic": "grammar",
+    "blockTier": "easy",
+    "difficulty": 2,
+    "stem": "If she ______ half an hour earlier, she would have caught the last train.",
+    "options": [
+      "had left",
+      "left",
+      "would leave",
+      "has left"
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "The main clause uses 'would have caught' — a third conditional about the unreal past.",
+      "The if-clause of a third conditional takes the past perfect.",
+      "'Had left' is the past perfect."
+    ],
+    "techniqueTags": [
+      "conditionals",
+      "third-conditional"
+    ],
+    "targetTimeSec": 50,
+    "trapExplanations": {
+      "1": "Past simple belongs to the second conditional, which pairs with 'would catch'.",
+      "2": "'Would' does not belong in the if-clause of a conditional.",
+      "3": "Present perfect cannot describe an unreal past situation."
+    }
+  },
+  {
+    "id": "egr-8",
+    "domain": "english",
+    "topic": "grammar",
+    "blockTier": "medium",
+    "difficulty": 3,
+    "stem": "Neither of the two proposals ______ acceptable to the board in its present form.",
+    "options": [
+      "was",
+      "were",
+      "have been",
+      "are"
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "The subject is 'neither', not 'proposals' — 'of the two proposals' is a prepositional phrase.",
+      "'Neither' is treated as singular.",
+      "The singular past form is 'was'."
+    ],
+    "techniqueTags": [
+      "subject-verb-agreement",
+      "indefinite-pronouns"
+    ],
+    "targetTimeSec": 55,
+    "trapExplanations": {
+      "1": "Agrees with 'proposals' inside the prepositional phrase rather than with the subject.",
+      "2": "Plural, and it also shifts the tense away from the past frame.",
+      "3": "Plural and present, wrong on both counts."
+    }
+  },
+  {
+    "id": "egr-9",
+    "domain": "english",
+    "topic": "grammar",
+    "blockTier": "medium",
+    "difficulty": 4,
+    "stem": "Hardly ______ the meeting begun when the fire alarm went off.",
+    "options": [
+      "had",
+      "has",
+      "did",
+      "was"
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "'Hardly' at the start of a clause forces inversion of subject and auxiliary.",
+      "The pattern is 'hardly had X done Y when Z' — past perfect for the earlier event.",
+      "'Had' is the auxiliary the past perfect needs."
+    ],
+    "techniqueTags": [
+      "inversion",
+      "past-perfect"
+    ],
+    "targetTimeSec": 60,
+    "trapExplanations": {
+      "1": "Present perfect clashes with 'went off', which is past.",
+      "2": "'Did' cannot be followed by the past participle 'begun'.",
+      "3": "'Was begun' is passive, but the meeting began by itself here."
+    }
+  },
+  {
+    "id": "egr-10",
+    "domain": "english",
+    "topic": "grammar",
+    "blockTier": "hard",
+    "difficulty": 4,
+    "stem": "She is one of those managers who ______ always willing to listen.",
+    "options": [
+      "are",
+      "is",
+      "was",
+      "has been"
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "Ask what 'who' refers back to: 'those managers', not 'one'.",
+      "The relative clause therefore has a plural subject.",
+      "'Are' agrees with 'those managers'."
+    ],
+    "techniqueTags": [
+      "relative-clauses",
+      "subject-verb-agreement"
+    ],
+    "targetTimeSec": 65,
+    "trapExplanations": {
+      "1": "Agrees with 'one', but 'who' attaches to the plural noun immediately before it.",
+      "2": "Singular and past; the sentence is in the present.",
+      "3": "Singular present perfect, so both the number and the aspect are off."
     }
   }
 ]

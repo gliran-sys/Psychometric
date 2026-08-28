@@ -18,7 +18,10 @@
       "Check the order of events: he was ill first, then the meeting was cancelled.",
       "Option 1 preserves both the cause and the order."
     ],
-    "techniqueTags": ["cause-preservation", "event-order"],
+    "techniqueTags": [
+      "cause-preservation",
+      "event-order"
+    ],
     "targetTimeSec": 60,
     "trapExplanations": {
       "1": "Places the illness during the meeting, but the original says the meeting never happened.",
@@ -45,7 +48,10 @@
       "If few passed first time, the majority did not — they needed another attempt.",
       "Option 1 states exactly that."
     ],
-    "techniqueTags": ["quantifier-logic", "few-vs-none"],
+    "techniqueTags": [
+      "quantifier-logic",
+      "few-vs-none"
+    ],
     "targetTimeSec": 65,
     "trapExplanations": {
       "1": "'Few' is not 'none' — some students did pass. This is the classic quantifier trap.",
@@ -72,7 +78,10 @@
       "Necessary is not the same as sufficient — registering makes attendance possible, not certain.",
       "Option 1 says 'required', which is exactly necessity."
     ],
-    "techniqueTags": ["conditional-logic", "necessary-vs-sufficient"],
+    "techniqueTags": [
+      "conditional-logic",
+      "necessary-vs-sufficient"
+    ],
     "targetTimeSec": 70,
     "trapExplanations": {
       "1": "Turns a necessary condition into a sufficient one — 'definitely' overstates the original.",
@@ -99,7 +108,10 @@
       "X = economically sound (positive), Y = politically unacceptable (negative).",
       "Option 1 keeps both halves with the same polarity."
     ],
-    "techniqueTags": ["concession-structure", "polarity"],
+    "techniqueTags": [
+      "concession-structure",
+      "polarity"
+    ],
     "targetTimeSec": 70,
     "trapExplanations": {
       "1": "Reverses the economics — the original grants that it was sound.",
@@ -126,7 +138,10 @@
       "It means at least one was unsubstantiated — but not necessarily all.",
       "Option 1 says 'some ... not', which is exactly the negation of 'all'."
     ],
-    "techniqueTags": ["quantifier-logic", "not-all-vs-none"],
+    "techniqueTags": [
+      "quantifier-logic",
+      "not-all-vs-none"
+    ],
     "targetTimeSec": 70,
     "trapExplanations": {
       "1": "'Not all' is not 'none'. This is the single most common restatement trap on the test.",
@@ -153,7 +168,10 @@
       "That entails nothing of the kind happened before X.",
       "Option 1 states that entailment directly."
     ],
-    "techniqueTags": ["temporal-logic", "only-after"],
+    "techniqueTags": [
+      "temporal-logic",
+      "only-after"
+    ],
     "targetTimeSec": 75,
     "trapExplanations": {
       "1": "Reverses cause and effect — the accident prompted the investment, not the other way round.",
@@ -180,7 +198,10 @@
       "X = surprising (novelty), Y = easily replicated (reproducibility).",
       "Option 1 preserves the rejection of X and the assertion of Y."
     ],
-    "techniqueTags": ["not-because-but-because", "reason-substitution"],
+    "techniqueTags": [
+      "not-because-but-because",
+      "reason-substitution"
+    ],
     "targetTimeSec": 85,
     "trapExplanations": {
       "1": "The original denies that the findings are surprising as the source of significance; this asserts both.",
@@ -207,7 +228,10 @@
       "'Might have been' expresses possibility, not certainty.",
       "Option 1 keeps both the counterfactual and the hedged possibility."
     ],
-    "techniqueTags": ["counterfactual", "modality"],
+    "techniqueTags": [
+      "counterfactual",
+      "modality"
+    ],
     "targetTimeSec": 90,
     "trapExplanations": {
       "1": "States as fact what the original explicitly presents as contrary to fact.",
@@ -234,7 +258,10 @@
       "The carve-out is 'manufactured before 2010', so what remains is 2010 and later.",
       "Option 1 describes precisely the remaining set."
     ],
-    "techniqueTags": ["exception-logic", "set-boundaries"],
+    "techniqueTags": [
+      "exception-logic",
+      "set-boundaries"
+    ],
     "targetTimeSec": 85,
     "trapExplanations": {
       "1": "Inverts the exception — the pre-2010 vehicles are the ones excluded, not the only ones included.",
@@ -243,7 +270,11 @@
     }
   },
   {
-    "id": "ers-e4", "domain": "english", "topic": "restatement", "blockTier": "easy", "difficulty": 1,
+    "id": "ers-e4",
+    "domain": "english",
+    "topic": "restatement",
+    "blockTier": "easy",
+    "difficulty": 1,
     "stem": "The shop opens at nine and closes at six.",
     "options": [
       "The shop is open for nine hours each day.",
@@ -252,12 +283,27 @@
       "The shop is closed between nine and six."
     ],
     "correctIndex": 0,
-    "solutionSteps": ["Convert to a 24-hour span: nine in the morning to six in the evening.", "From 9 to 18 is nine hours.", "Option 1 states that duration."],
-    "techniqueTags": ["time-arithmetic"], "targetTimeSec": 55,
-    "trapExplanations": {"1": "Takes the closing hour as the duration.", "2": "Reverses opening and closing times.", "3": "Inverts open and closed — that is the period it is open."}
+    "solutionSteps": [
+      "Convert to a 24-hour span: nine in the morning to six in the evening.",
+      "From 9 to 18 is nine hours.",
+      "Option 1 states that duration."
+    ],
+    "techniqueTags": [
+      "time-arithmetic"
+    ],
+    "targetTimeSec": 55,
+    "trapExplanations": {
+      "1": "Takes the closing hour as the duration.",
+      "2": "Reverses opening and closing times.",
+      "3": "Inverts open and closed — that is the period it is open."
+    }
   },
   {
-    "id": "ers-e5", "domain": "english", "topic": "restatement", "blockTier": "easy", "difficulty": 2,
+    "id": "ers-e5",
+    "domain": "english",
+    "topic": "restatement",
+    "blockTier": "easy",
+    "difficulty": 2,
     "stem": "Everyone in the class except Maya finished the assignment.",
     "options": [
       "Maya was the only one who did not finish.",
@@ -266,12 +312,27 @@
       "Maya finished before the others."
     ],
     "correctIndex": 0,
-    "solutionSteps": ["'Everyone except X' means all but X.", "So the rest finished and X did not.", "Option 1 states exactly that."],
-    "techniqueTags": ["exception-logic"], "targetTimeSec": 60,
-    "trapExplanations": {"1": "Inverts the exception, making Maya the only finisher.", "2": "Contradicts 'everyone ... finished'.", "3": "Says Maya finished, which the exception denies."}
+    "solutionSteps": [
+      "'Everyone except X' means all but X.",
+      "So the rest finished and X did not.",
+      "Option 1 states exactly that."
+    ],
+    "techniqueTags": [
+      "exception-logic"
+    ],
+    "targetTimeSec": 60,
+    "trapExplanations": {
+      "1": "Inverts the exception, making Maya the only finisher.",
+      "2": "Contradicts 'everyone ... finished'.",
+      "3": "Says Maya finished, which the exception denies."
+    }
   },
   {
-    "id": "ers-e6", "domain": "english", "topic": "restatement", "blockTier": "easy", "difficulty": 2,
+    "id": "ers-e6",
+    "domain": "english",
+    "topic": "restatement",
+    "blockTier": "easy",
+    "difficulty": 2,
     "stem": "He rarely arrives on time.",
     "options": [
       "He is usually late.",
@@ -280,12 +341,27 @@
       "He never arrives at all."
     ],
     "correctIndex": 0,
-    "solutionSteps": ["'Rarely' means seldom but not never.", "If punctuality is rare, lateness is the norm.", "'Usually late' preserves the frequency."],
-    "techniqueTags": ["frequency-adverbs"], "targetTimeSec": 55,
-    "trapExplanations": {"1": "Reverses the meaning entirely.", "2": "Also the reverse of what is stated.", "3": "'Rarely on time' still means he arrives — just late."}
+    "solutionSteps": [
+      "'Rarely' means seldom but not never.",
+      "If punctuality is rare, lateness is the norm.",
+      "'Usually late' preserves the frequency."
+    ],
+    "techniqueTags": [
+      "frequency-adverbs"
+    ],
+    "targetTimeSec": 55,
+    "trapExplanations": {
+      "1": "Reverses the meaning entirely.",
+      "2": "Also the reverse of what is stated.",
+      "3": "'Rarely on time' still means he arrives — just late."
+    }
   },
   {
-    "id": "ers-m4", "domain": "english", "topic": "restatement", "blockTier": "medium", "difficulty": 3,
+    "id": "ers-m4",
+    "domain": "english",
+    "topic": "restatement",
+    "blockTier": "medium",
+    "difficulty": 3,
     "stem": "The policy was adopted despite strong opposition from the board.",
     "options": [
       "The board objected, but the policy was adopted anyway.",
@@ -294,12 +370,27 @@
       "The policy was adopted because the board objected."
     ],
     "correctIndex": 0,
-    "solutionSteps": ["'Despite X' concedes X and asserts the outcome anyway.", "X is board opposition; the outcome is adoption.", "Option 1 keeps both."],
-    "techniqueTags": ["concession-structure"], "targetTimeSec": 65,
-    "trapExplanations": {"1": "'Despite' means the opposition did not prevent it.", "2": "Reverses the board's stance.", "3": "Turns concession into causation — the opposition did not cause adoption."}
+    "solutionSteps": [
+      "'Despite X' concedes X and asserts the outcome anyway.",
+      "X is board opposition; the outcome is adoption.",
+      "Option 1 keeps both."
+    ],
+    "techniqueTags": [
+      "concession-structure"
+    ],
+    "targetTimeSec": 65,
+    "trapExplanations": {
+      "1": "'Despite' means the opposition did not prevent it.",
+      "2": "Reverses the board's stance.",
+      "3": "Turns concession into causation — the opposition did not cause adoption."
+    }
   },
   {
-    "id": "ers-m5", "domain": "english", "topic": "restatement", "blockTier": "medium", "difficulty": 3,
+    "id": "ers-m5",
+    "domain": "english",
+    "topic": "restatement",
+    "blockTier": "medium",
+    "difficulty": 3,
     "stem": "Sales rose in every region apart from the north, where they held steady.",
     "options": [
       "Sales did not fall in any region.",
@@ -308,12 +399,28 @@
       "Sales rose only in the north."
     ],
     "correctIndex": 0,
-    "solutionSteps": ["Everywhere but the north: rose. In the north: held steady.", "Holding steady is neither a rise nor a fall.", "So no region saw a decline."],
-    "techniqueTags": ["exception-logic", "precise-reading"], "targetTimeSec": 70,
-    "trapExplanations": {"1": "'Held steady' explicitly rules out a fall. The most tempting misreading.", "2": "Contradicts the exception for the north.", "3": "Inverts which regions rose."}
+    "solutionSteps": [
+      "Everywhere but the north: rose. In the north: held steady.",
+      "Holding steady is neither a rise nor a fall.",
+      "So no region saw a decline."
+    ],
+    "techniqueTags": [
+      "exception-logic",
+      "precise-reading"
+    ],
+    "targetTimeSec": 70,
+    "trapExplanations": {
+      "1": "'Held steady' explicitly rules out a fall. The most tempting misreading.",
+      "2": "Contradicts the exception for the north.",
+      "3": "Inverts which regions rose."
+    }
   },
   {
-    "id": "ers-m6", "domain": "english", "topic": "restatement", "blockTier": "medium", "difficulty": 4,
+    "id": "ers-m6",
+    "domain": "english",
+    "topic": "restatement",
+    "blockTier": "medium",
+    "difficulty": 4,
     "stem": "No decision will be made before the report is published.",
     "options": [
       "A decision can only come after publication of the report.",
@@ -322,12 +429,28 @@
       "No decision will ever be made."
     ],
     "correctIndex": 0,
-    "solutionSteps": ["'No X before Y' makes Y a prerequisite for X.", "Publication must precede any decision.", "It does not promise a decision will follow."],
-    "techniqueTags": ["temporal-logic", "necessary-vs-sufficient"], "targetTimeSec": 75,
-    "trapExplanations": {"1": "Turns a necessary condition into a guarantee with a timetable.", "2": "Reverses the order of the two events.", "3": "The statement delays a decision, it does not rule one out."}
+    "solutionSteps": [
+      "'No X before Y' makes Y a prerequisite for X.",
+      "Publication must precede any decision.",
+      "It does not promise a decision will follow."
+    ],
+    "techniqueTags": [
+      "temporal-logic",
+      "necessary-vs-sufficient"
+    ],
+    "targetTimeSec": 75,
+    "trapExplanations": {
+      "1": "Turns a necessary condition into a guarantee with a timetable.",
+      "2": "Reverses the order of the two events.",
+      "3": "The statement delays a decision, it does not rule one out."
+    }
   },
   {
-    "id": "ers-h4", "domain": "english", "topic": "restatement", "blockTier": "hard", "difficulty": 4,
+    "id": "ers-h4",
+    "domain": "english",
+    "topic": "restatement",
+    "blockTier": "hard",
+    "difficulty": 4,
     "stem": "The treaty is binding on signatories only insofar as their domestic law permits.",
     "options": [
       "Domestic law sets the limit of each signatory's obligation.",
@@ -336,12 +459,28 @@
       "Domestic law must be changed to match the treaty."
     ],
     "correctIndex": 0,
-    "solutionSteps": ["'Only insofar as X permits' makes X the ceiling on the obligation.", "X is domestic law.", "So obligation extends exactly as far as domestic law allows, and no further."],
-    "techniqueTags": ["qualifier-logic", "scope"], "targetTimeSec": 85,
-    "trapExplanations": {"1": "Exactly reverses the hierarchy the clause establishes.", "2": "There are obligations — they are bounded, not absent.", "3": "The clause accommodates domestic law rather than demanding it change."}
+    "solutionSteps": [
+      "'Only insofar as X permits' makes X the ceiling on the obligation.",
+      "X is domestic law.",
+      "So obligation extends exactly as far as domestic law allows, and no further."
+    ],
+    "techniqueTags": [
+      "qualifier-logic",
+      "scope"
+    ],
+    "targetTimeSec": 85,
+    "trapExplanations": {
+      "1": "Exactly reverses the hierarchy the clause establishes.",
+      "2": "There are obligations — they are bounded, not absent.",
+      "3": "The clause accommodates domestic law rather than demanding it change."
+    }
   },
   {
-    "id": "ers-h5", "domain": "english", "topic": "restatement", "blockTier": "hard", "difficulty": 5,
+    "id": "ers-h5",
+    "domain": "english",
+    "topic": "restatement",
+    "blockTier": "hard",
+    "difficulty": 5,
     "stem": "It is not that the method fails, but that its successes cannot be distinguished from chance.",
     "options": [
       "The method may work, but the evidence cannot show that it does.",
@@ -350,12 +489,28 @@
       "The method works only by chance."
     ],
     "correctIndex": 0,
-    "solutionSteps": ["'Not that X, but that Y' denies X and asserts Y.", "X is failure — denied. Y is indistinguishability from chance.", "That is a claim about evidence, not about the method being wrong."],
-    "techniqueTags": ["not-that-but-that", "epistemic-claim"], "targetTimeSec": 95,
-    "trapExplanations": {"1": "Failure is precisely what the sentence denies.", "2": "If successes exceeded chance they would be distinguishable — the opposite is stated.", "3": "Asserts the method does not work, going beyond a claim about evidence. The strongest distractor."}
+    "solutionSteps": [
+      "'Not that X, but that Y' denies X and asserts Y.",
+      "X is failure — denied. Y is indistinguishability from chance.",
+      "That is a claim about evidence, not about the method being wrong."
+    ],
+    "techniqueTags": [
+      "not-that-but-that",
+      "epistemic-claim"
+    ],
+    "targetTimeSec": 95,
+    "trapExplanations": {
+      "1": "Failure is precisely what the sentence denies.",
+      "2": "If successes exceeded chance they would be distinguishable — the opposite is stated.",
+      "3": "Asserts the method does not work, going beyond a claim about evidence. The strongest distractor."
+    }
   },
   {
-    "id": "ers-h6", "domain": "english", "topic": "restatement", "blockTier": "hard", "difficulty": 5,
+    "id": "ers-h6",
+    "domain": "english",
+    "topic": "restatement",
+    "blockTier": "hard",
+    "difficulty": 5,
     "stem": "Far from settling the question, the new findings have multiplied the possible explanations.",
     "options": [
       "The findings left the question more open than before.",
@@ -364,8 +519,560 @@
       "The findings confirmed the existing explanation."
     ],
     "correctIndex": 0,
-    "solutionSteps": ["'Far from X' asserts the opposite of X.", "X is settling the question, so the question was not settled.", "'Multiplied the explanations' means more openness, not less."],
-    "techniqueTags": ["far-from-structure", "negation"], "targetTimeSec": 95,
-    "trapExplanations": {"1": "Asserts exactly what 'far from' denies.", "2": "Multiplying explanations is the opposite of eliminating them.", "3": "Confirmation would reduce the range of explanations, not expand it."}
+    "solutionSteps": [
+      "'Far from X' asserts the opposite of X.",
+      "X is settling the question, so the question was not settled.",
+      "'Multiplied the explanations' means more openness, not less."
+    ],
+    "techniqueTags": [
+      "far-from-structure",
+      "negation"
+    ],
+    "targetTimeSec": 95,
+    "trapExplanations": {
+      "1": "Asserts exactly what 'far from' denies.",
+      "2": "Multiplying explanations is the opposite of eliminating them.",
+      "3": "Confirmation would reduce the range of explanations, not expand it."
+    }
+  },
+  {
+    "id": "ers-e7",
+    "domain": "english",
+    "topic": "restatement",
+    "blockTier": "easy",
+    "difficulty": 2,
+    "stem": "The concert was postponed because of the heavy rain.",
+    "options": [
+      "Heavy rain caused the concert to be moved to a later date.",
+      "The concert went ahead despite the heavy rain.",
+      "The concert was called off and will not take place at all.",
+      "The rain stopped in time for the concert to begin."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "Fix the cause: rain.",
+      "Fix what happened to the concert: postponed, meaning moved later.",
+      "Only the first option keeps both the cause and the delay."
+    ],
+    "techniqueTags": [
+      "cause-preservation",
+      "word-precision"
+    ],
+    "targetTimeSec": 55,
+    "trapExplanations": {
+      "1": "Reverses the outcome — the concert did not go ahead.",
+      "2": "Postponed means delayed, not cancelled; a later date still exists.",
+      "3": "Contradicts the stated cause: the rain is why it was postponed."
+    }
+  },
+  {
+    "id": "ers-e8",
+    "domain": "english",
+    "topic": "restatement",
+    "blockTier": "easy",
+    "difficulty": 2,
+    "stem": "Only members are allowed to use the swimming pool.",
+    "options": [
+      "Nobody who is not a member may use the pool.",
+      "All members use the swimming pool regularly.",
+      "Anyone may use the pool if a member comes with them.",
+      "Members are the only people who want to use the pool."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "'Only X may' sets a restriction on who is permitted.",
+      "A restriction says who is excluded, not what people actually do.",
+      "The first option states the same exclusion in negative form."
+    ],
+    "techniqueTags": [
+      "scope",
+      "permission-vs-action"
+    ],
+    "targetTimeSec": 60,
+    "trapExplanations": {
+      "1": "Being allowed to do something is not the same as doing it.",
+      "2": "Adds a guest rule the original never mentions.",
+      "3": "Swaps permission for desire — the original says nothing about wanting."
+    }
+  },
+  {
+    "id": "ers-e9",
+    "domain": "english",
+    "topic": "restatement",
+    "blockTier": "easy",
+    "difficulty": 2,
+    "stem": "She finished the report before the deadline.",
+    "options": [
+      "The report was completed in time.",
+      "She missed the deadline for the report.",
+      "The deadline was extended so that she could finish.",
+      "She started work on the report before the deadline."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "Identify the action: finishing.",
+      "Identify its timing: earlier than the deadline.",
+      "'Completed in time' preserves both."
+    ],
+    "techniqueTags": [
+      "event-order",
+      "word-precision"
+    ],
+    "targetTimeSec": 50,
+    "trapExplanations": {
+      "1": "States the opposite of finishing before the deadline.",
+      "2": "Invents an extension; the original says she simply finished early.",
+      "3": "Starting before a deadline says nothing about whether she finished."
+    }
+  },
+  {
+    "id": "ers-e10",
+    "domain": "english",
+    "topic": "restatement",
+    "blockTier": "easy",
+    "difficulty": 2,
+    "stem": "The shop closes earlier on Sundays than on weekdays.",
+    "options": [
+      "On Sundays the shop shuts before its usual weekday hour.",
+      "The shop is closed for the whole of Sunday.",
+      "The shop opens later on Sundays than on weekdays.",
+      "The shop closes early on every day of the week."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "The comparison is between Sunday and weekdays.",
+      "What differs is the closing hour, and Sunday's is earlier.",
+      "The first option keeps both the day and the direction of the difference."
+    ],
+    "techniqueTags": [
+      "comparison",
+      "word-precision"
+    ],
+    "targetTimeSec": 55,
+    "trapExplanations": {
+      "1": "Closing early is not the same as never opening.",
+      "2": "Changes closing time to opening time — a different part of the day.",
+      "3": "Removes the comparison; the original contrasts Sunday with other days."
+    }
+  },
+  {
+    "id": "ers-e11",
+    "domain": "english",
+    "topic": "restatement",
+    "blockTier": "easy",
+    "difficulty": 2,
+    "stem": "Tickets cost less if you book them online.",
+    "options": [
+      "Booking online is the cheaper way to buy a ticket.",
+      "Tickets can only be bought online.",
+      "Online tickets sell out more quickly than others.",
+      "Tickets booked online are free of charge."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "The sentence compares two prices for the same ticket.",
+      "The online price is the lower one.",
+      "'Cheaper way to buy' states that comparison directly."
+    ],
+    "techniqueTags": [
+      "comparison",
+      "price-logic"
+    ],
+    "targetTimeSec": 55,
+    "trapExplanations": {
+      "1": "A price advantage does not mean other channels are closed.",
+      "2": "Speed of selling is never mentioned in the original.",
+      "3": "Cheaper is not the same as costing nothing."
+    }
+  },
+  {
+    "id": "ers-e12",
+    "domain": "english",
+    "topic": "restatement",
+    "blockTier": "easy",
+    "difficulty": 2,
+    "stem": "He apologised for arriving late.",
+    "options": [
+      "He said he was sorry for having come late.",
+      "He arrived on time but apologised anyway.",
+      "He was late and offered no apology.",
+      "He explained why the meeting had started late."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "Two facts: he was late, and he apologised.",
+      "A restatement must keep both.",
+      "The first option carries the lateness and the apology."
+    ],
+    "techniqueTags": [
+      "fact-preservation",
+      "word-precision"
+    ],
+    "targetTimeSec": 50,
+    "trapExplanations": {
+      "1": "Removes the lateness, which is what the apology was for.",
+      "2": "Removes the apology, reversing the sentence.",
+      "3": "Shifts the subject from his own lateness to the meeting's start."
+    }
+  },
+  {
+    "id": "ers-m7",
+    "domain": "english",
+    "topic": "restatement",
+    "blockTier": "medium",
+    "difficulty": 3,
+    "stem": "The proposal was accepted although several members had reservations.",
+    "options": [
+      "Some members had doubts, but the proposal went through all the same.",
+      "The proposal was rejected because of the members' reservations.",
+      "Every member supported the proposal without hesitation.",
+      "The members' reservations were resolved before the vote was taken."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "'Although' concedes something that did not prevent the outcome.",
+      "The outcome is acceptance; the concession is that doubts existed.",
+      "A correct restatement keeps both, joined by a contrast."
+    ],
+    "techniqueTags": [
+      "concession",
+      "fact-preservation"
+    ],
+    "targetTimeSec": 70,
+    "trapExplanations": {
+      "1": "Reverses the outcome — the proposal was accepted, not rejected.",
+      "2": "Deletes the reservations that 'although' explicitly reports.",
+      "3": "Adds a resolution the original never mentions; the doubts may well have remained."
+    }
+  },
+  {
+    "id": "ers-m8",
+    "domain": "english",
+    "topic": "restatement",
+    "blockTier": "medium",
+    "difficulty": 3,
+    "stem": "Few of the participants completed the questionnaire.",
+    "options": [
+      "Most of the participants did not finish the questionnaire.",
+      "None of the participants completed the questionnaire.",
+      "The questionnaire was completed by most participants.",
+      "A few participants completed it, which pleased the researchers."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "'Few' means a small number — and by implication most did not.",
+      "Convert the positive statement about a minority into its negative equivalent.",
+      "'Most did not finish' says the same thing from the other side."
+    ],
+    "techniqueTags": [
+      "quantifiers",
+      "scope"
+    ],
+    "targetTimeSec": 70,
+    "trapExplanations": {
+      "1": "'Few' is not 'none'; a small number did complete it.",
+      "2": "Reverses the quantity entirely.",
+      "3": "Adds a reaction from the researchers that the original does not report."
+    }
+  },
+  {
+    "id": "ers-m9",
+    "domain": "english",
+    "topic": "restatement",
+    "blockTier": "medium",
+    "difficulty": 4,
+    "stem": "The company will not proceed unless funding is secured.",
+    "options": [
+      "Funding has to be obtained before the company can go ahead.",
+      "Once funding is secured, the company is certain to proceed.",
+      "The company will go ahead whether or not funding is found.",
+      "The company has already secured the funding it needs."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "'Not X unless Y' makes Y a requirement for X.",
+      "A requirement is necessary, not automatically sufficient.",
+      "'Has to be obtained before' states the necessity without overclaiming."
+    ],
+    "techniqueTags": [
+      "necessary-vs-sufficient",
+      "conditionals"
+    ],
+    "targetTimeSec": 80,
+    "trapExplanations": {
+      "1": "Turns a necessary condition into a guarantee — funding may be needed yet other obstacles remain.",
+      "2": "Removes the condition altogether, reversing the sentence.",
+      "3": "Asserts as fact something the original leaves open."
+    }
+  },
+  {
+    "id": "ers-m10",
+    "domain": "english",
+    "topic": "restatement",
+    "blockTier": "medium",
+    "difficulty": 3,
+    "stem": "Sales dipped slightly in the first quarter but had recovered by the summer.",
+    "options": [
+      "After a small early fall, sales returned to their previous level.",
+      "Sales fell sharply and never regained their earlier level.",
+      "Sales rose steadily throughout the whole year.",
+      "Sales recovered first and then began to fall."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "Two stages in order: a small fall, then a recovery.",
+      "'Slightly' limits the size of the fall.",
+      "The first option keeps the size, the sequence and the recovery."
+    ],
+    "techniqueTags": [
+      "event-order",
+      "degree"
+    ],
+    "targetTimeSec": 70,
+    "trapExplanations": {
+      "1": "Overstates the fall and denies the recovery the original reports.",
+      "2": "Erases the dip, leaving only growth.",
+      "3": "Reverses the order of the two stages."
+    }
+  },
+  {
+    "id": "ers-m11",
+    "domain": "english",
+    "topic": "restatement",
+    "blockTier": "medium",
+    "difficulty": 4,
+    "stem": "The results are significant only when the sample is large.",
+    "options": [
+      "A large sample is needed for the results to be significant.",
+      "A large sample always makes the results significant.",
+      "The results are significant regardless of the size of the sample.",
+      "Small samples produce insignificant results in every field of study."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "'Only when Y' makes Y a requirement for the claim.",
+      "Again this is necessity, not a guarantee.",
+      "'Needed for' captures the requirement exactly."
+    ],
+    "techniqueTags": [
+      "necessary-vs-sufficient",
+      "scope"
+    ],
+    "targetTimeSec": 80,
+    "trapExplanations": {
+      "1": "Upgrades a requirement into a guarantee; size may be necessary without being enough.",
+      "2": "Deletes the condition, contradicting the original.",
+      "3": "Generalises to every field, a claim the sentence never makes."
+    }
+  },
+  {
+    "id": "ers-m12",
+    "domain": "english",
+    "topic": "restatement",
+    "blockTier": "medium",
+    "difficulty": 3,
+    "stem": "He rarely comments on his own work.",
+    "options": [
+      "It is unusual for him to discuss what he has produced.",
+      "He never comments on his own work.",
+      "He frequently explains his work to others.",
+      "He comments only on work produced by other people."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "'Rarely' means seldom, not never.",
+      "The subject of the comments is his own work.",
+      "'Unusual for him to discuss' preserves both the frequency and the subject."
+    ],
+    "techniqueTags": [
+      "quantifiers",
+      "word-precision"
+    ],
+    "targetTimeSec": 65,
+    "trapExplanations": {
+      "1": "'Rarely' allows occasional comment; 'never' does not.",
+      "2": "Reverses the frequency.",
+      "3": "Adds a claim about other people's work that the original omits."
+    }
+  },
+  {
+    "id": "ers-h7",
+    "domain": "english",
+    "topic": "restatement",
+    "blockTier": "hard",
+    "difficulty": 5,
+    "stem": "Had the warning been issued earlier, the damage might have been avoided.",
+    "options": [
+      "Issuing the warning sooner could possibly have prevented the damage.",
+      "The warning was issued early and the damage was successfully avoided.",
+      "Because the warning came late, the damage was certainly unavoidable.",
+      "The damage was caused by the warning itself."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "This is a counterfactual: the warning was in fact not issued earlier.",
+      "'Might have' expresses possibility, not certainty.",
+      "The first option keeps both the unreal past and the hedged possibility."
+    ],
+    "techniqueTags": [
+      "counterfactual",
+      "modality"
+    ],
+    "targetTimeSec": 90,
+    "trapExplanations": {
+      "1": "Treats the unreal condition as something that actually happened.",
+      "2": "Upgrades 'might' to certainty, which the hedge explicitly avoids.",
+      "3": "Inverts cause and effect entirely."
+    }
+  },
+  {
+    "id": "ers-h8",
+    "domain": "english",
+    "topic": "restatement",
+    "blockTier": "hard",
+    "difficulty": 5,
+    "stem": "The findings challenge, without wholly refuting, the accepted model.",
+    "options": [
+      "The results cast doubt on the accepted model but do not completely overturn it.",
+      "The results completely disprove the accepted model.",
+      "The results confirm the accepted model in every respect.",
+      "The results neither support nor question the accepted model."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "Two forces here: challenge (against) and 'without wholly refuting' (limited).",
+      "A restatement must keep the doubt and the limit on it.",
+      "The first option carries both."
+    ],
+    "techniqueTags": [
+      "degree",
+      "concession"
+    ],
+    "targetTimeSec": 90,
+    "trapExplanations": {
+      "1": "Drops the limit; 'without wholly refuting' rules out complete disproof.",
+      "2": "Reverses the direction — the findings work against the model.",
+      "3": "Removes the challenge, leaving the model untouched."
+    }
+  },
+  {
+    "id": "ers-h9",
+    "domain": "english",
+    "topic": "restatement",
+    "blockTier": "hard",
+    "difficulty": 4,
+    "stem": "Not all of the recommendations were implemented.",
+    "options": [
+      "Some of the recommendations were not put into practice.",
+      "None of the recommendations were implemented.",
+      "Every recommendation was implemented, though only in part.",
+      "All of the recommendations were formally rejected."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "'Not all' negates the whole, not each one.",
+      "That leaves at least one unimplemented, and possibly some implemented.",
+      "'Some were not' is the precise equivalent."
+    ],
+    "techniqueTags": [
+      "quantifiers",
+      "negation-scope"
+    ],
+    "targetTimeSec": 85,
+    "trapExplanations": {
+      "1": "Negates every one, which is stronger than negating the whole.",
+      "2": "Shifts the negation from how many to how completely each was carried out.",
+      "3": "Rejection is a decision; the original only says they were not implemented."
+    }
+  },
+  {
+    "id": "ers-h10",
+    "domain": "english",
+    "topic": "restatement",
+    "blockTier": "hard",
+    "difficulty": 4,
+    "stem": "The technique is effective, provided that it is applied consistently.",
+    "options": [
+      "The technique works so long as it is used in a consistent way.",
+      "The technique works even when it is applied inconsistently.",
+      "Consistency is the only advantage the technique offers.",
+      "The technique has been shown to work in every study of it."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "'Provided that' introduces a condition on the claim.",
+      "The claim is effectiveness; the condition is consistent application.",
+      "'So long as' is a direct equivalent of 'provided that'."
+    ],
+    "techniqueTags": [
+      "conditionals",
+      "word-precision"
+    ],
+    "targetTimeSec": 85,
+    "trapExplanations": {
+      "1": "Deletes the condition, which is the whole point of 'provided that'.",
+      "2": "Turns the condition into a benefit, changing what the sentence asserts.",
+      "3": "Claims universal evidence the original never offers."
+    }
+  },
+  {
+    "id": "ers-h11",
+    "domain": "english",
+    "topic": "restatement",
+    "blockTier": "hard",
+    "difficulty": 5,
+    "stem": "Far from discouraging applicants, the stricter requirements attracted more of them.",
+    "options": [
+      "The stricter requirements increased rather than reduced the number of applicants.",
+      "The stricter requirements put off a large number of applicants.",
+      "The number of applicants was unchanged by the stricter requirements.",
+      "Applicants were discouraged by the requirements but applied nonetheless."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "'Far from X' denies X: applicants were not discouraged.",
+      "The second half gives what happened instead: more applied.",
+      "The first option denies the fall and states the rise."
+    ],
+    "techniqueTags": [
+      "negation",
+      "contrast"
+    ],
+    "targetTimeSec": 90,
+    "trapExplanations": {
+      "1": "Asserts exactly what 'far from' denies.",
+      "2": "The original reports an increase, not stability.",
+      "3": "Reintroduces the discouragement the sentence rules out."
+    }
+  },
+  {
+    "id": "ers-h12",
+    "domain": "english",
+    "topic": "restatement",
+    "blockTier": "hard",
+    "difficulty": 5,
+    "stem": "Whatever its merits, the plan cannot be funded this year.",
+    "options": [
+      "The plan may well be a good one, but no money is available for it this year.",
+      "The plan has no merits, and for that reason cannot be funded.",
+      "The plan will be funded next year instead.",
+      "It is the plan's merits that make funding impossible."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "'Whatever its merits' sets the quality of the plan aside rather than denying it.",
+      "The refusal is about money this year, not about quality.",
+      "The first option keeps the quality open and the funding closed."
+    ],
+    "techniqueTags": [
+      "concession",
+      "scope"
+    ],
+    "targetTimeSec": 90,
+    "trapExplanations": {
+      "1": "Denies the merits, while the original deliberately leaves them open.",
+      "2": "Adds a promise about next year that the sentence does not make.",
+      "3": "Makes the merits the cause of the refusal, which reverses the concession."
+    }
   }
 ]

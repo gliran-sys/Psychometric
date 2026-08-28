@@ -19,7 +19,10 @@
       "The platform changes from three to seven.",
       "The announcement states explicitly that the departure time has not changed."
     ],
-    "techniqueTags": ["listen-for-contrast", "announcement"],
+    "techniqueTags": [
+      "listen-for-contrast",
+      "announcement"
+    ],
     "targetTimeSec": 70,
     "trapExplanations": {
       "1": "The reverse of what was said — the time is the part explicitly unchanged.",
@@ -47,7 +50,10 @@
       "The speaker then names the myth and denies it.",
       "The rest clarifies what the accurate version is."
     ],
-    "techniqueTags": ["speaker-purpose", "signposting"],
+    "techniqueTags": [
+      "speaker-purpose",
+      "signposting"
+    ],
     "targetTimeSec": 80,
     "trapExplanations": {
       "1": "Imaging is mentioned as evidence, not as the topic being explained.",
@@ -75,7 +81,10 @@
       "The speaker says extension requests must be emailed before the tenth.",
       "The final sentence confirms the cut-off is strict."
     ],
-    "techniqueTags": ["listen-for-condition", "instructions"],
+    "techniqueTags": [
+      "listen-for-condition",
+      "instructions"
+    ],
     "targetTimeSec": 80,
     "trapExplanations": {
       "1": "That is the project deadline, not the extension procedure.",
@@ -103,12 +112,139 @@
       "The speaker affirms a real effect that survived a control.",
       "But withholds certainty pending replication — positive, not proven."
     ],
-    "techniqueTags": ["hedging-language", "speaker-attitude"],
+    "techniqueTags": [
+      "hedging-language",
+      "speaker-attitude"
+    ],
     "targetTimeSec": 95,
     "trapExplanations": {
       "1": "The speaker explicitly declines to call the results conclusive.",
       "2": "The speaker calls the results encouraging, which is the opposite of disappointing.",
       "3": "The small sample is a reason for caution, not a reason the speaker rejects the findings. Confusing a limitation with invalidity is the trap here."
+    }
+  },
+  {
+    "id": "els-5",
+    "domain": "english",
+    "topic": "listening",
+    "blockTier": "easy",
+    "difficulty": 2,
+    "audioText": "Good afternoon, shoppers. The store will close in twenty minutes, at six o'clock. Please bring your purchases to the checkout now. The pharmacy counter has already closed for the day and will reopen tomorrow morning at eight.",
+    "stem": "What does the announcement say about the pharmacy counter?",
+    "options": [
+      "It has already shut for the day.",
+      "It will close in twenty minutes with the rest of the store.",
+      "It will stay open until eight this evening.",
+      "It is closed for the whole of tomorrow."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "Two different closing times are given: one for the store, one for the pharmacy.",
+      "The store closes in twenty minutes; the pharmacy is described in the past.",
+      "'Has already closed' means it shut before the announcement."
+    ],
+    "techniqueTags": [
+      "listen-for-contrast",
+      "announcement"
+    ],
+    "targetTimeSec": 65,
+    "trapExplanations": {
+      "1": "That is the store's closing time, not the pharmacy's.",
+      "2": "Eight is the reopening time tomorrow morning, not tonight.",
+      "3": "It reopens tomorrow morning, so it is not closed all day."
+    }
+  },
+  {
+    "id": "els-6",
+    "domain": "english",
+    "topic": "listening",
+    "blockTier": "medium",
+    "difficulty": 3,
+    "audioText": "Hello, this is the dental surgery calling for Mr Levy. We need to move your appointment on Thursday the twelfth. The dentist is available at the same time on Friday the thirteenth, or at four o'clock on Thursday if you would rather keep the same day. Please call us back to confirm which you prefer.",
+    "stem": "What is the caller asking Mr Levy to do?",
+    "options": [
+      "Choose between two alternative appointment times.",
+      "Confirm that Thursday the twelfth still suits him.",
+      "Come to the surgery at four o'clock on Friday.",
+      "Call back only if he cannot attend on Friday."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "The appointment must move — that is stated, not asked.",
+      "Two alternatives follow: same time Friday, or four o'clock Thursday.",
+      "The request at the end is to say which he prefers."
+    ],
+    "techniqueTags": [
+      "listen-for-purpose",
+      "voicemail"
+    ],
+    "targetTimeSec": 80,
+    "trapExplanations": {
+      "1": "The original slot is being cancelled, not confirmed.",
+      "2": "Four o'clock is the Thursday option; Friday keeps the original time.",
+      "3": "He is asked to call either way, not only to decline."
+    }
+  },
+  {
+    "id": "els-7",
+    "domain": "english",
+    "topic": "listening",
+    "blockTier": "medium",
+    "difficulty": 3,
+    "audioText": "Before we look at the results, one word about the sample. We contacted two thousand households, but only about six hundred replied. That response rate is normal for a postal survey, though it does mean the findings should be read as indicative rather than conclusive.",
+    "stem": "What does the speaker say about the response rate?",
+    "options": [
+      "It is typical, but it limits how firmly the findings can be stated.",
+      "It is unusually low and makes the survey worthless.",
+      "It is high enough for the findings to be treated as conclusive.",
+      "It was higher than expected for a postal survey."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "The speaker gives a fact, then a concession introduced by 'though'.",
+      "The fact: the rate is normal for a postal survey.",
+      "The concession: the findings are indicative rather than conclusive."
+    ],
+    "techniqueTags": [
+      "listen-for-concession",
+      "lecture"
+    ],
+    "targetTimeSec": 85,
+    "trapExplanations": {
+      "1": "The speaker calls the rate normal, not unusually low.",
+      "2": "'Indicative rather than conclusive' says exactly the opposite.",
+      "3": "The rate is described as normal, not better than expected."
+    }
+  },
+  {
+    "id": "els-8",
+    "domain": "english",
+    "topic": "listening",
+    "blockTier": "hard",
+    "difficulty": 4,
+    "audioText": "Interviewer: So you would say the policy has failed? Guest: I would not put it that way. It has not produced the fall in traffic its supporters promised, and on that measure it has clearly fallen short. But air quality in the centre has improved, and that was always part of the case for it. Judging it on the traffic figures alone seems to me too narrow.",
+    "stem": "What is the guest's position?",
+    "options": [
+      "The policy has missed one of its aims but should not be judged on that aim alone.",
+      "The policy has failed and its supporters should admit it.",
+      "The policy has succeeded fully in everything it set out to do.",
+      "The traffic figures are the only fair way to judge the policy."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "The guest declines the word 'failed' but concedes the traffic target was missed.",
+      "A second measure, air quality, is then offered as also relevant.",
+      "The closing sentence rejects judging on traffic alone."
+    ],
+    "techniqueTags": [
+      "listen-for-concession",
+      "interview"
+    ],
+    "targetTimeSec": 95,
+    "trapExplanations": {
+      "1": "The guest explicitly refuses to call it a failure.",
+      "2": "The traffic shortfall is conceded, so success was not complete.",
+      "3": "The guest calls that view too narrow — the opposite of the position."
     }
   }
 ]

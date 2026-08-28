@@ -19,7 +19,10 @@
       "The sentence begins with 'Because', which directly signals the reason.",
       "The reason given is low water content and natural acidity."
     ],
-    "techniqueTags": ["locate-explicit", "because-signal"],
+    "techniqueTags": [
+      "locate-explicit",
+      "because-signal"
+    ],
     "targetTimeSec": 60,
     "trapExplanations": {
       "1": "Sealing preserved the tomb honey, but the passage attributes bacterial resistance to composition, not packaging.",
@@ -47,7 +50,10 @@
       "It gives a condition under which honey does spoil: absorbed moisture.",
       "The closing sentence states the point outright — preservation depends on storage."
     ],
-    "techniqueTags": ["main-idea", "paragraph-function"],
+    "techniqueTags": [
+      "main-idea",
+      "paragraph-function"
+    ],
     "targetTimeSec": 65,
     "trapExplanations": {
       "1": "Too strong. The paragraph qualifies the claim rather than reversing it.",
@@ -75,7 +81,10 @@
       "The first paragraph ends with 'a food that never spoils'.",
       "That claim is the reputation being qualified."
     ],
-    "techniqueTags": ["reference-word", "backward-link"],
+    "techniqueTags": [
+      "reference-word",
+      "backward-link"
+    ],
     "targetTimeSec": 60,
     "trapExplanations": {
       "1": "Mentioned in the opening line, but not the claim the second paragraph limits.",
@@ -103,7 +112,10 @@
       "It follows the claim that moisture enables fermentation.",
       "It illustrates that claim with an everyday case."
     ],
-    "techniqueTags": ["example-function", "author-purpose"],
+    "techniqueTags": [
+      "example-function",
+      "author-purpose"
+    ],
     "targetTimeSec": 70,
     "trapExplanations": {
       "1": "No storage advice is given; the sentence describes a failure case, not a recommendation.",
@@ -131,7 +143,10 @@
       "The final sentence balances both: preservation depends on storage.",
       "A statement that keeps both halves is the writer's actual position."
     ],
-    "techniqueTags": ["author-view", "balanced-claim"],
+    "techniqueTags": [
+      "author-view",
+      "balanced-claim"
+    ],
     "targetTimeSec": 70,
     "trapExplanations": {
       "1": "Too extreme — the writer accepts that sealed honey lasted millennia.",
@@ -159,7 +174,10 @@
       "'Adding capacity lowers the effective cost of driving in time, which draws in trips that were previously not worth taking.'",
       "That is induced demand — new trips, not merely existing ones."
     ],
-    "techniqueTags": ["locate-explicit", "mechanism"],
+    "techniqueTags": [
+      "locate-explicit",
+      "mechanism"
+    ],
     "targetTimeSec": 75,
     "trapExplanations": {
       "1": "Design quality is never raised; the passage says the pattern repeated across dozens of cities.",
@@ -187,7 +205,10 @@
       "It then states a condition under which capacity works as expected: when driving is priced properly.",
       "So it limits the argument without abandoning it."
     ],
-    "techniqueTags": ["paragraph-function", "qualification"],
+    "techniqueTags": [
+      "paragraph-function",
+      "qualification"
+    ],
     "targetTimeSec": 80,
     "trapExplanations": {
       "1": "It advances the argument rather than repeating the opening.",
@@ -215,7 +236,10 @@
       "The paragraph then treats trips as worth making or not — a cost-benefit framing.",
       "So time functions as the price of the journey."
     ],
-    "techniqueTags": ["inference-from-wording", "metaphor"],
+    "techniqueTags": [
+      "inference-from-wording",
+      "metaphor"
+    ],
     "targetTimeSec": 80,
     "trapExplanations": {
       "1": "The passage uses time as a measure, not as an unreliable one.",
@@ -243,7 +267,10 @@
       "To weaken it, show that trips did not increase when capacity did.",
       "Unchanged trip totals would leave the mechanism with nothing to explain."
     ],
-    "techniqueTags": ["weaken-argument", "mechanism-test"],
+    "techniqueTags": [
+      "weaken-argument",
+      "mechanism-test"
+    ],
     "targetTimeSec": 90,
     "trapExplanations": {
       "1": "Construction cost has no bearing on whether traffic volume responds to capacity.",
@@ -271,7 +298,10 @@
       "It compresses the whole mechanism: building capacity is itself what generates the traffic that fills it.",
       "So its role is summary, not criticism or prediction."
     ],
-    "techniqueTags": ["sentence-function", "summary-statement"],
+    "techniqueTags": [
+      "sentence-function",
+      "summary-statement"
+    ],
     "targetTimeSec": 75,
     "trapExplanations": {
       "1": "No individuals are blamed anywhere in the passage; the argument is about a mechanism, not about competence.",
@@ -299,7 +329,10 @@
       "The stated priority is 'the stabilisation of the old' over 'the spread of the new'.",
       "The rest of the passage develops uniformity as the key consequence."
     ],
-    "techniqueTags": ["main-claim", "conventional-view-reversal"],
+    "techniqueTags": [
+      "main-claim",
+      "conventional-view-reversal"
+    ],
     "targetTimeSec": 95,
     "trapExplanations": {
       "1": "The writer does not deny wider circulation; the claim is about which effect mattered most.",
@@ -327,7 +360,10 @@
       "The clause continues 'and therefore visible', followed by the example of two readers comparing the same page.",
       "Uniformity is what makes discrepancy locatable — that is the writer's point."
     ],
-    "techniqueTags": ["detail-purpose", "concession-structure"],
+    "techniqueTags": [
+      "detail-purpose",
+      "concession-structure"
+    ],
     "targetTimeSec": 100,
     "trapExplanations": {
       "1": "Carelessness is never claimed; the passage is neutral about who erred more.",
@@ -355,7 +391,10 @@
       "The writer places the textual baseline low on drama and high on consequence.",
       "The general principle implied is that visibility and significance come apart."
     ],
-    "techniqueTags": ["inference", "implied-principle"],
+    "techniqueTags": [
+      "inference",
+      "implied-principle"
+    ],
     "targetTimeSec": 100,
     "trapExplanations": {
       "1": "Overgeneralises: the writer separates drama from consequence in this case, not as a universal rule.",
@@ -383,7 +422,10 @@
       "Strengthening it means showing that precision in referencing actually increased.",
       "Exact page citations in disputes is direct evidence of that mechanism."
     ],
-    "techniqueTags": ["strengthen-argument", "evidence-match"],
+    "techniqueTags": [
+      "strengthen-argument",
+      "evidence-match"
+    ],
     "targetTimeSec": 105,
     "trapExplanations": {
       "1": "Volume supports the conventional account the writer is arguing against, not the revision.",
@@ -411,12 +453,480 @@
       "All three are things scribes did to the text, and the result was divergence between copies.",
       "'Silently' modifies how the change was made — unrecorded, so readers could not tell."
     ],
-    "techniqueTags": ["vocabulary-in-context", "list-parallelism"],
+    "techniqueTags": [
+      "vocabulary-in-context",
+      "list-parallelism"
+    ],
     "targetTimeSec": 90,
     "trapExplanations": {
       "1": "Takes 'silently' literally as an absence of sound, which the context does not support.",
       "2": "Too specific — removal is one possible emendation, not the meaning of the phrase.",
       "3": "Translation is a different activity and is not mentioned in the passage."
+    }
+  },
+  {
+    "id": "erd-e6",
+    "domain": "english",
+    "topic": "reading",
+    "blockTier": "easy",
+    "difficulty": 2,
+    "passage": "Bamboo is often called a tree, but it is in fact a grass. Some species grow more than half a metre in a single day, which makes bamboo one of the fastest-growing plants on Earth. Because a stem reaches its full height in months rather than decades, bamboo can be cut again and again from the same root system, which stays in the ground and sends up new growth.\n\nThis has made the plant attractive to builders looking for materials that renew quickly. Its stems are light and, for their weight, remarkably strong. Untreated bamboo, however, absorbs water and is readily attacked by insects, so it has to be treated before it can be used in construction. The plant's speed of growth is an advantage only once that problem has been dealt with.",
+    "stem": "According to the passage, why is bamboo not really a tree?",
+    "options": [
+      "It belongs to the grass family.",
+      "It grows far too quickly to be a tree.",
+      "It is cut without ever being replanted.",
+      "Its stems are light rather than woody."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "Find the sentence that makes the classification.",
+      "The first sentence states it directly: bamboo is a grass.",
+      "The other options are facts from the passage, but none is the reason for the classification."
+    ],
+    "techniqueTags": [
+      "locate-the-fact",
+      "classification"
+    ],
+    "targetTimeSec": 55,
+    "trapExplanations": {
+      "1": "Speed of growth is mentioned, but it is not what decides the classification.",
+      "2": "Harvesting without replanting is a consequence of the root system, not a reason it is a grass.",
+      "3": "The passage calls the stems light and strong but never contrasts them with wood."
+    }
+  },
+  {
+    "id": "erd-e7",
+    "domain": "english",
+    "topic": "reading",
+    "blockTier": "easy",
+    "difficulty": 2,
+    "passage": "Bamboo is often called a tree, but it is in fact a grass. Some species grow more than half a metre in a single day, which makes bamboo one of the fastest-growing plants on Earth. Because a stem reaches its full height in months rather than decades, bamboo can be cut again and again from the same root system, which stays in the ground and sends up new growth.\n\nThis has made the plant attractive to builders looking for materials that renew quickly. Its stems are light and, for their weight, remarkably strong. Untreated bamboo, however, absorbs water and is readily attacked by insects, so it has to be treated before it can be used in construction. The plant's speed of growth is an advantage only once that problem has been dealt with.",
+    "stem": "What allows bamboo to be cut repeatedly from the same plant?",
+    "options": [
+      "The root system stays in the ground and sends up new growth.",
+      "A new plant is put in the ground after every harvest.",
+      "The stems are treated against insects before cutting.",
+      "Each stem is cut before it reaches its full height."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "Locate 'cut again and again' in the first paragraph.",
+      "The clause immediately after it gives the reason.",
+      "The roots remain and produce new stems."
+    ],
+    "techniqueTags": [
+      "locate-the-fact",
+      "cause-in-text"
+    ],
+    "targetTimeSec": 55,
+    "trapExplanations": {
+      "1": "The passage says the opposite — no replanting is needed.",
+      "2": "Treatment is for construction use, not for regrowth.",
+      "3": "The passage says stems reach full height in months, not that they are cut early."
+    }
+  },
+  {
+    "id": "erd-e8",
+    "domain": "english",
+    "topic": "reading",
+    "blockTier": "easy",
+    "difficulty": 3,
+    "passage": "Bamboo is often called a tree, but it is in fact a grass. Some species grow more than half a metre in a single day, which makes bamboo one of the fastest-growing plants on Earth. Because a stem reaches its full height in months rather than decades, bamboo can be cut again and again from the same root system, which stays in the ground and sends up new growth.\n\nThis has made the plant attractive to builders looking for materials that renew quickly. Its stems are light and, for their weight, remarkably strong. Untreated bamboo, however, absorbs water and is readily attacked by insects, so it has to be treated before it can be used in construction. The plant's speed of growth is an advantage only once that problem has been dealt with.",
+    "stem": "Why must bamboo be treated before it is used in building?",
+    "options": [
+      "It takes in water and is easily attacked by insects.",
+      "It is too light to carry any weight.",
+      "It grows unevenly from one stem to the next.",
+      "It becomes weaker as it dries out."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "Find the sentence containing 'treated'.",
+      "The two problems are named just before it.",
+      "Water absorption and insects are the reasons given."
+    ],
+    "techniqueTags": [
+      "locate-the-fact",
+      "cause-in-text"
+    ],
+    "targetTimeSec": 55,
+    "trapExplanations": {
+      "1": "The passage calls bamboo strong for its weight, not too light.",
+      "2": "Uneven growth is never mentioned.",
+      "3": "The passage says nothing about drying weakening it."
+    }
+  },
+  {
+    "id": "erd-e9",
+    "domain": "english",
+    "topic": "reading",
+    "blockTier": "easy",
+    "difficulty": 3,
+    "passage": "Bamboo is often called a tree, but it is in fact a grass. Some species grow more than half a metre in a single day, which makes bamboo one of the fastest-growing plants on Earth. Because a stem reaches its full height in months rather than decades, bamboo can be cut again and again from the same root system, which stays in the ground and sends up new growth.\n\nThis has made the plant attractive to builders looking for materials that renew quickly. Its stems are light and, for their weight, remarkably strong. Untreated bamboo, however, absorbs water and is readily attacked by insects, so it has to be treated before it can be used in construction. The plant's speed of growth is an advantage only once that problem has been dealt with.",
+    "stem": "What does the last sentence suggest about bamboo's fast growth?",
+    "options": [
+      "It is only useful once the material's weaknesses have been handled.",
+      "It is the reason bamboo is stronger than wood.",
+      "It makes any treatment unnecessary.",
+      "It stops insects from reaching the stems."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "The last sentence begins with the advantage and ends with a condition.",
+      "The condition is that the water and insect problem be dealt with.",
+      "So the advantage depends on solving those problems first."
+    ],
+    "techniqueTags": [
+      "sentence-function",
+      "inference"
+    ],
+    "targetTimeSec": 60,
+    "trapExplanations": {
+      "1": "The passage never compares bamboo's strength with wood.",
+      "2": "It says the opposite: treatment is required.",
+      "3": "Growth speed has no effect on insects in this passage."
+    }
+  },
+  {
+    "id": "erd-e10",
+    "domain": "english",
+    "topic": "reading",
+    "blockTier": "easy",
+    "difficulty": 3,
+    "passage": "Bamboo is often called a tree, but it is in fact a grass. Some species grow more than half a metre in a single day, which makes bamboo one of the fastest-growing plants on Earth. Because a stem reaches its full height in months rather than decades, bamboo can be cut again and again from the same root system, which stays in the ground and sends up new growth.\n\nThis has made the plant attractive to builders looking for materials that renew quickly. Its stems are light and, for their weight, remarkably strong. Untreated bamboo, however, absorbs water and is readily attacked by insects, so it has to be treated before it can be used in construction. The plant's speed of growth is an advantage only once that problem has been dealt with.",
+    "stem": "The passage as a whole is mainly concerned with",
+    "options": [
+      "what makes bamboo useful and what limits it.",
+      "how bamboo differs from other kinds of grass.",
+      "the best methods of treating bamboo for building.",
+      "why builders have begun to abandon timber."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "Paragraph one gives advantages, paragraph two gives a drawback.",
+      "Neither half is presented alone.",
+      "The passage balances the two."
+    ],
+    "techniqueTags": [
+      "main-idea",
+      "structure"
+    ],
+    "targetTimeSec": 60,
+    "trapExplanations": {
+      "1": "Other grasses are never discussed.",
+      "2": "Treatment is mentioned as necessary but no method is described.",
+      "3": "Timber is never mentioned at all."
+    }
+  },
+  {
+    "id": "erd-m6",
+    "domain": "english",
+    "topic": "reading",
+    "blockTier": "medium",
+    "difficulty": 3,
+    "passage": "For most of the twentieth century, museums competed on the size of their collections. A great museum was one that owned a great many objects, and the measure of a new acquisition was largely whether it filled a gap on a shelf.\n\nThat assumption has weakened. Storage is expensive, and most collections are now so large that only a small part is ever shown; some institutions display less than five per cent of what they hold. Critics argue that objects locked away serve no public purpose, and would do more good if they were lent, shared or returned to the places they came from.\n\nDefenders reply that a collection is a research resource rather than an exhibition. An object no visitor ever sees may still be studied, and the worth of a holding cannot be measured by how often it is put on a wall.",
+    "stem": "How were museums traditionally judged, according to the passage?",
+    "options": [
+      "By the number of objects they owned.",
+      "By the number of visitors they attracted.",
+      "By how much of their collection was on display.",
+      "By the quality of the research they produced."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "The first paragraph describes the older assumption.",
+      "'Competed on the size of their collections' and 'owned a great many objects' both point the same way.",
+      "Size of holdings was the measure."
+    ],
+    "techniqueTags": [
+      "locate-the-fact",
+      "main-idea"
+    ],
+    "targetTimeSec": 65,
+    "trapExplanations": {
+      "1": "Visitor numbers are never mentioned in the passage.",
+      "2": "Display is raised later, as part of the criticism of the old view.",
+      "3": "Research appears only in the defenders' reply, not in the traditional measure."
+    }
+  },
+  {
+    "id": "erd-m7",
+    "domain": "english",
+    "topic": "reading",
+    "blockTier": "medium",
+    "difficulty": 4,
+    "passage": "For most of the twentieth century, museums competed on the size of their collections. A great museum was one that owned a great many objects, and the measure of a new acquisition was largely whether it filled a gap on a shelf.\n\nThat assumption has weakened. Storage is expensive, and most collections are now so large that only a small part is ever shown; some institutions display less than five per cent of what they hold. Critics argue that objects locked away serve no public purpose, and would do more good if they were lent, shared or returned to the places they came from.\n\nDefenders reply that a collection is a research resource rather than an exhibition. An object no visitor ever sees may still be studied, and the worth of a holding cannot be measured by how often it is put on a wall.",
+    "stem": "What is the critics' central objection?",
+    "options": [
+      "Objects that nobody can see serve no public purpose.",
+      "Museums should stop acquiring new objects altogether.",
+      "The cost of storage should not fall on the public.",
+      "Most collections are too small to be worth keeping."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "Find the sentence beginning 'Critics argue'.",
+      "The objection is about objects locked away serving no public purpose.",
+      "The remedy they propose follows from that."
+    ],
+    "techniqueTags": [
+      "locate-the-argument",
+      "paraphrase"
+    ],
+    "targetTimeSec": 70,
+    "trapExplanations": {
+      "1": "The critics object to storage, not to acquisition as such.",
+      "2": "Storage cost is given as background, not as the critics' objection.",
+      "3": "The passage says collections are large, not small."
+    }
+  },
+  {
+    "id": "erd-m8",
+    "domain": "english",
+    "topic": "reading",
+    "blockTier": "medium",
+    "difficulty": 4,
+    "passage": "For most of the twentieth century, museums competed on the size of their collections. A great museum was one that owned a great many objects, and the measure of a new acquisition was largely whether it filled a gap on a shelf.\n\nThat assumption has weakened. Storage is expensive, and most collections are now so large that only a small part is ever shown; some institutions display less than five per cent of what they hold. Critics argue that objects locked away serve no public purpose, and would do more good if they were lent, shared or returned to the places they came from.\n\nDefenders reply that a collection is a research resource rather than an exhibition. An object no visitor ever sees may still be studied, and the worth of a holding cannot be measured by how often it is put on a wall.",
+    "stem": "How do the defenders answer the criticism?",
+    "options": [
+      "They argue a collection's value lies in research rather than display.",
+      "They deny that most objects remain in storage.",
+      "They claim storage is cheaper than the critics suggest.",
+      "They warn that objects on display are gradually damaged."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "The final paragraph gives the reply.",
+      "It reframes the collection as a research resource, not an exhibition.",
+      "An unseen object can still be studied."
+    ],
+    "techniqueTags": [
+      "locate-the-argument",
+      "paraphrase"
+    ],
+    "targetTimeSec": 70,
+    "trapExplanations": {
+      "1": "The defenders accept the storage figures; they dispute what follows from them.",
+      "2": "Cost is never contested in the reply.",
+      "3": "Damage from display is not raised anywhere in the passage."
+    }
+  },
+  {
+    "id": "erd-m9",
+    "domain": "english",
+    "topic": "reading",
+    "blockTier": "medium",
+    "difficulty": 4,
+    "passage": "For most of the twentieth century, museums competed on the size of their collections. A great museum was one that owned a great many objects, and the measure of a new acquisition was largely whether it filled a gap on a shelf.\n\nThat assumption has weakened. Storage is expensive, and most collections are now so large that only a small part is ever shown; some institutions display less than five per cent of what they hold. Critics argue that objects locked away serve no public purpose, and would do more good if they were lent, shared or returned to the places they came from.\n\nDefenders reply that a collection is a research resource rather than an exhibition. An object no visitor ever sees may still be studied, and the worth of a holding cannot be measured by how often it is put on a wall.",
+    "stem": "The figure 'less than five per cent' is used in order to",
+    "options": [
+      "show how little of a collection is normally seen by the public.",
+      "prove that museums acquire far too many objects.",
+      "compare one institution's holdings with another's.",
+      "explain why storage has become so expensive."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "Locate the figure and read the sentence it sits in.",
+      "It follows the claim that only a small part of a collection is ever shown.",
+      "It is evidence for that claim."
+    ],
+    "techniqueTags": [
+      "evidence-function",
+      "sentence-function"
+    ],
+    "targetTimeSec": 75,
+    "trapExplanations": {
+      "1": "The figure describes what is displayed, not how much is bought.",
+      "2": "No two institutions are compared anywhere in the passage.",
+      "3": "Storage cost is stated separately and is not what the figure supports."
+    }
+  },
+  {
+    "id": "erd-m10",
+    "domain": "english",
+    "topic": "reading",
+    "blockTier": "medium",
+    "difficulty": 4,
+    "passage": "For most of the twentieth century, museums competed on the size of their collections. A great museum was one that owned a great many objects, and the measure of a new acquisition was largely whether it filled a gap on a shelf.\n\nThat assumption has weakened. Storage is expensive, and most collections are now so large that only a small part is ever shown; some institutions display less than five per cent of what they hold. Critics argue that objects locked away serve no public purpose, and would do more good if they were lent, shared or returned to the places they came from.\n\nDefenders reply that a collection is a research resource rather than an exhibition. An object no visitor ever sees may still be studied, and the worth of a holding cannot be measured by how often it is put on a wall.",
+    "stem": "The passage as a whole",
+    "options": [
+      "sets out a disagreement without deciding it.",
+      "argues that stored objects should be returned.",
+      "defends the traditional approach to collecting.",
+      "explains how museum storage facilities work."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "Paragraph two gives the critics, paragraph three gives the defenders.",
+      "Neither side is endorsed by the author.",
+      "The passage presents both and stops."
+    ],
+    "techniqueTags": [
+      "structure",
+      "authorial-stance"
+    ],
+    "targetTimeSec": 75,
+    "trapExplanations": {
+      "1": "Returning objects is one option the critics raise, not the passage's conclusion.",
+      "2": "The traditional view is described as having weakened, not defended.",
+      "3": "No description of storage facilities is given."
+    }
+  },
+  {
+    "id": "erd-h6",
+    "domain": "english",
+    "topic": "reading",
+    "blockTier": "hard",
+    "difficulty": 4,
+    "passage": "It is often said that a scientific theory must be falsifiable: there must be some observation which, if it were made, would show the theory to be wrong. The appeal of the criterion is plain. It separates claims that risk something from claims that can absorb any evidence at all.\n\nApplied strictly, however, the rule is harder to use than it looks. Theories are seldom tested on their own. A prediction follows not from the theory alone but from the theory together with assumptions about instruments, background conditions and auxiliary hypotheses, any of which might be blamed when the prediction fails. What a failed test refutes is a whole package, and deciding which part to discard is a matter of judgement rather than of logic.\n\nNone of this makes the criterion worthless. It remains a warning against claims built so that nothing could ever count against them. It is simply a blunter instrument than it first appears.",
+    "stem": "What, according to the passage, is the appeal of falsifiability?",
+    "options": [
+      "It separates claims that risk being wrong from claims that cannot be.",
+      "It identifies which scientific theories are true.",
+      "It removes the need for judgement in science.",
+      "It makes predictions easier to derive from a theory."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "The appeal is stated at the end of the first paragraph.",
+      "It divides claims that risk something from claims that absorb any evidence.",
+      "That is a distinction about testability, not about truth."
+    ],
+    "techniqueTags": [
+      "locate-the-fact",
+      "paraphrase"
+    ],
+    "targetTimeSec": 80,
+    "trapExplanations": {
+      "1": "Falsifiability concerns whether a theory could be shown false, not whether it is true.",
+      "2": "The passage argues the opposite: judgement turns out to be unavoidable.",
+      "3": "Deriving predictions is described as involving extra assumptions, not made easier."
+    }
+  },
+  {
+    "id": "erd-h7",
+    "domain": "english",
+    "topic": "reading",
+    "blockTier": "hard",
+    "difficulty": 5,
+    "passage": "It is often said that a scientific theory must be falsifiable: there must be some observation which, if it were made, would show the theory to be wrong. The appeal of the criterion is plain. It separates claims that risk something from claims that can absorb any evidence at all.\n\nApplied strictly, however, the rule is harder to use than it looks. Theories are seldom tested on their own. A prediction follows not from the theory alone but from the theory together with assumptions about instruments, background conditions and auxiliary hypotheses, any of which might be blamed when the prediction fails. What a failed test refutes is a whole package, and deciding which part to discard is a matter of judgement rather than of logic.\n\nNone of this makes the criterion worthless. It remains a warning against claims built so that nothing could ever count against them. It is simply a blunter instrument than it first appears.",
+    "stem": "Why does the author say the rule is harder to use than it looks?",
+    "options": [
+      "A failed prediction may be blamed on the assumptions rather than the theory.",
+      "Most theories make no testable predictions at all.",
+      "Instruments are rarely accurate enough to test any theory.",
+      "Scientists cannot agree on what counts as an observation."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "The second paragraph gives the difficulty.",
+      "Predictions depend on the theory plus assumptions about instruments and conditions.",
+      "When a test fails, any of those may be at fault."
+    ],
+    "techniqueTags": [
+      "locate-the-argument",
+      "inference"
+    ],
+    "targetTimeSec": 85,
+    "trapExplanations": {
+      "1": "The passage never claims theories lack predictions.",
+      "2": "Instruments are one of several assumptions, not a general accuracy problem.",
+      "3": "Disagreement over observations is not raised."
+    }
+  },
+  {
+    "id": "erd-h8",
+    "domain": "english",
+    "topic": "reading",
+    "blockTier": "hard",
+    "difficulty": 5,
+    "passage": "It is often said that a scientific theory must be falsifiable: there must be some observation which, if it were made, would show the theory to be wrong. The appeal of the criterion is plain. It separates claims that risk something from claims that can absorb any evidence at all.\n\nApplied strictly, however, the rule is harder to use than it looks. Theories are seldom tested on their own. A prediction follows not from the theory alone but from the theory together with assumptions about instruments, background conditions and auxiliary hypotheses, any of which might be blamed when the prediction fails. What a failed test refutes is a whole package, and deciding which part to discard is a matter of judgement rather than of logic.\n\nNone of this makes the criterion worthless. It remains a warning against claims built so that nothing could ever count against them. It is simply a blunter instrument than it first appears.",
+    "stem": "What does the author mean by 'a whole package'?",
+    "options": [
+      "The theory together with the assumptions used in testing it.",
+      "A group of competing theories tested against each other.",
+      "The complete body of evidence gathered in a field.",
+      "The set of instruments used in a single experiment."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "Read the sentence before the phrase.",
+      "It lists the theory plus instruments, background conditions and auxiliary hypotheses.",
+      "The package is that combination."
+    ],
+    "techniqueTags": [
+      "vocabulary-in-context",
+      "paraphrase"
+    ],
+    "targetTimeSec": 85,
+    "trapExplanations": {
+      "1": "Rival theories are never mentioned in the passage.",
+      "2": "The package is what a single test involves, not a field's whole evidence.",
+      "3": "Instruments are only one item in the list the passage gives."
+    }
+  },
+  {
+    "id": "erd-h9",
+    "domain": "english",
+    "topic": "reading",
+    "blockTier": "hard",
+    "difficulty": 5,
+    "passage": "It is often said that a scientific theory must be falsifiable: there must be some observation which, if it were made, would show the theory to be wrong. The appeal of the criterion is plain. It separates claims that risk something from claims that can absorb any evidence at all.\n\nApplied strictly, however, the rule is harder to use than it looks. Theories are seldom tested on their own. A prediction follows not from the theory alone but from the theory together with assumptions about instruments, background conditions and auxiliary hypotheses, any of which might be blamed when the prediction fails. What a failed test refutes is a whole package, and deciding which part to discard is a matter of judgement rather than of logic.\n\nNone of this makes the criterion worthless. It remains a warning against claims built so that nothing could ever count against them. It is simply a blunter instrument than it first appears.",
+    "stem": "The final paragraph serves to",
+    "options": [
+      "limit the criticism without withdrawing it.",
+      "reject the criterion as entirely unusable.",
+      "restate the appeal described in the opening.",
+      "propose a replacement for falsifiability."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "It opens by denying that the criterion is worthless.",
+      "It then restates a use for it, and closes by calling it blunt.",
+      "So it softens the second paragraph without taking it back."
+    ],
+    "techniqueTags": [
+      "paragraph-function",
+      "authorial-stance"
+    ],
+    "targetTimeSec": 85,
+    "trapExplanations": {
+      "1": "It explicitly says the criterion is not worthless.",
+      "2": "It adds a limitation rather than simply repeating the opening.",
+      "3": "No alternative criterion is offered anywhere."
+    }
+  },
+  {
+    "id": "erd-h10",
+    "domain": "english",
+    "topic": "reading",
+    "blockTier": "hard",
+    "difficulty": 5,
+    "passage": "It is often said that a scientific theory must be falsifiable: there must be some observation which, if it were made, would show the theory to be wrong. The appeal of the criterion is plain. It separates claims that risk something from claims that can absorb any evidence at all.\n\nApplied strictly, however, the rule is harder to use than it looks. Theories are seldom tested on their own. A prediction follows not from the theory alone but from the theory together with assumptions about instruments, background conditions and auxiliary hypotheses, any of which might be blamed when the prediction fails. What a failed test refutes is a whole package, and deciding which part to discard is a matter of judgement rather than of logic.\n\nNone of this makes the criterion worthless. It remains a warning against claims built so that nothing could ever count against them. It is simply a blunter instrument than it first appears.",
+    "stem": "The author's attitude towards falsifiability is best described as",
+    "options": [
+      "qualified acceptance.",
+      "complete endorsement.",
+      "outright rejection.",
+      "open indifference."
+    ],
+    "correctIndex": 0,
+    "solutionSteps": [
+      "The first paragraph grants the appeal.",
+      "The second raises a serious difficulty.",
+      "The third keeps the criterion while calling it blunt — acceptance with reservations."
+    ],
+    "techniqueTags": [
+      "authorial-stance",
+      "tone"
+    ],
+    "targetTimeSec": 80,
+    "trapExplanations": {
+      "1": "The second paragraph raises a difficulty too serious for full endorsement.",
+      "2": "The final paragraph explicitly refuses to discard the criterion.",
+      "3": "The author argues carefully on both sides, which is not indifference."
     }
   }
 ]
