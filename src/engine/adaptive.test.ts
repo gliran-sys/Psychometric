@@ -3,6 +3,7 @@ import {
   expectedScore,
   itemRating,
   masteryOf,
+  ACCEPTABLE_BAND,
   PRACTICE_BAND,
   selectNextItem,
   STARTING_RATING,
@@ -112,16 +113,44 @@ describe('item selection', () => {
     expect(served.size).toBeGreaterThan(1);
   });
 
-  it('never serves an item outside the productive success band', () => {
+  it('never serves an item the user would almost certainly miss or certainly get', () => {
     const wide = [1, 2, 3, 4, 5].map((difficulty) => ({ id: `d${difficulty}`, difficulty }));
     for (const rating of [700, 850, 1000, 1150, 1300]) {
       for (let i = 0; i < 60; i += 1) {
         const item = selectNextItem(wide, rating, new Set())!;
         const p = expectedScore(rating, itemRating(item.difficulty));
+        expect(p).toBeGreaterThanOrEqual(ACCEPTABLE_BAND.min);
+        expect(p).toBeLessThanOrEqual(ACCEPTABLE_BAND.max);
+      }
+    }
+  });
+
+  it('stays inside the tighter practice band when the topic is deep enough', () => {
+    // Reaching outwards is only for thin pools. With plenty of material at each level
+    // there is no reason to serve anything outside the productive band.
+    const deep = [1, 2, 3, 4, 5].flatMap((difficulty) =>
+      Array.from({ length: 8 }, (_, i) => ({ id: `d${difficulty}-${i}`, difficulty })),
+    );
+    for (const rating of [900, 1000, 1100, 1200]) {
+      for (let i = 0; i < 60; i += 1) {
+        const item = selectNextItem(deep, rating, new Set())!;
+        const p = expectedScore(rating, itemRating(item.difficulty));
         expect(p).toBeGreaterThanOrEqual(PRACTICE_BAND.min);
         expect(p).toBeLessThanOrEqual(PRACTICE_BAND.max);
       }
     }
+  });
+
+  it('widens a band that is too thin to carry a session', () => {
+    // Six items at one level is what a struggling user meets in analogies; without the
+    // top-up the drill would cycle those six and nothing else.
+    const thin = [
+      ...Array.from({ length: 6 }, (_, i) => ({ id: `easy-${i}`, difficulty: 1 })),
+      ...Array.from({ length: 14 }, (_, i) => ({ id: `mid-${i}`, difficulty: 2 })),
+    ];
+    const served = new Set<string>();
+    for (let i = 0; i < 400; i += 1) served.add(selectNextItem(thin, 800, new Set())!.id);
+    expect(served.size).toBeGreaterThanOrEqual(12);
   });
 
   it('falls back to the closest item when nothing sits in the band', () => {

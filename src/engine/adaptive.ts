@@ -61,6 +61,20 @@ export interface Selectable {
  */
 export const PRACTICE_BAND = { min: 0.55, max: 0.9 };
 
+/**
+ * The widest band selection will ever reach into, and only to fill out a thin pool.
+ *
+ * At the extremes of the rating range the practice band can collapse onto a single
+ * difficulty level — a struggling user drilling analogies would be served from six
+ * items and start repeating within one sitting. The fix is to reach outwards, but not
+ * without limit: an item the user has a one-in-ten chance on teaches nothing and an
+ * item they cannot miss wastes the question.
+ */
+export const ACCEPTABLE_BAND = { min: 0.35, max: 0.97 };
+
+/** The smallest pool selection will work from before it starts reaching outwards. */
+const MIN_POOL = 12;
+
 export interface SelectOptions {
   /** Never serve this item — used to avoid repeating a question back to back. */
   avoidId?: string;
@@ -93,17 +107,31 @@ export function selectNextItem<T extends Selectable>(
   const unseen = allowed.filter((i) => !seenIds.has(i.id));
   const candidates = unseen.length > 0 ? unseen : allowed;
 
-  const suitable = candidates.filter((item) => {
+  const within = (item: T, { min, max }: { min: number; max: number }) => {
     const p = expectedScore(userRating, itemRating(item.difficulty));
-    return p >= PRACTICE_BAND.min && p <= PRACTICE_BAND.max;
-  });
+    return p >= min && p <= max;
+  };
 
-  // Nothing in band means the user has outgrown the topic or is far below it; fall back
-  // to whatever sits closest so the drill still runs.
   const target = targetItemRating(userRating);
   const distance = (item: T) => Math.abs(itemRating(item.difficulty) - target);
-  const closest = Math.min(...candidates.map(distance));
-  const band = suitable.length > 0 ? suitable : candidates.filter((i) => distance(i) === closest);
+
+  const preferred = candidates.filter((i) => within(i, PRACTICE_BAND));
+  let band = preferred;
+
+  if (band.length < MIN_POOL) {
+    // Reach outwards, nearest first, but never past the acceptable band.
+    const extra = candidates
+      .filter((i) => !preferred.includes(i) && within(i, ACCEPTABLE_BAND))
+      .sort((a, b) => distance(a) - distance(b));
+    band = [...preferred, ...extra].slice(0, Math.max(MIN_POOL, preferred.length));
+  }
+
+  // Nothing acceptable at all: the user is far outside this topic's range, but the
+  // drill still has to serve something.
+  if (band.length === 0) {
+    const closest = Math.min(...candidates.map(distance));
+    band = candidates.filter((i) => distance(i) === closest);
+  }
 
   const pick = (from: T[]) => from[Math.floor(rng() * from.length)] ?? from[0];
   if (!lastSeen) return pick(band);
